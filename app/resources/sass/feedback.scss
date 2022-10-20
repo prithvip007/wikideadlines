@@ -1,0 +1,36 @@
+.sticky-feedback {
+    width: 100%;
+    position: sticky;
+    bottom: 10px;
+}
+
+.rule-for-correct {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .sticky-feedback--md-shake {
+        animation: feedback-shake 4.72s ease infinite;
+    }
+
+    body.modal-open .sticky-feedback--md-shake {
+        animation: none !important;
+    }
+
+    .sticky-feedback--md-shake:hover {
+        animation: none;
+    }
+}
+
+@keyframes feedback-shake {
+    50% { transform:translate(0,0) }
+    51.78571% { transform:translate(5px,0) }
+    53.57143% { transform:translate(0,0) }
+    55.35714% { transform:translate(5px,0) }
+    57.14286% { transform:translate(0,0) }
+    58.92857% { transform:translate(5px,0) }
+    60.71429% { transform:translate(0,0) }
+    100% { transform:translate(0,0) }
+}

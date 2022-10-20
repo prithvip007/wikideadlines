@@ -1,0 +1,559 @@
+[
+    {
+        "id": 0,
+        "key": "document-title",
+        "type": "input-text",
+        "conditions": null,
+        "data": {
+            "title": "Enter the title of the document or event",
+            "placeholder": "Examples: \"Motion to Set Aside Judgment\" or \"Trial Date\"",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 1,
+        "key": "deadline-rule-title",
+        "type": "textarea",
+        "conditions": null,
+        "data": {
+            "title": "Title of Deadline Rule",
+            "maxlength": 200,
+            "rows": 3,
+            "required": false
+        }
+    },
+    {
+        "id": 2,
+        "key": "deadline-rule-description",
+        "type": "textarea",
+        "conditions": null,
+        "data": {
+            "title": "Please enter a short description of the Deadline Rule",
+            "placeholder": "Last day to file opposition to motion compel",
+            "maxlength": 2000,
+            "rows": 5,
+            "required": true
+        }
+    },
+    {
+        "id": 6,
+        "key": "authority-source",
+        "type": "select",
+        "conditions": null,
+        "data": {
+            "title": "What is the source of authority for the Deadline Rule?",
+            "placeholder": "Select the authority",
+            "required": false,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "State Code Section"
+                },
+                {
+                    "id": 2,
+                    "title": "Case Law"
+                },
+                {
+                    "id": 3,
+                    "title": "Rules of Court"
+                },
+                {
+                    "id": 4,
+                    "title": "Local Rules"
+                },
+                {
+                    "id": 5,
+                    "title": "Department Rule"
+                },
+                {
+                    "id": 6,
+                    "key": "authority-source-frcp",
+                    "title": "Federal Rules of Civil Procedure (FRCP)"
+                },
+                {
+                    "id": 7,
+                    "title": "Reference Book"
+                },
+                {
+                    "id": 8,
+                    "title": "< Add an authority >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "key": "authority-name",
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 6,
+                        "itemId": 8
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of the authority for the rule",
+            "maxlength": 500,
+            "required": true
+        }
+    },
+    {
+        "id": -7,
+        "key": "triggering-event",
+        "type": "select",
+        "conditions": null,
+        "data": {
+            "title": "Select a Triggering Event",
+            "placeholder": "Select an event",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Proof of Service Date",
+                    "referenceKey": "dps",
+                    "smallDescription": "i.e. Date Document Mailed, faxed, etc."
+                },
+                {
+                    "id": 2,
+                    "title": "Date Document Served",
+                    "referenceKey": "dds",
+                    "smallDescription": "accounting for Delivery Method"
+                },
+                {
+                    "id": 3,
+                    "referenceKey": "fcd",
+                    "title": "Date document filed with court"
+                },
+                {
+                    "id": 4,
+                    "referenceKey": "dcf",
+                    "title": "Date Complaint or Cross-Complaint Filed"
+                },
+                {
+                    "id": 5,
+                    "referenceKey": "dcc",
+                    "title": "Date Service of the Complaint or Cross-Complaint was completed"
+                },
+                {
+                    "id": 6,
+                    "referenceKey": "dfcmch",
+                    "title": "Date of First Case Management Conference Hearing"
+                },
+                {
+                    "id": 7,
+                    "smallDescription": "other than a Case Management Conference",
+                    "referenceKey": "hd",
+                    "title": "Hearing Date"
+                },
+                {
+                    "id": 8,
+                    "referenceKey": "ftds",
+                    "title": "First Trial Date Set"
+                },
+                {
+                    "id": 9,
+                    "referenceKey": "tasd",
+                    "title": "Trial or Arbitration Starting Date"
+                },
+                {
+                    "id": 10,
+                    "referenceKey": "lad",
+                    "title": "Last Date Arbitration Conducted"
+                },
+                {
+                    "id": 11,
+                    "smallDescription": "other than an order or judgment",
+                    "referenceKey": "ddsc",
+                    "title": "Date Document Signed by Court"
+                },
+                {
+                    "id": 12,
+                    "referenceKey": "doorjsbc",
+                    "title": "Date Order or Judgment Signed by Court"
+                },
+                {
+                    "id": 13,
+                    "referenceKey": "dnmbc",
+                    "title": "Date Any Notice Mailed by Court "
+                },
+                {
+                    "id": 15,
+                    "referenceKey": "dsnejk",
+                    "title": "Date of Service of \"Notice of Entry\" of Judgment by Clerk"
+                },
+                {
+                    "id": 16,
+                    "referenceKey": "dcdr",
+                    "title": "Date of Completion of Deposition Record"
+                },
+                {
+                    "id": 17,
+                    "referenceKey": "dlpr",
+                    "title": "Date lis pendens is recorded"
+                },
+                {
+                    "id": 18,
+                    "referenceKey": "daafwcoc",
+                    "title": "Date arbitration award is filed with the clerk of the court"
+                },
+                {
+                    "id": 19,
+                    "referenceKey": "daf",
+                    "title": "Date Answer Filed"
+                },
+                {
+                    "id": 20,
+                    "referenceKey": "ddpodot",
+                    "title": "Date Deposition Production of Documents Objected to"
+                },
+                {
+                    "id": 21,
+                    "referenceKey": "fsc",
+                    "title": "Final Status Conference"
+                },
+                {
+                    "id": 22,
+                    "referenceKey": "dmc",
+                    "title": "Date of Meet and Confer"
+                },  
+                {
+                    "id": 23,
+                    "referenceKey": "dfaop",
+                    "title": "Date of First Appearance by Opposing Party"
+                },
+                {
+                    "id": 14,
+                    "title": "< Add a triggering event >"
+                }
+            ]
+        }
+    },
+    {
+        "id": -8,
+        "key": "triggering-event-name",
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": -7,
+                        "itemId": 14
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of the triggering event for the rule",
+            "maxlength": 500,
+            "required": true
+        }
+    },
+    {
+        "id": 8,
+        "type": "textarea",
+        "key": "authority-link",
+        "conditions": null,
+        "data": {
+            "rows": 3,
+            "smallDescription": "Please paste a link to the the most official authority source (Such as the official government website for a statute or rule)",
+            "title": "Copy and paste links to the authority for this Deadline Rule",
+            "help": "An authority can be a State Code section, Case Law, Rules of Court, a court Department Rule, Federal Rules of Civil Procedure or a Reference Book",
+            "required": false,
+            "maxlength": 2000
+        }
+    },
+    {
+        "id": 9,
+        "type": "input-radio",
+        "key": "acceptable-methods-limit",
+        "conditions": null,
+        "data": {
+            "title": "Does this  Rule limit the acceptable Methods of Delivery or Service of a document (i.e. only service by regular mail, etc.)?",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Yes"
+                },
+                {
+                    "id": 2,
+                    "title": "No"
+                }
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "type": "input-checkbox",
+        "key": "delivery-methods-list",
+        "intend": true,
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 9,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Check all Methods of Delivery/Service available under this Rule",
+            "required": false,
+            "items": [
+                {
+                    "id": 7,
+                    "defaultChecked": true,
+                    "referenceKey": "e_filing",
+                    "title": "Electronic service (One Legal, etc.)"
+                },
+                {
+                    "id": 3,
+                    "referenceKey": "email",
+                    "defaultChecked": true,
+                    "title": "Email"
+                },
+                {
+                    "id": 4,
+                    "defaultChecked": true,
+                    "referenceKey": "fax",
+                    "title": "Fax"
+                },
+                {
+                    "id": 5,
+                    "defaultChecked": true,
+                    "referenceKey": "hand_delivery",
+                    "title": "Hand-delivery"
+                },
+                {
+                    "id": 2,
+                    "defaultChecked": true,
+                    "referenceKey": "overnight_mail",
+                    "title": "Overnight delivery"
+                },
+                {
+                    "id": 1,
+                    "defaultChecked": true,
+                    "referenceKey": "regular_mail",
+                    "title": "Regular mail"
+                },
+                {
+                    "id": 6,
+                    "defaultChecked": false,
+                    "referenceKey": "personal_service",
+                    "title": "Personal service"
+                },
+                {
+                    "id": 8,
+                    "rowUp": true,
+                    "defaultChecked": true,
+                    "referenceKey": "certified_mail",
+                    "title": "Certified mail"
+                },
+                {
+                    "id": 9,
+                    "defaultChecked": false,
+                    "referenceKey": "acknowledgement",
+                    "title": "Service of Summons by First Class Mail and Acknowledgement of Receipt of Summons"
+                }
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "type": "input-text",
+        "key": "another-delviery-method",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 9,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of any other allowed Method of Delivery for this document",
+            "maxlength": 200,
+            "required": false
+        }
+    },
+    {
+        "id": 12,
+        "type": "input-radio",
+        "key": "add-days-delivery",
+        "conditions": null,
+        "data": {
+            "pattern": {
+                "title": "Does the Rule add a number of days to the deadline based on how the $document is delivered or served (the Method of Delivery or Service)?",
+                "keys": {
+                    "document": {
+                        "elementId": 0
+                    }
+                }
+            },
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Yes"
+                },
+                {
+                    "id": 2,
+                    "title": "No"
+                }
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "key": "event-time",
+        "type": "input-radio",
+        "conditions": null,
+        "data": {
+            "title": "Is the Rule based on an event in the future (like a trial date) or an event in the past (like the date of service)?",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Event in the future"
+                },
+                {
+                    "id": 2,
+                    "title": "Event in the past"
+                }
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "key": "days-number-before",
+        "type": "input-number",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 14,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "How many days before the event is the deadline?",
+            "required": true,
+            "maxlength": 20
+        }
+    },
+    {
+        "id": 16,
+        "key": "days-number-after",
+        "type": "input-number",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 14,
+                        "itemId": 2
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "How many days after the event is the deadline?",
+            "required": true,
+            "maxlength": 20
+        }
+    },
+    {
+        "id": -16,
+        "type": "input-radio",
+        "key": "day-types",
+        "conditions": [
+            {
+                "rule": "OR",
+                "items": [
+                    {
+                        "elementId": 14,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 14,
+                        "itemId": 2
+                    } 
+                ]
+            }
+        ],
+        "data": {
+            "title": "What type of days are counted?",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "smallDescription": "only days the court is open",
+                    "title": "Court"
+                },
+                {
+                    "id": 2,
+                    "smallDescription": "all sequential days, including weekends and holidays",
+                    "title": "Calendar"
+                }
+            ]
+        }  
+    },
+    {
+        "id": 19,
+        "key": "best-practice",
+        "type": "textarea",
+        "conditions": null,
+        "data": {
+            "title": "Suggest a Best Practice for this Rule",
+            "required": false,
+            "maxlength": 2000
+        }
+    },
+    {
+        "id": 20,
+        "type": "input-checkbox",
+        "key": "visibility-scope",
+        "conditions": null,
+        "data": {
+            "title": "How should it be filtered?",
+            "required": false,
+            "items": [
+                {
+                    "id": 0,
+                    "referenceKey": "no_display:document_received",
+                    "title": "No Display - Doc Received"
+                },
+                {
+                    "id": 1,
+                    "referenceKey": "no_check:document_received",
+                    "title": "No Check - Doc Received"
+                },
+                {
+                    "id": 2,
+                    "referenceKey": "no_display:document_to_send",
+                    "title": "No Display - Doc to Send"
+                },
+                {
+                    "id": 3,
+                    "referenceKey": "no_check:document_to_send",
+                    "title": "No Check - Doc to Send"
+                }
+            ]
+        }
+    }
+]

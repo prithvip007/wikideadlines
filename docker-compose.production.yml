@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  app:
+    volumes:
+      - app-logs:/var/www/html/storage/logs
+volumes:
+  app-logs:
