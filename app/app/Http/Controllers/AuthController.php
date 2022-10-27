@@ -104,7 +104,7 @@ class AuthController extends Controller
 
         $this->validate($request, $rules);
 
-        // Verification::startVerification($request->input('email'));
+        Verification::startVerification($request->input('email'));
     }
 
     public function confirmEmailCode(Request $request)
@@ -116,11 +116,11 @@ class AuthController extends Controller
 
         $this->validate($request, $rules);
 
-        // $isValid = Verification::verify($request->input('email'), $request->input('code'));
+        $isValid = Verification::verify($request->input('email'), $request->input('code'));
 
-        // if ($isValid === false) {
-        //     throw ValidationException::withMessages(['code' => 'Code is not valid']);
-        // }
+        if ($isValid === false) {
+            throw ValidationException::withMessages(['code' => 'Code is not valid']);
+        }
 
         $user = User::firstOrCreate([
             'email' => $request->input('email')
