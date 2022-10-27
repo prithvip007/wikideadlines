@@ -1,0 +1,84 @@
+.share-buttons {
+    position: fixed;
+    top: 25%;
+    right: 0px;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    display: none;
+}
+
+.share-buttons__link, .share-buttons__link:hover, .share-buttons__link:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.share-buttons__link {
+    background-color: #7d7d7d;
+    width: 100%;
+    max-width: 45px;
+    height: 45px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 17px;
+    padding-right: 7px;
+    display: flex;
+    overflow: hidden;
+    transition: max-width 0.4s ease-out, padding-right 0.4s ease-out, border-radius 0.4s ease-out;
+    justify-content: center;
+}
+
+.share-buttons__link:hover {
+    max-width: 140px;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    padding-right: 17px;
+}
+
+.share-buttons__link .share-buttons__link-caption {
+    word-break: keep-all;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.share-buttons__link:first-child {
+    border-top-left-radius: 0.25rem;
+}
+
+.share-buttons__link:last-child {
+    border-bottom-left-radius: 0.25rem;
+}
+
+.share-buttons__link:hover .share-buttons__link-caption {
+
+}
+
+.share-buttons__link .fa {
+    margin-top: 2px;
+    font-size: 1.25rem;
+}
+
+.share-buttons__link .fa-envelope {
+    margin-top: 0px;
+}
+
+.share-buttons__link--fb {
+    background-color: #4267B2;
+}
+
+.share-buttons__link--tweeter {
+    background-color: #55acee;
+}
+
+.share-buttons__link--link {
+    background-color: #ff8100;
+}
+
+
+@media (min-width: 768px) {
+    .share-buttons {
+        display: flex;
+    }
+}
