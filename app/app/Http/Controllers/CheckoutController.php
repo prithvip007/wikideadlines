@@ -17,6 +17,8 @@ class CheckoutController extends Controller
         $this->validate($request, $rules);
 
         $user = Auth::guard()->user();
+        print_r($user);
+        exit("test");
 
         if (!$user->stripe_id) {
             $user->createAsStripeCustomer();
