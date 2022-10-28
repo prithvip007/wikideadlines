@@ -10,6 +10,8 @@ class CheckoutController extends Controller
 {
     public function create(Request $request)
     {
+        print_r($request);
+        exit("test");
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
