@@ -10,8 +10,6 @@ class CheckoutController extends Controller
 {
     public function create(Request $request)
     {
-        print_r($request);
-        exit("test");
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
@@ -19,8 +17,6 @@ class CheckoutController extends Controller
         $this->validate($request, $rules);
 
         $user = Auth::guard()->user();
-        print_r($user);
-        exit("test");
 
         if (!$user->stripe_id) {
             $user->createAsStripeCustomer();
