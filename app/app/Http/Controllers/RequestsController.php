@@ -188,6 +188,10 @@ class RequestsController extends Controller
 
 
         if ($savedUserRequest->type === 'document_type') {
+            echo "I'm here";
+            echo "<pre>";
+            print_r($savedUserRequest);
+            exit("tst");
             $addMoreDeadlinesMail = new AddMoreDeadlines(Auth::user(), $savedUserRequest);
             Mail::to($savedUserRequest->data['email'])
                 ->later(
