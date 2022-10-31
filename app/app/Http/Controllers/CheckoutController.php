@@ -29,9 +29,6 @@ class CheckoutController extends Controller
         }
 
         $plan = StripePlan::where('interval', $request->input('billing_plan'))->first();
-        echo "<pre>";
-        print_r($plan);
-        exit("bjbjk");
 
         $checkout_session = \Stripe\Checkout\Session::create([  
             'mode' => 'subscription',
@@ -42,7 +39,7 @@ class CheckoutController extends Controller
             'payment_method_types' => ['card'],
             'line_items' => [[
                 'quantity' => 1,
-                'price' => $plan->price_id
+                'price' => 'price_1KdEGkBPSJxq8f6f6vcXBlbP'
             ]],
             'subscription_data' => [
                 'metadata' => [
