@@ -1,0 +1,85 @@
+#toasts-container {
+    position: fixed;
+    z-index: 99999999;
+    right: 0px;
+    top: 0px;
+    padding: 15px;
+}
+
+.toast.toast-error {
+    background-color: #ff3535 !important;
+    color: white !important;
+}
+
+.toast.toast-error .close {
+    color: white !important;
+}
+
+.toast {
+    background-color: #fdff7b !important;
+    display: flex !important;
+}
+
+.toast.hide {
+    display: none !important;
+}
+
+.toast .toast-body {
+    flex-grow: 1;
+}
+
+.toast .close {
+    text-shadow: none;
+    height: auto;
+    margin-bottom: 0 !important;
+    padding-right: 0.75rem;
+}
+
+.toast .close:focus {
+    outline: 0;
+}
+
+.toast .close span {
+    vertical-align: 1px;
+}
+
+.toast-love {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+    animation: heartbeat 2s;
+    margin-top: -5rem;
+    margin-left: -5rem;
+    color: #e82323;
+    transform: scale(0);
+}
+
+.toast-love i.fa {
+    font-size: 10rem;
+}
+
+.toast-love span {
+    display: block;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0);
+    }
+    35% {
+        transform: scale(1);
+    }
+    55% {
+        transform: scale(0.8);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(0);
+    }
+}

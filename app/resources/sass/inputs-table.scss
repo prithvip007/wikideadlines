@@ -1,0 +1,17 @@
+.inputs-table {
+
+}
+
+.inputs-table > tbody > tr > td {
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.inputs-table > tbody > tr:not(:last-child) > td:first-child {
+    padding-right: 0.5rem;
+    padding-bottom: 0.7rem;
+}
+
+.inputs-table > tbody > tr:not(:last-child) > td:last-child {
+    padding-bottom: 0.7rem;
+}

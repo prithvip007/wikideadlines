@@ -1,0 +1,2505 @@
+[
+    {
+        "id": 1,
+        "type": "textarea",
+        "key": "document-title",
+        "conditions": null,
+        "data": {
+            "title": "Title of the Pleading or Document",
+            "placeholder": "Example: \"Answer\" or \"Demand for Production\"",
+            "maxlength": 200,
+            "rows": 3,
+            "required": true
+        }
+    },
+    {
+        "id": 2,
+        "type": "textarea",
+        "key": "short-description",
+        "conditions": null,
+        "data": {
+            "title": "Please enter a short description of the Document",
+            "placeholder": "Example: Response to a Complaint or Cross-Complaint",
+            "maxlength": 2000,
+            "rows": 5,
+            "required": false
+        }
+    },
+    {
+        "id": -2,
+        "type": "textarea",
+        "key": "keywords",
+        "conditions": null,
+        "data": {
+            "title": "Unique keywords to help a user find this document",
+            "placeholder": "Example: contest opposition reply",
+            "maxlength": 100,
+            "rows": 3,
+            "required": false
+        }
+    },
+    {
+        "id": -8349,
+        "type": "input-radio",
+        "key": "document-generator",
+        "conditions": null,
+        "data": {
+            "title": "Who generates and sends out this document?",
+            "required": false,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "The court clerk"
+                },
+                {
+                    "id": 2,
+                    "title": "Plaintiff or petitioner"
+                },
+                {
+                    "id": 3,
+                    "title": "Defendant or respondent"
+                },
+                {
+                    "id": 4,
+                    "title": "Either Plaintiff or Defendant (Petitioner or Respondent) as may be ordered be the court"
+                }
+            ]
+        }
+    },
+    {
+        "id": 37,
+        "type": "input-checkbox",
+        "key": "delivery-methods-list",
+        "conditions": null,
+        "intend": true,
+        "data": {
+            "spacing": {
+                "margin": {
+                    "top": 4
+                },
+                "padding": {
+                    "top": 2
+                }
+            },
+            "title": "Which of the following Methods of Delivery or Service are acceptable for this document (i.e. only service by regular mail, etc.)?",
+            "required": false,
+            "items": [
+                {
+                    "id": 7,
+                    "defaultChecked": true,
+                    "referenceKey": "e_filing",
+                    "title": "Electronic service (One Legal, etc.)"
+                },
+                {
+                    "id": 3,
+                    "referenceKey": "email",
+                    "defaultChecked": true,
+                    "title": "Email"
+                },
+                {
+                    "id": 4,
+                    "defaultChecked": true,
+                    "referenceKey": "fax",
+                    "title": "Fax"
+                },
+                {
+                    "id": 5,
+                    "defaultChecked": true,
+                    "referenceKey": "hand_delivery",
+                    "title": "Hand-delivery"
+                },
+                {
+                    "id": 2,
+                    "defaultChecked": true,
+                    "title": "Overnight delivery",
+                    "referenceKey": "overnight_mail"
+                },
+                {
+                    "id": 1,
+                    "defaultChecked": true,
+                    "referenceKey": "regular_mail",
+                    "title": "Regular mail"
+                },
+                {
+                    "id": 8,
+                    "rowUp": true,
+                    "defaultChecked": false,
+                    "referenceKey": "certified_mail",
+                    "title": "Certified mail"
+                },
+                {
+                    "id": 6,
+                    "defaultChecked": false,
+                    "title": "Personal service",
+                    "referenceKey": "personal_service"
+                },
+                {
+                    "id": 9,
+                    "defaultChecked": false,
+                    "referenceKey": "acknowledgement",
+                    "title": "Service of Summons by First Class Mail and Acknowledgement of Receipt of Summons"
+                }
+            ]
+        }
+    },
+    {
+        "id": 39,
+        "type": "input-text",
+        "conditions": null,
+        "data": {
+            "title": "Enter another allowed Method of Delivery for this Document",
+            "maxlength": 200,
+            "required": false
+        }
+    },
+    {
+        "id": 3,
+        "type": "input-radio",
+        "key": "jurisdiction",
+        "conditions": null,
+        "data": {
+            "title": "Jurisdiction (court system) where this Document is used",
+            "required": false,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Arbitration"
+                },
+                {
+                    "id": 2,
+                    "title": "Federal"
+                },
+                {
+                    "id": 3,
+                    "key": "jurisdiction-state",
+                    "title": "State"
+                },
+                {
+                    "id": 4,
+                    "key": "add-court-system",
+                    "title": "Add a dispute resolution forum"
+                }
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "type": "input-text",
+        "key": "jurisdiction-name",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 4
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another dispute resolution forum",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 5,
+        "type": "select",
+        "key": "largest-jurisdiction",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 3
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the largest jurisdiction where this Document is used?",
+            "placeholder": "Select a jurisdiction size",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "The entire State"
+                },
+                {
+                    "id": 2,
+                    "title": "A particular County, Province or Parish"
+                },
+                {
+                    "id": 3,
+                    "title": "A Single Litigation Section/Department in a County (ex: Personal Injury)"
+                },
+                {
+                    "id": 4,
+                    "title": "A Single Courthouse"
+                },
+                {
+                    "id": 5,
+                    "title": "A Single Department or Courtroom in a Courthouse"
+                },
+                {
+                    "id": 6,
+                    "title": "An Entire Appellate District (ex: 2nd Appellate District)"
+                },
+                {
+                    "id": 7,
+                    "title": "A Single Appellate Division (ex: 3rd Division)"
+                }
+            ]
+        }
+    },
+    {
+        "id": -5,
+        "type": "select",
+        "key": "state",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 5,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Select State",
+            "placeholder": "Select State from the list",
+            "required": true,
+            "defaultValue": "California",
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Alabama"
+                },
+                {
+                    "id": 2,
+                    "title": "Alaska"
+                },
+                {
+                    "id": 3,
+                    "title": "Arizona"
+                },
+                {
+                    "id": 4,
+                    "title": "Arkansas"
+                },
+                {
+                    "id": 5,
+                    "title": "California"
+                },
+                {
+                    "id": 6,
+                    "title": "Colorado"
+                },
+                {
+                    "id": 7,
+                    "title": "Connecticut"
+                },
+                {
+                    "id": 8,
+                    "title": "Delaware"
+                },
+                {
+                    "id": 9,
+                    "title": "Florida"
+                },
+                {
+                    "id": 10,
+                    "title": "Georgia"
+                },
+                {
+                    "id": 11,
+                    "title": "Hawaii"
+                },
+                {
+                    "id": 12,
+                    "title": "Idaho"
+                },
+                {
+                    "id": 13,
+                    "title": "Illinois"
+                },
+                {
+                    "id": 14,
+                    "title": "Indiana"
+                },
+                {
+                    "id": 15,
+                    "title": "Iowa"
+                },
+                {
+                    "id": 16,
+                    "title": "Kansas"
+                },
+                {
+                    "id": 17,
+                    "title": " Kentucky"
+                },
+                {
+                    "id": 18,
+                    "title": "Louisiana"
+                },
+                {
+                    "id": 19,
+                    "title": "Maine"
+                },
+                {
+                    "id": 20,
+                    "title": "Maryland"
+                },
+                {
+                    "id": 21,
+                    "title": "Massachusetts"
+                },
+                {
+                    "id": 22,
+                    "title": "Michigan"
+                },
+                {
+                    "id": 23,
+                    "title": "Minnesota"
+                },
+                {
+                    "id": 24,
+                    "title": "Mississippi"
+                },
+                {
+                    "id": 25,
+                    "title": "Missouri"
+                },
+                {
+                    "id": 26,
+                    "title": "Montana"
+                },
+                {
+                    "id": 27,
+                    "title": "Nebraska"
+                },
+                {
+                    "id": 28,
+                    "title": "Nevada"
+                },
+                {
+                    "id": 29,
+                    "title": "New Hampshire"
+                },
+                {
+                    "id": 30,
+                    "title": "New Jersey"
+                },
+                {
+                    "id": 31,
+                    "title": "New Mexico"
+                },
+                {
+                    "id": 32,
+                    "title": "New York"
+                },
+                {
+                    "id": 33,
+                    "title": "North Carolina"
+                },
+                {
+                    "id": 34,
+                    "title": "North Dakota"
+                },
+                {
+                    "id": 35,
+                    "title": "Ohio"
+                },
+                {
+                    "id": 36,
+                    "title": "Oklahoma"
+                },
+                {
+                    "id": 37,
+                    "title": "Oregon"
+                },
+                {
+                    "id": 38,
+                    "title": "Pennsylvania"
+                },
+                {
+                    "id": 39,
+                    "title": "Rhode Island"
+                },
+                {
+                    "id": 40,
+                    "title": "South Carolina"
+                },
+                {
+                    "id": 41,
+                    "title": "South Dakota"
+                },
+                {
+                    "id": 42,
+                    "title": "Tennessee"
+                },
+                {
+                    "id": 43,
+                    "title": "Texas"
+                },
+                {
+                    "id": 44,
+                    "title": "Utah"
+                },
+                {
+                    "id": 45,
+                    "title": "Vermont"
+                },
+                {
+                    "id": 46,
+                    "title": "Virginia"
+                },
+                {
+                    "id": 47,
+                    "title": "Washington"
+                },
+                {
+                    "id": 48,
+                    "title": "West Virginia"
+                },
+                {
+                    "id": 49,
+                    "title": "Wisconsin"
+                },
+                {
+                    "id": 50,
+                    "title": "Wyoming"
+                }
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "type": "select",
+        "key": "department-name",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 5,
+                        "itemId": 3
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of a section/department?",
+            "placeholder": "Select a section/department",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Personal injury"
+                },
+                {
+                    "id": 2,
+                    "title": "Business"
+                },
+                {
+                    "id": 3,
+                    "title": "Real Property"
+                },
+                {
+                    "id": 4,
+                    "title": "Complex Litigation"
+                },
+                {
+                    "id": 5,
+                    "title": "Writs & Receivers"
+                },
+                {
+                    "id": 6,
+                    "title": "Construction"
+                },
+                {
+                    "id": 7,
+                    "title": "< Add another section/department >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 5,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 6,
+                        "itemId": 7
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another section/department",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 8,
+        "type": "input-text",
+        "key": "courthouse-name",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 5,
+                        "itemId": 5
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of the Courthouse?",
+            "smallDescription": "i.e. Los Angeles Superior - Stanley Mosk, etc.",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 9,
+        "type": "input-text",
+        "key": "courtroom-designation",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 5,
+                        "itemId": 5
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the court department or courtroom designation (N-28, Dept 2, etc.)?",
+            "smallDescription": "ex: \"Dept C-66\" etc.",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 10,
+        "type": "select",
+        "key": "largest-federal-jurisdiction",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the largest federal jurisdiction where this document is used?",
+            "placeholder": "Select the largest applicable federal jurisdiction",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Entire Federal System (FRCP) Other than Bankruptcy"
+                },
+                {
+                    "id": 2,
+                    "title": "An Entire Bankruptcy District"
+                },
+                {
+                    "id": 3,
+                    "title": "A Single Bankruptcy Courtroom"
+                },
+                {
+                    "id": 4,
+                    "title": "A Single Federal District (Cal. Southern District)"
+                },
+                {
+                    "id": -4,
+                    "title": "A specific subject matter court"
+                },
+                {
+                    "id": 5,
+                    "title": "A Single Federal Courtroom"
+                },
+                {
+                    "id": 6,
+                    "title": "Federal Appellate"
+                },
+                {
+                    "id": -6,
+                    "title": "Courts with Appellate Jurisdiction over specific subject matter"
+                },
+                {
+                    "id": 7,
+                    "title": "Entire Federal Circuit (9th Circuit)"
+                },
+                {
+                    "id": 8,
+                    "title": "< Add a Federal Court >"
+                }
+            ]
+        }
+    },
+    {
+        "id": -10,
+        "type": "select",
+        "key": "specific-subject-matter-court",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 10,
+                        "itemId": -4
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of the specific subject matter court?",
+            "placeholder": "Select the specific subject matter court",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "US Tax Court"
+                },
+                {
+                    "id": 2,
+                    "title": "Patent Trial and Appeal Board"
+                },
+                {
+                    "id": 3,
+                    "title": "International Trade Commission"
+                },
+                {
+                    "id": 4,
+                    "title": "US Court of International Trade"
+                },
+                {
+                    "id": 5,
+                    "title": "US Court of Federal Claims"
+                },
+                {
+                    "id": 6,
+                    "title": "US Foreign Intelligence Surveillance Court"
+                },
+                {
+                    "id": 7,
+                    "title": "US bankruptcy courts"
+                },
+                {
+                    "id": 8,
+                    "title": "Trademark Trial and Appeal Board"
+                },
+                {
+                    "id": 9,
+                    "title": "US Merit Systems Protection Board"
+                },
+                {
+                    "id": 10,
+                    "title": "US Alien Terrorist Removal Court"
+                }
+            ]
+        }
+    },
+    {
+        "id": -11,
+        "type": "select",
+        "key": "court-with-appellate-jurisdiction",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 10,
+                        "itemId": -6
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of the court with Appellate Jurisdiction over specific subject matter?",
+            "placeholder": "Select the court",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "US Court of Appeals for the Federal Circuit"
+                },
+                {
+                    "id": 2,
+                    "title": "US Army Court of Criminal Appeals"
+                },
+                {
+                    "id": 3,
+                    "title": "Navy-Marine Corps Court of Criminal Appeals"
+                },
+                {
+                    "id": 4,
+                    "title": "Air Force Court of Criminal Appeals"
+                },
+                {
+                    "id": 5,
+                    "title": "Coast Guard Court of Criminal Appeals"
+                },
+                {
+                    "id": 6,
+                    "title": "US Court of Appeals for Veterans Claims"
+                },
+                {
+                    "id": 7,
+                    "title": "US Foreign Intelligence Surveillance Court of Review"
+                },
+                {
+                    "id": 8,
+                    "title": "US Court of Military Commission Review"
+                },
+                {
+                    "id": 9,
+                    "title": "Civilian Board of Contract Appeals"
+                },
+                {
+                    "id": 10,
+                    "title": "Armed Services Board of Contract Appeals"
+                },
+                {
+                    "id": 11,
+                    "title": "Postal Service Board of Contract Appeals"
+                },
+                {
+                    "id": 12,
+                    "title": "Office of Dispute Resolution for Acquisition"
+                },
+                {
+                    "id": 13,
+                    "title": "Board of Immigration Appeals"
+                },
+                {
+                    "id": 14,
+                    "title": "Board of Veterans' Appeals"
+                }
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 8
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another federal court",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 12,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 4
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of a federal district?",
+            "placeholder": "Select a federal district",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "District of Wyoming"
+                },
+                {
+                    "id": 2,
+                    "title": "Western District of Wisconsin"
+                },
+                {
+                    "id": 3,
+                    "title": "Eastern District of Wisconsin"
+                },
+                {
+                    "id": 4,
+                    "title": "Southern District of West Virginia"
+                },
+                {
+                    "id": 5,
+                    "title": "Northern District of West Virginia"
+                },
+                {
+                    "id": 6,
+                    "title": "Western District of Washington"
+                },
+                {
+                    "id": 7,
+                    "title": "Eastern District of Washington"
+                },
+                {
+                    "id": 8,
+                    "title": "Western District of Virginia"
+                },
+                {
+                    "id": 9,
+                    "title": "Eastern District of Virginia"
+                },
+                {
+                    "id": 10,
+                    "title": "District of the Virgin Islands"
+                },
+                {
+                    "id": 11,
+                    "title": "District of Vermont"
+                },
+                {
+                    "id": 12,
+                    "title": "District of Utah"
+                },
+                {
+                    "id": 13,
+                    "title": "Western District of Texas"
+                },
+                {
+                    "id": 14,
+                    "title": "Southern District of Texas"
+                },
+                {
+                    "id": 15,
+                    "title": "Northern District of Texas"
+                },
+                {
+                    "id": 16,
+                    "title": "Eastern District of Texas"
+                },
+                {
+                    "id": 17,
+                    "title": "Western District of Tennessee"
+                },
+                {
+                    "id": 18,
+                    "title": "Middle District of Tennessee"
+                },
+                {
+                    "id": 19,
+                    "title": "Eastern District of Tennessee"
+                },
+                {
+                    "id": 20,
+                    "title": "District of South Dakota"
+                },
+                {
+                    "id": 21,
+                    "title": "District of South Carolina"
+                },
+                {
+                    "id": 22,
+                    "title": "District of Rhode Island"
+                },
+                {
+                    "id": 23,
+                    "title": "District of Puerto Rico"
+                },
+                {
+                    "id": 24,
+                    "title": "Western District of Pennsylvania"
+                },
+                {
+                    "id": 25,
+                    "title": "Middle District of Pennsylvania"
+                },
+                {
+                    "id": 26,
+                    "title": "Eastern District of Pennsylvania"
+                },
+                {
+                    "id": 27,
+                    "title": "District of Oregon"
+                },
+                {
+                    "id": 28,
+                    "title": "Western District of Oklahoma"
+                },
+                {
+                    "id": 29,
+                    "title": "Northern District of Oklahoma"
+                },
+                {
+                    "id": 30,
+                    "title": "Eastern District of Oklahoma"
+                },
+                {
+                    "id": 31,
+                    "title": "Southern District of Ohio"
+                },
+                {
+                    "id": 32,
+                    "title": "Northern District of Ohio"
+                },
+                {
+                    "id": 33,
+                    "title": "District of the Northern Mariana Islands"
+                },
+                {
+                    "id": 34,
+                    "title": "District of North Dakota"
+                },
+                {
+                    "id": 35,
+                    "title": "Western District of North Carolina"
+                },
+                {
+                    "id": 36,
+                    "title": "Middle District of North Carolina"
+                },
+                {
+                    "id": 37,
+                    "title": "Eastern District of North Carolina"
+                },
+                {
+                    "id": 38,
+                    "title": "Western District of New York"
+                },
+                {
+                    "id": 39,
+                    "title": "Southern District of New York"
+                },
+                {
+                    "id": 40,
+                    "title": "Northern District of New York"
+                },
+                {
+                    "id": 41,
+                    "title": "Eastern District of New York"
+                },
+                {
+                    "id": 42,
+                    "title": "District of New Mexico"
+                },
+                {
+                    "id": 43,
+                    "title": "District of New Jersey"
+                },
+                {
+                    "id": 44,
+                    "title": "District of New Hampshire"
+                },
+                {
+                    "id": 45,
+                    "title": "District of Nevada"
+                },
+                {
+                    "id": 46,
+                    "title": "District of Nebraska"
+                },
+                {
+                    "id": 47,
+                    "title": "District of Montana"
+                },
+                {
+                    "id": 48,
+                    "title": "Western District of Missouri"
+                },
+                {
+                    "id": 49,
+                    "title": "Eastern District of Missouri"
+                },
+                {
+                    "id": 50,
+                    "title": "Southern District of Mississippi"
+                },
+                {
+                    "id": 51,
+                    "title": "Northern District of Mississippi"
+                },
+                {
+                    "id": 52,
+                    "title": "District of Minnesota"
+                },
+                {
+                    "id": 53,
+                    "title": "Western District of Michigan"
+                },
+                {
+                    "id": 54,
+                    "title": "Eastern District of Michigan"
+                },
+                {
+                    "id": 55,
+                    "title": "District of Massachusetts"
+                },
+                {
+                    "id": 56,
+                    "title": "District of Maryland"
+                },
+                {
+                    "id": 57,
+                    "title": "District of Maine"
+                },
+                {
+                    "id": 58,
+                    "title": "Western District of Louisiana"
+                },
+                {
+                    "id": 59,
+                    "title": "Middle District of Louisiana"
+                },
+                {
+                    "id": 60,
+                    "title": "Eastern District of Louisiana"
+                },
+                {
+                    "id": 61,
+                    "title": "Western District of Kentucky"
+                },
+                {
+                    "id": 62,
+                    "title": "Eastern District of Kentucky"
+                },
+                {
+                    "id": 63,
+                    "title": "District of Kansas"
+                },
+                {
+                    "id": 64,
+                    "title": "Southern District of Iowa"
+                },
+                {
+                    "id": 65,
+                    "title": "Northern District of Iowa"
+                },
+                {
+                    "id": 66,
+                    "title": "Southern District of Indiana"
+                },
+                {
+                    "id": 67,
+                    "title": "Northern District of Indiana"
+                },
+                {
+                    "id": 68,
+                    "title": "Southern District of Illinois"
+                },
+                {
+                    "id": 69,
+                    "title": "Northern District of Illinois"
+                },
+                {
+                    "id": 70,
+                    "title": "Central District of Illinois"
+                },
+                {
+                    "id": 71,
+                    "title": "District of Idaho"
+                },
+                {
+                    "id": 72,
+                    "title": "District of Hawaii"
+                },
+                {
+                    "id": 73,
+                    "title": "District of Guam"
+                },
+                {
+                    "id": 74,
+                    "title": "Southern District of Georgia"
+                },
+                {
+                    "id": 75,
+                    "title": "Northern District of Georgia"
+                },
+                {
+                    "id": 76,
+                    "title": "Middle District of Georgia"
+                },
+                {
+                    "id": 77,
+                    "title": "Southern District of Florida"
+                },
+                {
+                    "id": 78,
+                    "title": "Northern District of Florida"
+                },
+                {
+                    "id": 79,
+                    "title": "Middle District of Florida"
+                },
+                {
+                    "id": 80,
+                    "title": "District of Columbia"
+                },
+                {
+                    "id": 81,
+                    "title": "District of Delaware"
+                },
+                {
+                    "id": 82,
+                    "title": "District of Connecticut"
+                },
+                {
+                    "id": 83,
+                    "title": "District of Colorado"
+                },
+                {
+                    "id": 84,
+                    "title": "Southern District of California"
+                },
+                {
+                    "id": 85,
+                    "title": "Northern District of California"
+                },
+                {
+                    "id": 86,
+                    "title": "Eastern District of California"
+                },
+                {
+                    "id": 87,
+                    "title": "Central District of California"
+                },
+                {
+                    "id": 88,
+                    "title": "Western District of Arkansas"
+                },
+                {
+                    "id": 89,
+                    "title": "Eastern District of Arkansas"
+                },
+                {
+                    "id": 90,
+                    "title": "District of Arizona"
+                },
+                {
+                    "id": 91,
+                    "title": "District of Alaska"
+                },
+                {
+                    "id": 92,
+                    "title": "Southern District of Alabama"
+                },
+                {
+                    "id": 93,
+                    "title": "Northern District of Alabama"
+                },
+                {
+                    "id": 94,
+                    "title": "Middle District of Alabama"
+                }
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 5
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of a federal courtroom?",
+            "placeholder": "Select a federal courtroom",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "< Add another federal courtroom >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 5
+                    },
+                    {
+                        "elementId": 14,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another federal courtroom",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 16,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 2
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of a bankruptcy district?",
+            "placeholder": "Select a bankruptcy district",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Alabama Middle"
+                },
+                {
+                    "id": 2,
+                    "title": "Alabama Northern"
+                },
+                {
+                    "id": 3,
+                    "title": "Alabama Southern"
+                },
+                {
+                    "id": 4,
+                    "title": "Alaska"
+                },
+                {
+                    "id": 5,
+                    "title": "Arizona"
+                },
+                {
+                    "id": 6,
+                    "title": "Arkansas Eastern & Western"
+                },
+                {
+                    "id": 7,
+                    "title": "California Central"
+                },
+                {
+                    "id": 8,
+                    "title": "California Eastern"
+                },
+                {
+                    "id": 9,
+                    "title": "California Northern"
+                },
+                {
+                    "id": 10,
+                    "title": "California Southern"
+                },
+                {
+                    "id": 11,
+                    "title": "Colorado"
+                },
+                {
+                    "id": 12,
+                    "title": "Connecticut"
+                },
+                {
+                    "id": 13,
+                    "title": "Delaware"
+                },
+                {
+                    "id": 14,
+                    "title": "District of Columbia"
+                },
+                {
+                    "id": 15,
+                    "title": "Florida Middle"
+                },
+                {
+                    "id": 16,
+                    "title": "Florida Northern"
+                },
+                {
+                    "id": 17,
+                    "title": "Florida Southern"
+                },
+                {
+                    "id": 18,
+                    "title": "Georgia Middle"
+                },
+                {
+                    "id": 19,
+                    "title": "Georgia Northern"
+                },
+                {
+                    "id": 20,
+                    "title": "Georgia Southern"
+                },
+                {
+                    "id": 21,
+                    "title": "Guam"
+                },
+                {
+                    "id": 23,
+                    "title": "Hawaii"
+                },
+                {
+                    "id": 24,
+                    "title": "Idaho"
+                },
+                {
+                    "id": 25,
+                    "title": "Illinois Central"
+                },
+                {
+                    "id": 26,
+                    "title": "Illinois Northern"
+                },
+                {
+                    "id": 27,
+                    "title": "Illinois Southern"
+                },
+                {
+                    "id": 28,
+                    "title": "Indiana Northern"
+                },
+                {
+                    "id": 29,
+                    "title": "Indiana Southern"
+                },
+                {
+                    "id": 30,
+                    "title": "Iowa Northern"
+                },
+                {
+                    "id": 31,
+                    "title": "Iowa Southern"
+                },
+                {
+                    "id": 32,
+                    "title": "Kansas"
+                },
+                {
+                    "id": 33,
+                    "title": "Kentucky Eastern"
+                },
+                {
+                    "id": 34,
+                    "title": "Kentucky Western"
+                },
+                {
+                    "id": 35,
+                    "title": "Louisiana Eastern"
+                },
+                {
+                    "id": 36,
+                    "title": "Louisiana Middle"
+                },
+                {
+                    "id": 37,
+                    "title": "Louisiana Western"
+                },
+                {
+                    "id": 38,
+                    "title": "Maine"
+                },
+                {
+                    "id": 39,
+                    "title": "Maryland"
+                },
+                {
+                    "id": 40,
+                    "title": "Massachusetts"
+                },
+                {
+                    "id": 41,
+                    "title": "Michigan Eastern"
+                },
+                {
+                    "id": 42,
+                    "title": "Michigan Western"
+                },
+                {
+                    "id": 43,
+                    "title": "Minnesota"
+                },
+                {
+                    "id": 44,
+                    "title": "Mississippi Northern"
+                },
+                {
+                    "id": 45,
+                    "title": "Mississippi Southern"
+                },
+                {
+                    "id": 46,
+                    "title": "Missouri Eastern"
+                },
+                {
+                    "id": 47,
+                    "title": "Missouri Western"
+                },
+                {
+                    "id": 48,
+                    "title": "Montana"
+                },
+                {
+                    "id": 49,
+                    "title": "Nebraska"
+                },
+                {
+                    "id": 50,
+                    "title": "Nevada"
+                },
+                {
+                    "id": 51,
+                    "title": "New Hampshire"
+                },
+                {
+                    "id": 52,
+                    "title": "New Jersey"
+                },
+                {
+                    "id": 53,
+                    "title": "New Mexico"
+                },
+                {
+                    "id": 54,
+                    "title": "New York Eastern"
+                },
+                {
+                    "id": 55,
+                    "title": "New York Northern"
+                },
+                {
+                    "id": 56,
+                    "title": "New York Southern"
+                },
+                {
+                    "id": 57,
+                    "title": "New York Western"
+                },
+                {
+                    "id": 58,
+                    "title": "North Carolina Eastern"
+                },
+                {
+                    "id": 59,
+                    "title": "North Carolina Middle"
+                },
+                {
+                    "id": 60,
+                    "title": "North Carolina Western"
+                },
+                {
+                    "id": 61,
+                    "title": "North Dakota"
+                },
+                {
+                    "id": 62,
+                    "title": "Ohio Northern"
+                },
+                {
+                    "id": 63,
+                    "title": "Ohio Southern"
+                },
+                {
+                    "id": 64,
+                    "title": "Oklahoma Eastern"
+                },
+                {
+                    "id": 65,
+                    "title": "Oklahoma Northern"
+                },
+                {
+                    "id": 66,
+                    "title": "Oklahoma Western"
+                },
+                {
+                    "id": 67,
+                    "title": "Oregon"
+                },
+                {
+                    "id": 68,
+                    "title": "Pennsylvania Eastern"
+                },
+                {
+                    "id": 69,
+                    "title": "Pennsylvania Middle"
+                },
+                {
+                    "id": 70,
+                    "title": "Pennsylvania Western"
+                },
+                {
+                    "id": 71,
+                    "title": "Puerto Rico"
+                },
+                {
+                    "id": 72,
+                    "title": "Rhode Island"
+                },
+                {
+                    "id": 73,
+                    "title": "South Carolina"
+                },
+                {
+                    "id": 74,
+                    "title": "South Dakota"
+                },
+                {
+                    "id": 75,
+                    "title": "Tennessee Eastern"
+                },
+                {
+                    "id": 76,
+                    "title": "Tennessee Middle"
+                },
+                {
+                    "id": 77,
+                    "title": "Tennessee Western"
+                },
+                {
+                    "id": 78,
+                    "title": "Texas Eastern"
+                },
+                {
+                    "id": 79,
+                    "title": "Texas Northern"
+                },
+                {
+                    "id": 80,
+                    "title": "Texas Southern"
+                },
+                {
+                    "id": 81,
+                    "title": "Texas Western"
+                },
+                {
+                    "id": 82,
+                    "title": "Utah"
+                },
+                {
+                    "id": 83,
+                    "title": "Vermont"
+                },
+                {
+                    "id": 84,
+                    "title": "Virginia Eastern"
+                },
+                {
+                    "id": 85,
+                    "title": "Virginia Western"
+                },
+                {
+                    "id": 86,
+                    "title": "Washington Eastern"
+                },
+                {
+                    "id": 87,
+                    "title": "Washington Western"
+                },
+                {
+                    "id": 88,
+                    "title": "West Virginia Northern"
+                },
+                {
+                    "id": 89,
+                    "title": "West Virginia Southern"
+                },
+                {
+                    "id": 90,
+                    "title": "Wisconsin Eastern"
+                },
+                {
+                    "id": 91,
+                    "title": "Wisconsin Western"
+                },
+                {
+                    "id": 92,
+                    "title": "Wyoming"
+                },
+                {
+                    "id": 93,
+                    "title": "<< Add a Bankruptcy District Court >>"
+                }
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 16,
+                        "itemId": 93
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another bankruptcy district",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 18,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 3
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of a bankruptcy courtroom?",
+            "placeholder": "Select a bankruptcy courtroom",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "< Add another bankruptcy courtroom >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 10,
+                        "itemId": 3
+                    },
+                    {
+                        "elementId": 18,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another bankruptcy courtroom",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 20,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of an arbitration provider?",
+            "placeholder": "Select an arbitration provider",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "American Arbitration Association (AAA)"
+                },
+                {
+                    "id": 2,
+                    "title": "Judicial Arbitration and Mediation (JAMS)"
+                },
+                {
+                    "id": 3,
+                    "title": "< Add another arbitration provider >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 21,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 20,
+                        "itemId": 3
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another arbitration provider",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 22,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 20,
+                        "itemId": 1
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of AAA Arbitration Section?",
+            "placeholder": "Select AAA Arbitration Section",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "American Arbitration Association - Consumer Arbitration Documents [AAA]"
+                },
+                {
+                    "id": 2,
+                    "title": "American Arbitration Association - Consumer Arbitration Documents (Non-Binding) [AAA]"
+                },
+                {
+                    "id": 3,
+                    "title": "American Arbitration Association - Commercial Dispute Resolution (Consumer) [AAA]"
+                },
+                {
+                    "id": 4,
+                    "title": "American Arbitration Association - Commercial Dispute Resolution (Expedited Consumer) [AAA]"
+                },
+                {
+                    "id": 5,
+                    "title": "American Arbitration Association - Construction Industry Dispute Resolution (Consumer) [AAA]"
+                },
+                {
+                    "id": 6,
+                    "title": "American Arbitration Association - Construction Industry - Consumer (Fast Track) [AAA]"
+                },
+                {
+                    "id": 7,
+                    "title": "American Arbitration Association - IDRC International Dispute Resolution Documents (before 6/1/14 - Consumer) [AAA]"
+                },
+                {
+                    "id": 8,
+                    "title": "American Arbitration Association - Professional Accounting and Related Services (filed before 2/1/15 - Consumer) [AAA]"
+                },
+                {
+                    "id": 9,
+                    "title": "American Arbitration Association - Professional Accounting and Related (filed before 2/1/15 - Expedited Services - Consumer) [AAA]"
+                },
+                {
+                    "id": 10,
+                    "title": "American Arbitration Association - Real Estate Arbitration Documents (Consumer) [AAA]"
+                },
+                {
+                    "id": 11,
+                    "title": "AAA Dispute Resolution Board Hearing Documents and Procedures"
+                },
+                {
+                    "id": 12,
+                    "title": "AAA Dispute Resolution Board Operating Procedures"
+                },
+                {
+                    "id": 13,
+                    "title": "AAA Domain Name Disputes Supplementary Documents"
+                },
+                {
+                    "id": 14,
+                    "title": "AAA Healthcare Payor Provider Arbitration Documents and Mediation Procedures"
+                },
+                {
+                    "id": 15,
+                    "title": "AAA Medicare Demonstration Project Documents - MA"
+                },
+                {
+                    "id": 16,
+                    "title": "AAA Medicare Demonstration Project Documents - NY"
+                },
+                {
+                    "id": 17,
+                    "title": "AAA New Jersey Residential Construction Lien Arbitration Documents"
+                },
+                {
+                    "id": 18,
+                    "title": "AAA Nexus Disputes Supplementary Procedures"
+                },
+                {
+                    "id": 19,
+                    "title": "AAA Optional Appellate Arbitration Documents"
+                },
+                {
+                    "id": 20,
+                    "title": "AAA-ICDR International Dispute Resolution Procedures"
+                },
+                {
+                    "id": 21,
+                    "title": "Accounting and Related Services Arbitration Documents and Mediation Procedures"
+                },
+                {
+                    "id": 22,
+                    "title": "American Arbitration Association Supplementary Procedures for the Arbitration of Olympic Sport Disputes"
+                },
+                {
+                    "id": 23,
+                    "title": "Canadian Dispute Resolution Procedures (Including Mediation and Arbitration Documents) — English"
+                },
+                {
+                    "id": 24,
+                    "title": "Canadian Dispute Resolution Procedures (Including Mediation and Arbitration Documents) — French"
+                },
+                {
+                    "id": 25,
+                    "title": "Commercial Arbitration Documents and Mediation Procedures"
+                },
+                {
+                    "id": 26,
+                    "title": "Construction Arbitration Documents and Mediation Procedures"
+                },
+                {
+                    "id": 27,
+                    "title": "Construction Industry Initial Decision Maker (IDM) Procedures"
+                },
+                {
+                    "id": 28,
+                    "title": "Consumer Arbitration Documents"
+                },
+                {
+                    "id": 29,
+                    "title": "Election Arbitration Documents"
+                },
+                {
+                    "id": 30,
+                    "title": "Employee Benefit Plan Claims Arbitration Documents"
+                },
+                {
+                    "id": 31,
+                    "title": "Employment Arbitration Documents and Mediation Procedures"
+                },
+                {
+                    "id": 32,
+                    "title": "Final Offer Supplementary Arbitration Procedures"
+                },
+                {
+                    "id": 33,
+                    "title": "Grievance Mediation Procedures"
+                },
+                {
+                    "id": 34,
+                    "title": "gTLD Dispute Resolution Procedures"
+                },
+                {
+                    "id": 35,
+                    "title": "Home Construction Arbitration Documents and Mediation Procedures"
+                },
+                {
+                    "id": 36,
+                    "title": "ICDR Procedures for Final Review of Perceived Inconsistent or Unreasonable String Confusion Objection Expert Determinations"
+                },
+                {
+                    "id": 37,
+                    "title": "Illinois Uninsured/Underinsured Motorist Arbitration and Mediation Documents"
+                },
+                {
+                    "id": 38,
+                    "title": "Impartial Umpire Documents Employee Benefit Trust Funds"
+                },
+                {
+                    "id": 39,
+                    "title": "Inter-American Commercial Arbitration Commission Documents - English"
+                },
+                {
+                    "id": 40,
+                    "title": "Interim Supplementary Procedures for Internet Corporation for Assigned Names and Numbers (ICANN) Independent Review Process"
+                },
+                {
+                    "id": 41,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - Arabic"
+                },
+                {
+                    "id": 42,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - Chinese"
+                },
+                {
+                    "id": 43,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - English"
+                },
+                {
+                    "id": 44,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - French"
+                },
+                {
+                    "id": 45,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - German"
+                },
+                {
+                    "id": 46,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - Italian"
+                },
+                {
+                    "id": 47,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - Portuguese"
+                },
+                {
+                    "id": 48,
+                    "title": "International Dispute Resolution Procedures (Including Mediation and Arbitration Documents) - Spanish"
+                },
+                {
+                    "id": 49,
+                    "title": "Judicial Settlement Conference Procedures"
+                },
+                {
+                    "id": 50,
+                    "title": "Labor Arbitration Documents"
+                },
+                {
+                    "id": 51,
+                    "title": "Large, Complex Commercial Disputes Procedures with Commentary"
+                },
+                {
+                    "id": 52,
+                    "title": "Minnesota Documents of No-Fault Arbitration Procedure"
+                },
+                {
+                    "id": 53,
+                    "title": "Multiemployer Pension Plan Arbitration Documents for Withdrawal Liability Disputes"
+                },
+                {
+                    "id": 54,
+                    "title": "National Patent Board Non-Binding Arbitration Documents"
+                },
+                {
+                    "id": 55,
+                    "title": "Non-Binding Consumer Arbitration Documents"
+                },
+                {
+                    "id": 56,
+                    "title": "Procedures for Cases under the UNCITRAL Arbitration Documents"
+                },
+                {
+                    "id": 57,
+                    "title": "Procedures for New York State No-Fault Master Arbitration"
+                },
+                {
+                    "id": 58,
+                    "title": "Resolution of Intra-Industry U.S. Reinsurance and Insurance Disputes Supplementary Procedures"
+                },
+                {
+                    "id": 59,
+                    "title": "Resolution of Patent Disputes Supplementary Documents"
+                },
+                {
+                    "id": 60,
+                    "title": "Documents for Arbitration of No-Fault Disputes in the State of NY"
+                },
+                {
+                    "id": 61,
+                    "title": "Documents for Arbitration of Supplementary Uninsured/Underinsured Motorist"
+                },
+                {
+                    "id": 62,
+                    "title": "Documents for Impartial Determination of Union Fees"
+                },
+                {
+                    "id": 63,
+                    "title": "Documents for NY Workers' Compensation Health Insurers' Match Program (HIMP)"
+                },
+                {
+                    "id": 64,
+                    "title": "Supplementary Documents for Class Arbitrations"
+                },
+                {
+                    "id": 65,
+                    "title": "Supplementary Documents for Fixed Time and Cost Construction Arbitration"
+                },
+                {
+                    "id": 66,
+                    "title": "Wireless Industry Arbitration Documents"
+                },
+                {
+                    "id": 67,
+                    "title": "< Add another AAA arbitration section >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 23,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 20,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 22,
+                        "itemId": 67
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another AAA arbitration section",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 24,
+        "type": "select",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 20,
+                        "itemId": 2
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the name of JAMS Arbitration Section?",
+            "placeholder": "Select JAMS Arbitration Section",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Comprehensive arbitration documents and procedures [JAMS]"
+                },
+                {
+                    "id": 2,
+                    "title": "Commercial"
+                },
+                {
+                    "id": 3,
+                    "title": "Labor"
+                },
+                {
+                    "id": 4,
+                    "title": "Consumer"
+                },
+                {
+                    "id": 5,
+                    "title": "Employment arbitration documents and procedures [JAMS]"
+                },
+                {
+                    "id": 6,
+                    "title": "Engineering and construction arbitration documents and procedures [JAMS]"
+                },
+                {
+                    "id": 7,
+                    "title": "International arbitration documents [JAMS]"
+                },
+                {
+                    "id": 8,
+                    "title": "Optional arbitration appeal procedure [JAMS]"
+                },
+                {
+                    "id": 9,
+                    "title": "Streamlined arbitration documents and procedures [JAMS]"
+                },
+                {
+                    "id": 10,
+                    "title": "< Add another JAMS arbitration section >"
+                }
+            ]
+        }
+    },
+    {
+        "id": 25,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 1
+                    },
+                    {
+                        "elementId": 20,
+                        "itemId": 2
+                    },
+                    {
+                        "elementId": 24,
+                        "itemId": 10
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "Type the name of another JAMS arbitration section",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": -26,
+        "type": "input-text",
+        "conditions": [
+            {
+                "rule": "AND",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 4
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the court where this document is used?",
+            "maxlength": 200,
+            "required": true
+        }
+    },
+    {
+        "id": 26,
+        "type": "select",
+        "conditions":  [
+            {
+                "rule": "OR",
+                "items": [
+                    {
+                        "elementId": 3,
+                        "itemId": 2
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "title": "What is the court where this document is used?",
+            "placeholder": "Select the court",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "U.S. District Court"
+                },
+                {
+                    "id": 2,
+                    "title": "U.S. Court of International Trade"
+                },
+                {
+                    "id": 3,
+                    "title": "U.S. Court of Federal Claims"
+                },
+                {
+                    "id": 4,
+                    "title": "U.S. Bankruptcy Court"
+                },
+                {
+                    "id": 5,
+                    "title": "U.S. Bankruptcy Appellate Panel"
+                },
+                {
+                    "id": 6,
+                    "title": "U.S. Court of Appeals for Veterans Claims"
+                },
+                {
+                    "id": 7,
+                    "title": "U.S. Court of Appeals for the Armed Forces"
+                },
+                {
+                    "id": 8,
+                    "title": "U.S. Tax Court"
+                },
+                {
+                    "id": 9,
+                    "title": "U.S. Court of Appeal"
+                },
+                {
+                    "id": 10,
+                    "title": "U.S. Supreme Court"
+                }
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "type": "multiselect",
+        "conditions": null,
+        "data": {
+            "title": "What is the triggering event used to calculate the deadline for this document?",
+            "placeholder": "Select events",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Proof of Service Date",
+                    "referenceKey": "dps",
+                    "smallDescription": "i.e. Date Document Mailed, faxed, etc."
+                },
+                {
+                    "id": 2,
+                    "title": "Date Document Served",
+                    "referenceKey": "dds",
+                    "smallDescription": "accounting for Delivery Method"
+                },
+                {
+                    "id": 3,
+                    "referenceKey": "fcd",
+                    "title": "Date document filed with court"
+                },
+                {
+                    "id": 4,
+                    "referenceKey": "dcf",
+                    "title": "Date Complaint or Cross-Complaint Filed"
+                },
+                {
+                    "id": 5,
+                    "referenceKey": "dcc",
+                    "title": "Date Service of the Complaint or Cross-Complaint was completed"
+                },
+                {
+                    "id": 6,
+                    "referenceKey": "dfcmch",
+                    "title": "Date of First Case Management Conference Hearing"
+                },
+                {
+                    "id": 7,
+                    "smallDescription": "other than a Case Management Conference",
+                    "referenceKey": "hd",
+                    "title": "Hearing Date"
+                },
+                {
+                    "id": 8,
+                    "referenceKey": "ftds",
+                    "title": "First Trial Date Set"
+                },
+                {
+                    "id": 9,
+                    "referenceKey": "tasd",
+                    "title": "Trial or Arbitration Starting Date"
+                },
+                {
+                    "id": 10,
+                    "referenceKey": "lad",
+                    "title": "Last Date Arbitration Conducted"
+                },
+                {
+                    "id": 11,
+                    "smallDescription": "other than an order or judgment",
+                    "referenceKey": "ddsc",
+                    "title": "Date Document Signed by Court"
+                },
+                {
+                    "id": 12,
+                    "referenceKey": "doorjsbc",
+                    "title": "Date Order or Judgment Signed by Court"
+                },
+                {
+                    "id": 13,
+                    "referenceKey": "dnmbc",
+                    "title": "Date Any Notice Mailed by Court "
+                },
+                {
+                    "id": 15,
+                    "referenceKey": "dsnejk",
+                    "title": "Date of Service of \"Notice of Entry\" of Judgment by Clerk"
+                },
+                {
+                    "id": 16,
+                    "referenceKey": "dcdr",
+                    "title": "Date of Completion of Deposition Record"
+                },
+                {
+                    "id": 17,
+                    "referenceKey": "dlpr",
+                    "title": "Date lis pendens is recorded"
+                },
+                {
+                    "id": 18,
+                    "referenceKey": "daafwcoc",
+                    "title": "Date arbitration award is filed with the clerk of the court"
+                },
+                {
+                    "id": 19,
+                    "referenceKey": "daf",
+                    "title": "Date Answer Filed"
+                },
+                {
+                    "id": 20,
+                    "referenceKey": "ddpodot",
+                    "title": "Date Deposition Production of Documents Objected to"
+                },
+                {
+                    "id": 21,
+                    "referenceKey": "fsc",
+                    "title": "Final Status Conference"
+                },
+                {
+                    "id": 22,
+                    "referenceKey": "dmc",
+                    "title": "Date of Meet and Confer"
+                },
+                {
+                    "id": 23,
+                    "referenceKey": "dfaop",
+                    "title": "Date of First Appearance by Opposing Party"
+                }
+            ]
+        }
+    },
+    {
+        "id": 27,
+        "type": "textarea",
+        "key": "best-practices",
+        "conditions": null,
+        "data": {
+            "title": ["Enter any best practices associated with this Document", "(including links to forms, etc.)"],
+            "smallDescription": "i.e. \"It's best to use form CV-222 with this document\"",
+            "required": false,
+            "maxlength": 3000
+        }
+    },
+    {
+        "id": -27,
+        "type": "input-radio",
+        "key": "standard-motion-briefing",
+        "conditions": null,
+        "data": {
+            "defaultValue": "No",
+            "title": "Add standard 16-9-5 motion deadline rules?",
+            "help": "When checked, deadline rules for the motion, opposition and reply filing and service, along with the hearing date, are automatically created.",
+            "required": true,
+            "items": [
+                {
+                    "id": 1,
+                    "title": "Yes"
+                },
+                {
+                    "id": 2,
+                    "title": "No"
+                }
+            ]
+        }
+    }
+]

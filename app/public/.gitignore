@@ -1,0 +1,7 @@
+css
+fonts
+js
+mix-manifest.json
+
+# if this file missing, then telescope will throw an exception
+!vendor/telescope/mix-manifest.json

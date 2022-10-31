@@ -1,0 +1,20 @@
+.flatpickr-calendar {
+    -webkit-box-shadow: 1px 0 0 #dadfe3, -1px 0 0 #dadfe3, 0 1px 0 #dadfe3, 0 -1px 0 #dadfe3, 0 3px 13px rgba(0, 0, 0, .08);
+    box-shadow: 1px 0 0 #dadfe3, -1px 0 0 #dadfe3, 0 1px 0 #dadfe3, 0 -1px 0 #dadfe3, 0 3px 13px rgba(0, 0, 0, .08);
+}
+
+.flatpickr-calendar.arrowTop {
+    margin-top: 5px;
+}
+
+.flatpickr-calendar.arrowBottom {
+    margin-top: -5px;
+}
+
+.holiday-warning + .flatpickr-input {
+    border-color: #ffc107 !important;
+}
+
+.text-holiday-warning {
+    color: #ffc107 !important;
+}

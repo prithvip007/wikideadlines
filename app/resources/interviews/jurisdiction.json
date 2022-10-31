@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "type": "input-text",
+        "key": "jurisdiction-name",
+        "conditions": null,
+        "data": {
+            "title": "Type the name of another jurisdiction (court system)",
+            "maxlength": 200,
+            "required": true
+        }
+    }
+]

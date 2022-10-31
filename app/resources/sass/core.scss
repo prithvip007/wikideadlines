@@ -1,0 +1,92 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+#app, main {
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+nav {
+    position: absolute !important;
+    width: 100%;
+    z-index: 1;
+}
+
+main {
+    padding-top: calc(51px + 1.5rem);
+    padding-bottom: 1.5rem;
+}
+
+.container_mw600 {
+    max-width: 600px;
+}
+
+.container_mw620 {
+    max-width: 620px;
+}
+
+.container_mw700 {
+    max-width: 700px;
+}
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+}
+
+.alert-wide {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.alert-squared {
+    border-radius: 0px;
+}
+
+.flex-basis-0 {
+    flex-basis: 0;
+}
+
+.flex-basis-auto {
+    flex-basis: 0;
+}
+
+.page-header {
+    margin-bottom: 0.5rem;
+}
+
+.pagination-container .pagination {
+    flex-wrap: wrap;
+}
+
+.nav-light .nav-link:hover, .navbar-light .nav-link:focus {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-light .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-light .active > .nav-link {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.card-m {
+    box-shadow: 0px 4px 20px rgb(77 166 186 / 38%);
+    border-radius: 20px;
+}
+
+.modal-content .card-m {
+    border-radius: 0;
+    box-shadow: none;
+}
+
