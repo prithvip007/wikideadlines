@@ -14,7 +14,9 @@ class UserController extends Controller
         $id = (int) $request->id;
 
         $user = User::withCount('calculations')->findOrFail($id);
-
+        echo "<pre>";
+        print_r($user->roles);
+        exit("fnkj");
         return view('dashboard.pages.user', [ 'user' => $user ]);
     }
 
