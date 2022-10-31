@@ -29,8 +29,11 @@ class CheckoutController extends Controller
         }
 
         $plan = StripePlan::where('interval', $request->input('billing_plan'))->first();
+        echo "<pre>";
+        print_r($plan);
+        exit("bjbjk");
 
-        $checkout_session = \Stripe\Checkout\Session::create([
+        $checkout_session = \Stripe\Checkout\Session::create([  
             'mode' => 'subscription',
             'success_url' => route('payment.success') . '?session_id={CHECKOUT_SESSION_ID}',
             'cancel_url' => route('payment.fail'),
