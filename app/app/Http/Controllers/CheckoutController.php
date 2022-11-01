@@ -39,7 +39,7 @@ class CheckoutController extends Controller
             'payment_method_types' => ['card'],
             'line_items' => [[
                 'quantity' => 1,
-                'price' => 'price_1LsOnrED3hGHDRI5htPdjA75'
+                'price' => $plan->price_id
             ]],
             'subscription_data' => [
                 'metadata' => [
