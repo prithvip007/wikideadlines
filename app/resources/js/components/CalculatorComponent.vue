@@ -69,7 +69,7 @@
                             v-if="canChangeJurisdiction === false"
                             data-toggle="tooltip"
                             data-placement="top"
-                            title="Double click the disabled element in order to change its value"
+                          
                             class="fa fa-question-circle-o help ml-1"
                         ></i>
                         <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
@@ -95,7 +95,7 @@
                             v-if="canChangeCounty === false"
                             data-toggle="tooltip"
                             data-placement="top"
-                            title="Double click the disabled element in order to change its value"
+                           
                             class="fa fa-question-circle-o help ml-1"
                         ></i>
                     </label>
