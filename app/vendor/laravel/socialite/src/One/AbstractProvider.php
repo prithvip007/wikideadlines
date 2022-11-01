@@ -38,6 +38,14 @@ abstract class AbstractProvider implements ProviderContract
      * @param  \League\OAuth1\Client\Server\Server  $server
      * @return void
      */
+
+     /**
+     * Indicates if the session state should be utilized.
+     *
+     * @var bool
+     */
+    protected $stateless = false;
+    
     public function __construct(Request $request, Server $server)
     {
         $this->server = $server;
@@ -179,6 +187,17 @@ abstract class AbstractProvider implements ProviderContract
     {
         $this->request = $request;
 
+        return $this;
+    }
+
+    /**
+     * Indicates that the provider should operate as stateless.
+     *
+     * @return $this
+     */
+    public function stateless()
+    {
+        $this->stateless = true;
         return $this;
     }
 }
