@@ -23,7 +23,7 @@ class SocialAuthController extends Controller
 
     public function callback(Request $request)
     {
-        $networkUser = Socialite::driver($request->network)->stateless()->user();
+        $networkUser = Socialite::driver($request->network)->stateless();
 
         // $networkUser = Socialite::driver($request->network)->user();
 
