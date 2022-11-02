@@ -10,15 +10,15 @@
             <div class="col-12 flex-basis-0">
                 <div class="container_mw700 px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
                     <h1>WikiDeadlines Pricing</h1>
-                    <h5 class="mb-0 py-2">{{ $title ?? "Help win your case by knowing crucial deadlines and best practices." }} <i class="fa fa-asterisk" aria-hidden="true" style="position: relative;top: -7px;font-size: 6px;"></i></h5>
+                    <h5 class="mb-0 py-2">{{ $title ?? "Help win your case by knowing crucial deadlines and best practices1 ." }} <i class="fa fa-asterisk" aria-hidden="true" style="position: relative;top: -7px;font-size: 6px;"></i></h5>
                   </div>
             </div>
-            <!-- <div class="col-12 flex-grow-1 flex-basis-auto">
+            <div class="col-12 flex-grow-1 flex-basis-auto">
               <pricing
                 publishable-key="{{ $publishableKey }}"
                 :plans="{{json_encode($plans) }}"
               ></pricing>
-            </div> -->
+            </div>
             <div class="col-12 flex-grow-1 flex-basis-auto">
               <p class="text-muted py-2">
                 <i class="fa fa-asterisk" aria-hidden="true" style="position: relative;top: -7px;font-size: 6px;"></i>
