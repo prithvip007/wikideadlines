@@ -11,7 +11,6 @@ use \Illuminate\Database\QueryException;
 use \Symfony\Component\HttpKernel\Exception\HttpException;
 use URL;
 
-use Laravel\Socialite\Facades\Socialite\Src\Two\AbstractProvider;
 class SocialAuthController extends Controller
 {
     public function connect(Request $request)
@@ -23,9 +22,7 @@ class SocialAuthController extends Controller
 
     public function callback(Request $request)
     {
-        $networkUser = Socialite::driver($request->network)->stateless();
-
-        // $networkUser = Socialite::driver($request->network)->user();
+        $networkUser = Socialite::driver($request->network)->user();
 
         $user = Auth::guard()->user();
 
