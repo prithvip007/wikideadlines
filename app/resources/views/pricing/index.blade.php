@@ -13,12 +13,12 @@
                     <h5 class="mb-0 py-2">{{ $title ?? "Help win your case by knowing crucial deadlines and best practices." }} <i class="fa fa-asterisk" aria-hidden="true" style="position: relative;top: -7px;font-size: 6px;"></i></h5>
                   </div>
             </div>
-            <div class="col-12 flex-grow-1 flex-basis-auto">
+            <!-- <div class="col-12 flex-grow-1 flex-basis-auto">
               <pricing
                 publishable-key="{{ $publishableKey }}"
-                :plans="{{ json_encode($plans) }}"
+                :plans="{{json_encode($plans) }}"
               ></pricing>
-            </div>
+            </div> -->
             <div class="col-12 flex-grow-1 flex-basis-auto">
               <p class="text-muted py-2">
                 <i class="fa fa-asterisk" aria-hidden="true" style="position: relative;top: -7px;font-size: 6px;"></i>
