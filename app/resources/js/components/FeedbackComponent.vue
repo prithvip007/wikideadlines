@@ -10,7 +10,7 @@
                     <textarea
                         required
                         id="feedback"
-                        placeholder="Tell us your thoughts 2"
+                        placeholder="Tell us your thoughts"
                         rows="6"
                         v-model="formData.text"
                         maxlength="2000"
