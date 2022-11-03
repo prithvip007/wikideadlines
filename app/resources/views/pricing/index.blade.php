@@ -14,7 +14,7 @@
                   </div>
             </div>
             <div class="col-12 flex-grow-1 flex-basis-auto">
-              <?php print_r($publishableKey); ?>
+              <?php print_r($plans); ?>
 
               <pricing
                 publishable-key="{{ $publishableKey }}"
