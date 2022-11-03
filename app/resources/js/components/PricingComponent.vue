@@ -6,11 +6,11 @@
                 <img v-if="isFreeActive()" class="pricing-card__selected-icon" src="/images/tick.svg" alt="selected">
             </div>
             <div class="card-body">
-                <h1 class="card-title mb-0">Free</h1>
+                <h1 class="card-title mb-0">Free 2.o</h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>Calculate deadlines</li>
                     <li>Share deadlines and best practices</li>
-                    <li>Keep case deadline history chang hear /li>
+                    <li><del>Keep case deadline history</del></li>
                     <li><del>Export deadlines to Google, Apple, Outlook, iCal calendars</del></li>
                 </ul>
             </div>
