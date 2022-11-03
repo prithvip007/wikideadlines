@@ -3,10 +3,6 @@
 @section('content')
     <div class="container-lg">
         <h1> After Payment sucesfully done </h1>
-        @php  
-        print_r($_SESSION);
-            echo '</pre>';  
-            die;  @endphp 
         <div class="row h-100 flex-column">
             <div class="col-12 flex-grow-1 flex-basis-auto">
                 <div class="row">
