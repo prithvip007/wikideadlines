@@ -66,12 +66,24 @@ class Request extends Model
 
         $keys = ['document-title', 'short-description', 'keywords', 'delivery-methods-list', 'best-practices', 'standard-motion-briefing'];
 
+
         $data = $this->getDataByKeys($keys);
 
         $keywords = null;
 
+        echo "<pre>";
+        echo ("keys");
+        print_r($key);
+        echo ("data");
+        print_r($data);
+
+
+
+
         if (isset($data['keywords'])) {
             $keywordsArray = preg_split('/\s+/', $data['keywords']['value']);
+            echo ("keywords array");
+            print_r($keywordsArray);
 
             if ($keywordsArray !== false) {
                 $keywordsArray = array_unique($keywordsArray);
@@ -85,6 +97,9 @@ class Request extends Model
             $referenceKeys = $data['delivery-methods-list']['meta']['item']['referenceKeys'];
 
             $methods = DeliveryMethod::whereIn('reference_key', $referenceKeys)->get();
+            echo ("keywords array");
+            print_r($methods);
+            die;
         }
 
         $includeStandardMotionDeadlines = false;
