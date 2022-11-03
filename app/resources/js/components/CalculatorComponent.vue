@@ -64,7 +64,7 @@
                 <div @dblclick="onJurisdictionDBClick" class="form-group mb-4">
                     <!-- Its actually not a Jurisdiction. Is a State. We should refactor the whole app to support jurisdictions later when more details become available -->
                     <label class="font-weight-bold" for="state-id">
-                        Jurisdiction
+                        Jurisdiction 1
                         <i
                             v-if="canChangeJurisdiction === false"
                             data-toggle="tooltip"
@@ -72,7 +72,7 @@
                           
                             class="fa fa-question-circle-o help ml-1"
                         ></i>
-                        <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
+                        <span class="text-muted">( change hear Court or arbitration company where the case is or will be filed)</span>
                         <div class="text-muted"> 
                             (If you don't see your jurisdiction, 
                             <a
