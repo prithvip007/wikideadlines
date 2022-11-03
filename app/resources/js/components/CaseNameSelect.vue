@@ -2,7 +2,7 @@
     <div class="form-group">
         <label class="font-weight-bold" for="case-name">
             Matter / Case Name
-            <span class="text-muted">(Optional - for your reference)</span>
+            <span class="text-muted">(Optional - for your reference2)</span>
         </label>
 
         <select
@@ -12,7 +12,7 @@
             id="case_name"
             class="form-control"
             name="case_name"
-            placeholder='Select a Matter / Case Name Or Type' required="required"
+            placeholder='Select a Matter / Case Name Or Type1' required="required"
         >
             <option v-if="value" selected="true" :value="value">
                 {{ value }}
@@ -24,7 +24,7 @@
             :class="{'form-control': true, 'is-invalid': errors.length > 0}"
             name="case_name"
             id="case-name"
-            placeholder= 'Select a Matter / Case Name Or Type' required="required"
+            placeholder= 'Select a Matter / Case Name Or Type2' required="required"
             
         >
         <span
