@@ -21,7 +21,7 @@
             </div>
             <div class="col-12 flex-grow-1 flex-basis-auto">
               {{ $publishableKey}} 
-              {{ $plans}}
+              {{ json_encode($plans)}}
               <p class="text-muted py-2">
                 <i class="fa fa-asterisk" aria-hidden="true" style="position: relative;top: -7px;font-size: 6px;"></i>
                 You get one free search every 30 days - just create your account.
