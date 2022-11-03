@@ -23,6 +23,7 @@
         <input
             v-else
             :class="{'form-control': true, 'is-invalid': errors.length > 0}"
+            :required="!selected"
             name="case_name"
             id="case-name"
             placeholder= 'Select a Matter / Case Name Or Type'
