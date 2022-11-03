@@ -22,10 +22,9 @@
         <input
             v-else
             :class="{'form-control': true, 'is-invalid': errors.length > 0}"
-            :required
             name="case_name"
             id="case-name"
-            placeholder= 'Select a Matter / Case Name Or Type 2'
+            placeholder= 'Select a Matter / Case Name Or Type'
             
         >
         <span
@@ -45,7 +44,7 @@ export default {
     props: {
         dynamic: {
             type: Boolean,
-            required: true,
+            required: false,
             default: true
         },
         errors: {
@@ -55,7 +54,7 @@ export default {
         },
         value: {
             type: String,
-            required: true,
+            required: false,
             default: ""
         }
     },

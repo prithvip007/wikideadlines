@@ -388,7 +388,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             },
             authenticated: {
                 type: Boolean,
-                required: false,
+                required: true,
                 default: true
             },
             showHummerIcon: {
