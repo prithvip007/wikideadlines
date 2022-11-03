@@ -14,7 +14,7 @@ class PricingController extends Controller
 
         $subscription = $user->subscription();
         echo "<pre>";
-        print_r($subscription);
+        print_r($user);
         $cancelled = $subscription === null ? false : $subscription->cancelled();
 
         $stripePlans = StripePlan::all();
