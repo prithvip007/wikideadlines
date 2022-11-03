@@ -8,10 +8,10 @@
             <div class="card-body">
                 <h1 class="card-title mb-0">Free</h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>Calculate ggdfgfgkfffffffßßßß deadlines</li>
-                    <li>Share deadlines and best practices</li>
-                    <li><del>Keep case deadline history</del></li>
-                    <li><del>Export deadlines to Google, Apple, Outlook, iCal calendars</del></li>
+                    <li>nes</li>
+                    <li>Share deand best practices</li>
+                    <li><del>Keep case <del></li>
+                    <li><del>Exppple, Outlook, iCal calendars</del></li>
                 </ul>
             </div>
         </div>
