@@ -100,7 +100,7 @@ export default {
                     },
                     cache: true
                 },
-                placeholder: 'Select a Matter / Case Name Or Type'
+                placeholder: 'Select a Matter / Case Name Or Type 2'
                // minimumInputLength: 1
             };
         },
