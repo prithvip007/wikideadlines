@@ -26,7 +26,7 @@
             <section class="text-center">
                 <div class="mb-4 h4" style="display: flex;flex-direction: column;">
                     <span v-if="showHummerIcon" class="fa fa-gavel" style="margin-bottom: 10px;font-size: 54px;"></span>
-                    Find Deadlines &amp; Best Practices
+                    Find Deadlines &amp; Best Practices 2
                 </div>
             </section>
             <div class="d-flex justify-content-center mb-4 form-border">
