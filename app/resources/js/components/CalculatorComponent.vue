@@ -26,7 +26,7 @@
             <section class="text-center">
                 <div class="mb-4 h4" style="display: flex;flex-direction: column;">
                     <span v-if="showHummerIcon" class="fa fa-gavel" style="margin-bottom: 10px;font-size: 54px;"></span>
-                    Find Deadlines &amp; Best Practices 2
+                    Find Deadlines &amp; Best Practices
                 </div>
             </section>
             <div class="d-flex justify-content-center mb-4 form-border">
@@ -388,7 +388,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             },
             authenticated: {
                 type: Boolean,
-                required: true,
+                required: false,
                 default: true
             },
             showHummerIcon: {

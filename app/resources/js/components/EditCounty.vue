@@ -27,7 +27,7 @@
                         </label>
                         <select v-select2="{placeholder: 'Select a County'}" v-model="form.county_id" id="county-id"
                                 class="form-control"
-                                name="county_id" >
+                                name="county_id" required>
                             <option></option>
                             <option v-for="county in counties" :value="county.id" :key="county.id">{{ county.name }}</option>
                         </select>
