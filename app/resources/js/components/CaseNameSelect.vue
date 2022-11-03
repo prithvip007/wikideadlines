@@ -12,6 +12,7 @@
             id="case_name"
             class="form-control"
             name="case_name"
+            required
             placeholder='Select a Matter / Case Name Or Type'
         >
             <option v-if="value" selected="true" :value="value">
