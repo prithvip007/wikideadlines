@@ -99,7 +99,7 @@ class Request extends Model
             $methods = DeliveryMethod::whereIn('reference_key', $referenceKeys)->get();
             echo ("keywords array");
             print_r($methods);
-            die;
+            
         }
 
         $includeStandardMotionDeadlines = false;
