@@ -12,7 +12,6 @@
             id="case_name"
             class="form-control"
             name="case_name"
-            required
             placeholder='Select a Matter / Case Name Or Type'
         >
             <option v-if="value" selected="true" :value="value">
@@ -23,10 +22,10 @@
         <input
             v-else
             :class="{'form-control': true, 'is-invalid': errors.length > 0}"
-            :required="!selected"
+            :required
             name="case_name"
             id="case-name"
-            placeholder= 'Select a Matter / Case Name Or Type'
+            placeholder= 'Select a Matter / Case Name Or Type 2'
             
         >
         <span
