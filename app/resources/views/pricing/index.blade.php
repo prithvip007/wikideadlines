@@ -14,8 +14,6 @@
                   </div>
             </div>
             <div class="col-12 flex-grow-1 flex-basis-auto">
-              <?php print_r($plans); ?>
-
               <pricing
                 publishable-key="{{ $publishableKey }}"
                 :plans="{{ json_encode($plans) }}"
