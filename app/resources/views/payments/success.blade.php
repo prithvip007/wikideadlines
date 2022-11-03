@@ -4,7 +4,7 @@
     <div class="container-lg">
         <h1> After Payment sucesfully done </h1>
         @php  
-            var_dump($_SESSION);
+        print_r($_SESSION);
             echo '</pre>';  
             die;  @endphp 
         <div class="row h-100 flex-column">
