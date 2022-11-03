@@ -13,7 +13,7 @@
             class="form-control"
             name="case_name"
             required
-            placeholder='Select a Matter / Case Name Or Type 2'
+            placeholder='Select a Matter / Case Name Or Type'
         >
             <option v-if="value" selected="true" :value="value">
                 {{ value }}
