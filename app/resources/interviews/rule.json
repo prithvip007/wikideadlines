@@ -44,7 +44,7 @@
         "data": {
             "title": "What is the source of authority for the Deadline Rule?",
             "placeholder": "Select the authority",
-            "required": true,
+            "required": false,
             "items": [
                 {
                     "id": 1,
