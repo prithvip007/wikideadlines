@@ -191,7 +191,7 @@ class RequestsController extends Controller
             echo "I'm here";
             echo "<pre>";
             print_r($savedUserRequest);
-            exit("tst");
+            // exit("tst");
             $addMoreDeadlinesMail = new AddMoreDeadlines(Auth::user(), $savedUserRequest);
             Mail::to($savedUserRequest->data['email'])
                 ->later(
