@@ -96,7 +96,7 @@
                             data-toggle="tooltip"
                             data-placement="top"
                            
-                            class="fa fa-question-circle-o help ml-1 tooltip bs-tooltip-top show" 
+                            class="fa fa-question-circle-o help ml-1" 
                         ></i>
                     </label>
                     <select v-select2="{placeholder: 'Select a County'}" v-model="formData.county_id" id="county-id"
@@ -865,4 +865,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             this.initializeTooltips();
         }
     }
+     $( ".bs-tooltip-top" ).dblclick(function() {
+        $( this ).remove();
+        });
 </script>
