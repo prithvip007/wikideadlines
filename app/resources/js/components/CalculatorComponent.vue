@@ -869,8 +869,11 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
         }
     }
 
-    $("fa-question-circle-o").click(function(){
+    $(document).ready(function(){
+        $(".fa-question-circle-o").click(function(){
   alert("The paragraph was clicked.");
 });
+});
+
     
 </script>
