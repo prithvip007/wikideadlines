@@ -5,7 +5,7 @@
         "key": "document-title",
         "conditions": null,
         "data": {
-            "title": "Title of the Pleading or Document change heare "  ,
+            "title": "Title of the Pleading or Document "  ,
             "placeholder": "Example: \"Answer\" or \"Demand for Production\"",
             "maxlength": 200,
             "rows": 3,
