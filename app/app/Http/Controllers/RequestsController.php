@@ -209,7 +209,7 @@ class RequestsController extends Controller
              $newdoc->best_practices = $request->array[9];
              echo "before save ";
              print_r($newdoc);
-             die;
+             
              $newdoc->save();
 
             // echo "I'm here";
