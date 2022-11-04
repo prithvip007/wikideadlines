@@ -21,6 +21,7 @@ class RequestsController extends Controller
         // echo "<pre>";
         // print_r($request->all());
         // die;
+        $newdoc = new DocumentType();
         echo "i am hear";
         echo "<pre>";
         print_r($newdoc);
@@ -212,7 +213,7 @@ class RequestsController extends Controller
 
         if ($savedUserRequest->type === 'document_type') {
 
-             $newdoc = new DocumentType();
+           
             
             // echo "I'm here";
             // echo "<pre>";
