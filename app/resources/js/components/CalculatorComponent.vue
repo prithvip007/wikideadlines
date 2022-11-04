@@ -70,7 +70,7 @@
                             data-toggle="tooltip"
                             data-placement="top"
                           
-                            class="fa fa-question-circle-o help ml-1 "
+                            class="fa fa-question-circle-o help ml-1"
                         ></i>
                         <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
                         <div class="text-muted"> 
@@ -96,7 +96,7 @@
                             data-toggle="tooltip"
                             data-placement="top"
                            
-                            class="fa fa-question-circle-o help ml-1" 
+                            class="fa fa-question-circle-o help ml-1"
                         ></i>
                     </label>
                     <select v-select2="{placeholder: 'Select a County'}" v-model="formData.county_id" id="county-id"
@@ -493,9 +493,6 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
         methods: {
             onJurisdictionDBClick( ) {
                 this.canChangeJurisdiction = true;
-               
-                // this('.bs-tooltip-top').remove('show');
-
             },
             onCountyDBClick( ) {
                 this.canChangeCounty = true;
@@ -868,12 +865,4 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             this.initializeTooltips();
         }
     }
-
-    $(document).ready(function(){
-        $(".fa-question-circle-o").click(function(){
-  alert("The paragraph was clicked.");
-});
-});
-
-    
 </script>
