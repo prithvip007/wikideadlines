@@ -493,6 +493,9 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
         methods: {
             onJurisdictionDBClick( ) {
                 this.canChangeJurisdiction = true;
+               
+                this('.bs-tooltip-top').remove('show');
+
             },
             onCountyDBClick( ) {
                 this.canChangeCounty = true;
@@ -865,7 +868,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             this.initializeTooltips();
         }
     }
-     $( ".bs-tooltip-top" ).dblclick(function() {
+     $( ".fa-question-circle-o" ).dblclick(function() {
         $( this ).remove();
         });
 </script>
