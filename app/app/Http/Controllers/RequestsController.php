@@ -18,9 +18,9 @@ class RequestsController extends Controller
     public function send(Request $request)
     {
 
-        echo "<pre>";
-        print_r($request->all());
-        die;
+        // echo "<pre>";
+        // print_r($request->all());
+        // die;
         // TODO: write custom validation rule
         $rules = [
             'type' => 'required|in:edit_document_type,document_type,add_deadline,edit_deadline,feedback,jurisdiction',
@@ -193,9 +193,26 @@ class RequestsController extends Controller
 
         if ($savedUserRequest->type === 'document_type') {
 
-            // $documentInterview = new DocumentInterview();
+             $newdoc = new savedUserRequest();
+             echo "i am hear";
+             print_r($newdoc);
+             $newdoc->name = $request->array[0];
+             $newdoc->small_description = $request->array[1];
+             $newdoc->keywords = $request->array[2];
+             $newdoc->ask_hearing_courthouse = $request->array[3];
+             $newdoc->nask_hearing_courtroomame = $request->array[4];
+
+             $newdoc->deleted_at = $request->array[5];
+             $newdoc->audit_user_id = $request->array[6];
+             $newdoc->days_before_hd_court = $request->array[7];
+             $newdoc->days_before_hd_calendar = $request->array[8];
+             $newdoc->best_practices = $request->array[9];
+             echo "before save ";
+             print_r($newdoc);
+             die;
+             $newdoc->save();
+
             // echo "I'm here";
-            DocumentInterview::insert($savedUserRequest);
             // echo "<pre>";
             // print_r($savedUserRequest);
             // exit("tst");
