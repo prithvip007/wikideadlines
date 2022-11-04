@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
 use App\Models\User;
+use App\Models\DocumentType;
 
 class RequestsController extends Controller
 {
@@ -188,9 +189,12 @@ class RequestsController extends Controller
 
 
         if ($savedUserRequest->type === 'document_type') {
-            echo "I'm here";
-            echo "<pre>";
-            print_r($savedUserRequest);
+            // $documentInterview = new document_types();
+            document_types::insert($savedUserRequest);
+
+            // echo "I'm here";
+            // echo "<pre>";
+            // print_r($savedUserRequest);
             // exit("tst");
             $addMoreDeadlinesMail = new AddMoreDeadlines(Auth::user(), $savedUserRequest);
             Mail::to($savedUserRequest->data['email'])
@@ -207,3 +211,4 @@ class RequestsController extends Controller
         ]);
     }
 }
+

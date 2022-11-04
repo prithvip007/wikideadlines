@@ -67,6 +67,8 @@ class Request extends Model
         $keys = ['document-title', 'short-description', 'keywords', 'delivery-methods-list', 'best-practices', 'standard-motion-briefing'];
 
         $data = $this->getDataByKeys($keys);
+        // new change hear
+        // $data->save();
 
         $keywords = null;
 
