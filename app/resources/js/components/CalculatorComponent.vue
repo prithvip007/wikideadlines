@@ -70,7 +70,7 @@
                             data-toggle="tooltip"
                             data-placement="top"
                           
-                            class="fa fa-question-circle-o help ml-1"
+                            class="fa fa-question-circle-o help ml-1 "
                         ></i>
                         <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
                         <div class="text-muted"> 
@@ -96,7 +96,7 @@
                             data-toggle="tooltip"
                             data-placement="top"
                            
-                            class="fa fa-question-circle-o help ml-1"
+                            class="fa fa-question-circle-o help ml-1 tooltip bs-tooltip-top show" 
                         ></i>
                     </label>
                     <select v-select2="{placeholder: 'Select a County'}" v-model="formData.county_id" id="county-id"
