@@ -15,7 +15,7 @@
                     <div class="form-group d-flex align-items-center flex-column">
                         <div v-if="mode === 'logging'" class="text-center mb-3">Please enter your phone number<br>to log in to WikiDeadlines</div>
                         <div v-if="mode === 'signup'" class="text-center mb-3">Please enter your phone number<br>to sign up to WikiDeadlines</div>
-                        <div v-if="mode === 'update'" id="mobile_code" class="text-center mb-3">Please enter a new phone number<br>that you will use to log in to WikiDeadlines</div>
+                        <div v-if="mode === 'update'"  class="text-center mb-3">Please enter a new phone number<br>that you will use to log in to WikiDeadlines</div>
                             <vue-phone-number-input border-radius="10" class="w-100" size="sm" :no-example="true" autofocus v-on:update="handlePhoneNumberUpdate" autocomplete="tel" required v-model="phone"></vue-phone-number-input>
                         <div v-if="isPhoneNumberValid === false" class="invalid-feedback">
                             Incorrect phone number
@@ -285,9 +285,5 @@
             this.stopResendTimeout();
         }
     }
-    $("#mobile_code").intlTelInput({
-	initialCountry: "in",
-	separateDialCode: true,
-	// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-});
+   
 </script>
