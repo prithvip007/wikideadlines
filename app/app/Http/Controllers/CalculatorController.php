@@ -133,8 +133,13 @@ class CalculatorController extends Controller
     {
         echo "<pre>";
         print_r($request_all());
-        die;
-        $document_type_id = (int) $request->input('document_type_id');
+        echo ($request[0]);
+        echo ($request[1]);
+        echo ($request[2]);
+        echo ($request[3]);
+        echo ($request[4]);
+        die(); 
+             $do3ument_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');
 
