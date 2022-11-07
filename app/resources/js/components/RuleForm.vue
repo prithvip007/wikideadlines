@@ -251,7 +251,7 @@
                     </div>
                     <div class="form-group">
                             <label class="font-weight-bold">
-                                How should it be filtered change hear?
+                                How should it be filtered?
                             </label>
                                 <div
                                     v-for="item, index in [
