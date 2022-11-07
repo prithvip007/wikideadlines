@@ -119,7 +119,7 @@
                     <label class="font-weight-bold" for="document-type-id">
                         Document or Pleading Title
                         <div class="text-muted"> 
-                            (If you don't see a document title visit hear:-, 
+                            (If you don't see a document title, 
                             <a
                                 href="#document"
                             >
