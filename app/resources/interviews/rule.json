@@ -531,7 +531,8 @@
         "conditions": null,
         "data": {
             "title": "How should it be filtered?",
-            "required": false,
+            "required": true,
+            
             "items": [
                 {
                     "id": 0,
