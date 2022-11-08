@@ -539,7 +539,8 @@
                 {
                     "id": 0,
                     "referenceKey": "no_display:document_received",
-                    "title": "No Display - Doc Received"
+                    "title": "No Display - Doc Received",
+                    "required": true
                 },
                 {
                     "id": 1,
