@@ -17,7 +17,7 @@ class SocialAuthController extends Controller
     {
         redirect()->setIntendedUrl(request()->headers->get('referer'));
 
-        return Socialite::driver($request->network)->redirect();
+        return Socialite::driver($request->network)->stateless()->redirect();
     }
 
     public function callback(Request $request)
@@ -39,7 +39,7 @@ class SocialAuthController extends Controller
                 throw $e;
             }
 
-            return redirect()->intended();
+            return redirect()->stateless()->intended();
         }
 
         $userWithTheSameEmail = User::where([ 'email' => $networkUser->email ])->first();
