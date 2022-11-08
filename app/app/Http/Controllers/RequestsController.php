@@ -18,13 +18,6 @@ class RequestsController extends Controller
     public function send(Request $request)
     {
 
-        echo "<pre>";
-        print_r($request->all());
-        // die;
-        $newdoc = new DocumentType();
-        // echo "i am hear";
-        // echo "<pre>";
-        // print_r($newdoc);
         $newdoc->name = $request->array[0];
         $newdoc->small_description = $request->array[1];
         $newdoc->keywords = $request->array[2];
