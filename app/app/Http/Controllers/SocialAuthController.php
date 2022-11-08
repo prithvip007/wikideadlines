@@ -26,11 +26,7 @@ class SocialAuthController extends Controller
         $networkUser = Socialite::driver($request->network)->user();
 
         $user = Auth::guard()->user();
-        echo "<pre>";
-        ECHO "newtwok print";    
-        print_r($networkUser);
-        echo "priuntuser";
-        print_r($user);
+        
        
         
         if ($user) {
