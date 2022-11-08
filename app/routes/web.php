@@ -104,8 +104,11 @@ Route::get('/social-auth/{network}/connect', 'SocialAuthController@connect')
     ->where('network', 'facebook|google')
     ->name('social.connect');
 
-Route::get('/social-auth/{network}/callback', 'SocialAuthController@callback')
+Route::get('/social-auth/google/callback', 'SocialAuthController@callback')
     ->where('network', 'facebook|google');
+
+
+    // social-auth/google/callback
 
 Route::get('/calculation/calendar/ical/{key}', 'CalculatorController@generateIcalFile')
     ->name('calculation.ical')
