@@ -15,8 +15,6 @@ class SocialAuthController extends Controller
 {
     public function connect(Request $request)
     {
-        echo "<pre>";
-        print_r($request->all());
         redirect()->setIntendedUrl(request()->headers->get('referer'));
 
         return Socialite::driver($request->network)->stateless->redirect();
@@ -25,14 +23,7 @@ class SocialAuthController extends Controller
     public function callback(Request $request)
     {
         $networkUser = Socialite::driver($request->network)->user();
-
         $user = Auth::guard()->user();
-        echo "<pre>";
-        print_r($request->all());
-        echo "print network";
-        print_r($networkUser);
-        echo "print user";
-        print_r($user);
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
 
