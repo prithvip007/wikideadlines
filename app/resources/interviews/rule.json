@@ -529,6 +529,9 @@
         "type": "input-checkbox",
         "key": "visibility-scope",
         "conditions": null,
+
+
+        
         "data": {
             "title": "How should it be filtered? change 2.0",
             "required": false,
