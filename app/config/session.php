@@ -153,9 +153,11 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    'domain' => env('SESSION_DOMAIN', 'wikideadlines.com'),
 
     /*
+    
+Check session Session Cookie Domain The default configuration is 'domain' => null, I made a change to 'domain' => 'mysite.com'.
     |--------------------------------------------------------------------------
     | HTTPS Only Cookies
     |--------------------------------------------------------------------------
