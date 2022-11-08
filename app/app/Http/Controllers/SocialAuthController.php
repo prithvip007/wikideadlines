@@ -22,6 +22,9 @@ class SocialAuthController extends Controller
 
     public function callback(Request $request)
     {
+        echo "<pre>";
+        print_r($request->all());
+        
         $networkUser = Socialite::driver($request->network)->user();
 
         $user = Auth::guard()->user();
