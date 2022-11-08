@@ -104,7 +104,7 @@ Route::get('/social-auth/{network}/connect', 'SocialAuthController@connect')
     ->where('network', 'facebook|google')
     ->name('social.connect');
 
-Route::get('/social-auth/google/callback', 'SocialAuthController@callback')
+Route::get('/social-auth/{network}/callback', 'SocialAuthController@callback')
     ->where('network', 'facebook|google');
 
 

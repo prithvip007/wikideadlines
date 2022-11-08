@@ -22,13 +22,17 @@ class SocialAuthController extends Controller
 
     public function callback(Request $request)
     {
-        // echo "<pre>";
-        // print_r($request->all());
         
         $networkUser = Socialite::driver($request->network)->user();
 
         $user = Auth::guard()->user();
-
+        echo "<pre>";
+        ECHO "newtwok print";    
+        print_r($networkUser);
+        echo "priuntuser";
+        print_r($user);
+       
+        
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
 
