@@ -24,19 +24,13 @@ class SocialAuthController extends Controller
          print_r($request->all());
          echo "ggff";
          print_r(Auth::guard()->user());
-         exit();
         $networkUser = Socialite::driver($request->network)->user();
         print_r($networkUser);
         $user = Auth::guard()->user();
-      echo "<pre>";
-    
-      print_r($user);
-      exit();
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
-echo "enter in if";
+
             try {
-                echo "in try block";
                 $user->save();
             } catch (QueryException $e) {
                 
