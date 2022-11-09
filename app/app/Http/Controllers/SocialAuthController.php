@@ -16,7 +16,7 @@ class SocialAuthController extends Controller
     public function connect(Request $request)
     {
         redirect()->setIntendedUrl(request()->headers->get('referer'));
-
+        dd($request->network);
         return Socialite::driver($request->network)->redirect();
     }
 
