@@ -28,6 +28,7 @@ class SocialAuthController extends Controller
         $user = Auth::guard()->user();
       echo "<pre>";
       print_r($user);
+      exit();
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
 echo "enter in if";
