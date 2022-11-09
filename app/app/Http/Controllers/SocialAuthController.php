@@ -24,7 +24,7 @@ class SocialAuthController extends Controller
          print_r($request->all());
         //  die;
         $networkUser = Socialite::driver($request->network)->user();
-        dd($networkUser);
+        print_r($networkUser);
         $user = Socialite::driver($request->network)->userFromTokenAndSecret($token, $secret);
         $user = Auth::guard()->user();
         dd($user);
