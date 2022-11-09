@@ -40,6 +40,7 @@ class SocialAuthController extends Controller
 
             return redirect()->intended();
         }
+        
 
         $userWithTheSameEmail = User::where([ 'email' => $networkUser->email ])->first();
 
