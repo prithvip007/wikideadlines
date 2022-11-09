@@ -24,9 +24,7 @@ class SocialAuthController extends Controller
     {
         $networkUser = Socialite::driver($request->network)->user();
         $user = Auth::guard()->user();
-        echo "<pre>";
-        print_r($user);
-        die;
+        dd($user);
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
 
