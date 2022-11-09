@@ -25,15 +25,17 @@ class SocialAuthController extends Controller
         //  die;
         $networkUser = Socialite::driver($request->network)->user();
         print_r($networkUser);
-        $user = Socialite::driver($request->network)->userFromTokenAndSecret($token, $secret);
         $user = Auth::guard()->user();
-        dd($user);
+      echo "<pre>";
+      print_r($user);
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
-
+echo "enter in if";
             try {
+                echo "in try block";
                 $user->save();
             } catch (QueryException $e) {
+                print_r($e);
                 if ('23505' === $e->getCode()) {
                     throw new AuthenticationMethodAlreadyExists();
                 }
