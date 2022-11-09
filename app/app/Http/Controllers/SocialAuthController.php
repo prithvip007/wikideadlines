@@ -22,11 +22,13 @@ class SocialAuthController extends Controller
     public function callback(Request $request)
     {
          print_r($request->all());
-        //  die;
-        $networkUser = Socialite::driver($request->network)->stateless()->user();
+         echo "fddfdfd";
+         print_r(Auth::guard());
+        $networkUser = Socialite::driver($request->network)->user();
         print_r($networkUser);
         $user = Auth::guard()->user();
       echo "<pre>";
+    
       print_r($user);
       exit();
         if ($user) {
@@ -36,7 +38,7 @@ echo "enter in if";
                 echo "in try block";
                 $user->save();
             } catch (QueryException $e) {
-                print_r($e);
+                
                 if ('23505' === $e->getCode()) {
                     throw new AuthenticationMethodAlreadyExists();
                 }
