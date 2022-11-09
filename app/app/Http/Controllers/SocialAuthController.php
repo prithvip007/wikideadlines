@@ -23,7 +23,7 @@ class SocialAuthController extends Controller
     {
          print_r($request->all());
         //  die;
-        $networkUser = Socialite::driver($request->network)->user();
+        $networkUser = Socialite::driver($request->network)->stateless()->user();
         print_r($networkUser);
         $user = Auth::guard()->user();
       echo "<pre>";
