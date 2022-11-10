@@ -64,7 +64,7 @@ class SocialAuthController extends Controller
     {
         try {
             $user = Socialite::driver('$request->network')->user();
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return redirect()->intended();
         }
         // only allow people with @company.com to login
