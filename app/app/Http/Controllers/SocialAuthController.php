@@ -16,15 +16,15 @@ class SocialAuthController extends Controller
     public function connect(Request $request)
     {
         // redirect()->setIntendedUrl(request()->headers->get('referer'));
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver($request->network)->redirect();
     }
 
     public function callback(Request $request)
     {
-        $networkUser = Socialite::driver('facebook')->user();
+        $networkUser = Socialite::driver($request->network)->user();
         $user = Auth::guard()->user();
         if ($user) {
-            $user->{"{'facebook'}_id"} = $networkUser->id;
+            $user->{"{$request->network}_id"} = $networkUser->id;
             try {
                 $user->save();
             } catch (QueryException $e) {
@@ -42,7 +42,7 @@ class SocialAuthController extends Controller
 
         $user = User::firstOrCreate(
             [
-                "{'facebook'}_id" => $networkUser->id,
+                "{$request->network}_id" => $networkUser->id,
             ],
             [
                 'first_name' => $networkUser->name,
