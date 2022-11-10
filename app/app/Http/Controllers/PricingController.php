@@ -20,6 +20,9 @@ class PricingController extends Controller
         $plans = [];
 
         foreach ($stripePlans as $stripePlan) {
+            echo "<pre>";
+            print_r($stripePlan);
+            die;
             $plans[] = [
                 'price' => $stripePlan->price_amount,
                 'active' => $user->subscribedToPlan($stripePlan->price_id),
