@@ -2,7 +2,7 @@
     <div class="form-group">
         <label class="font-weight-bold" for="case-name">
             Matter / Case Name
-            <span class="text-muted">(Optional - for your reference)</span>
+            <span class="text-muted"></span>
         </label>
 
         <select
