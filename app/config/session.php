@@ -153,7 +153,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', 'wikideadlines.com/'),
+    'domain' => env('SESSION_DOMAIN', 'wikideadlines.com'),
 
     /*
     |--------------------------------------------------------------------------
