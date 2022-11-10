@@ -16,83 +16,51 @@ class SocialAuthController extends Controller
     public function connect(Request $request)
     {
         // redirect()->setIntendedUrl(request()->headers->get('referer'));
-        return Socialite::driver($request->network)->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
 
-    // public function callback(Request $request)
-    // {
-    //     $networkUser = Socialite::driver($request->network)->user();
-    //     $user = Auth::guard()->user();
-    //     if ($user) {
-    //         $user->{"{$request->network}_id"} = $networkUser->id;
-    //         try {
-    //             $user->save();
-    //         } catch (QueryException $e) {
-                
-    //             if ('23505' === $e->getCode()) {
-    //                 throw new AuthenticationMethodAlreadyExists();
-    //             }
-    
-    //             throw $e;
-    //         }
-
-    //         return redirect()->intended();
-    //     }
-    //     $userWithTheSameEmail = User::where([ 'email' => $networkUser->email ])->first();
-
-    //     $user = User::firstOrCreate(
-    //         [
-    //             "{$request->network}_id" => $networkUser->id,
-    //         ],
-    //         [
-    //             'first_name' => $networkUser->name,
-    //             'email' => $userWithTheSameEmail ? null : $networkUser->email
-    //         ]
-    //     );
-
-    //     // refresh to fetch default values from database
-    //     $user->refresh();
-
-    //     $guard = Auth::guard();
-
-    //     $guard->login($user);
-
-    //     return redirect()->intended();
-    // }
-
-    public function callback()
+    public function callback(Request $request)
     {
-        try {
-            $user = Socialite::driver('$request->network')->user();
-        } catch (Exception $e) {
+        $networkUser = Socialite::driver('facebook')->user();
+        $user = Auth::guard()->user();
+        if ($user) {
+            $user->{"{'facebook'}_id"} = $networkUser->id;
+            try {
+                $user->save();
+            } catch (QueryException $e) {
+                
+                if ('23505' === $e->getCode()) {
+                    throw new AuthenticationMethodAlreadyExists();
+                }
+    
+                throw $e;
+            }
+
             return redirect()->intended();
         }
-        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'company.com'){
-            return redirect()->to('/');
-        }
-        // check if they're an existing user
-        $existingUser = User::where('email', $user->email)->first();
-        if($existingUser){
-            // log them in
-            auth()->login($existingUser, true);
-        } else {
-            // create a new user
-            $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->$request->network_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();
-            auth()->login($newUser, true);
-        }
+        $userWithTheSameEmail = User::where([ 'email' => $networkUser->email ])->first();
+
+        $user = User::firstOrCreate(
+            [
+                "{'facebook'}_id" => $networkUser->id,
+            ],
+            [
+                'first_name' => $networkUser->name,
+                'email' => $userWithTheSameEmail ? null : $networkUser->email
+            ]
+        );
+
+        // refresh to fetch default values from database
+        $user->refresh();
+
+        $guard = Auth::guard();
+
+        $guard->login($user);
+
         return redirect()->intended();
     }
 
-
-
-
+   
 
 
 
