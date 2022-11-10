@@ -15,26 +15,20 @@ class SocialAuthController extends Controller
 {
     public function connect(Request $request)
     {
-        redirect()->setIntendedUrl(request()->headers->get('referer'));
-
-        return Socialite::driver($request->network)->stateless()->redirect();
+        // redirect()->setIntendedUrl(request()->headers->get('referer'));
+        return Socialite::driver($request->network)->redirect();
     }
 
     public function callback(Request $request)
     {
-        
         $networkUser = Socialite::driver($request->network)->user();
-
         $user = Auth::guard()->user();
-        
-       
-        
         if ($user) {
             $user->{"{$request->network}_id"} = $networkUser->id;
-
             try {
                 $user->save();
             } catch (QueryException $e) {
+                
                 if ('23505' === $e->getCode()) {
                     throw new AuthenticationMethodAlreadyExists();
                 }
@@ -42,9 +36,8 @@ class SocialAuthController extends Controller
                 throw $e;
             }
 
-            return redirect()->stateless()->intended();
+            return redirect()->intended();
         }
-
         $userWithTheSameEmail = User::where([ 'email' => $networkUser->email ])->first();
 
         $user = User::firstOrCreate(
