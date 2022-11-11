@@ -11,6 +11,9 @@ class PricingController extends Controller
     public function index()
     {
         $user = Auth::guard()->user();
+        echo "<pre>";
+        print_r( $user);
+       die;
 
         $subscription = $user->subscription();
         $cancelled = $subscription === null ? false : $subscription->cancelled();
