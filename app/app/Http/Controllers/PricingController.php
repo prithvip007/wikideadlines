@@ -27,16 +27,7 @@ class PricingController extends Controller
                 'interval' => $stripePlan->interval,
                 'canceled' => $cancelled,
             ];
-            echo "<pre>";
-            print_r( $stripePlan->price_amount);
-            echo "preice amount";
-            print_r($user->subscribedToPlan($stripePlan->price_id));
-            echo "price id";
-            print_r($stripePlan->interval);
-            echo "intirvel";
-            print_r( $cancelled);
-    
-           die;
+           
         }
 
         $publishableKey = config('app.stripe.key');
