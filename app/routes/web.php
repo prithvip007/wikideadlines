@@ -100,7 +100,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('logout');
 });
 
-Route::get('/social-auth/{network}/connect', 'SocialAuthController@connect')
+Route::get('/social-auth/{network}/connect', '-@connect')
     ->where('network', 'facebook|google')
     ->name('social.connect');
 
