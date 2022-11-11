@@ -11,10 +11,7 @@ class PricingController extends Controller
     public function index()
     {
         $user = Auth::guard()->user();
-        echo "<pre>";
-        print_r( $user);
-       die;
-
+      
         $subscription = $user->subscription();
         $cancelled = $subscription === null ? false : $subscription->cancelled();
 
@@ -33,6 +30,14 @@ class PricingController extends Controller
         }
 
         $publishableKey = config('app.stripe.key');
+        echo "<pre>";
+        print_r( $user);
+        print_r( $subscription);
+        print_r( $cancelled);
+        print_r( $publishableKey);
+
+       die;
+
 
         return view('pricing.index', compact('plans', 'publishableKey'));
     }
