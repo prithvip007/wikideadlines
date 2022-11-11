@@ -765,7 +765,7 @@ class Subscription extends Model
         ];
 
         if ($payload['payment_behavior'] !== StripeSubscription::PAYMENT_BEHAVIOR_PENDING_IF_INCOMPLETE) {
-            $payload['cancel_at_period_end'] = false;
+            $payload['immediately'] = false;
         }
 
         $payload = array_merge($payload, $options);
@@ -891,7 +891,7 @@ class Subscription extends Model
     {
         $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = true;
+        $subscription->immediately = true;
 
         $subscription = $subscription->save();
 
@@ -1005,7 +1005,7 @@ class Subscription extends Model
 
         $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = false;
+        $subscription->immediately = false;
 
         if ($this->onTrial()) {
             $subscription->trial_end = $this->trial_ends_at->getTimestamp();
