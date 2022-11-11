@@ -29,8 +29,11 @@ class PricingController extends Controller
             ];
             echo "<pre>";
             print_r( $stripePlan->price_amount);
+            echo "preice amount";
             print_r($user->subscribedToPlan($stripePlan->price_id));
+            echo "price id";
             print_r($stripePlan->interval);
+            echo "intirvel";
             print_r( $cancelled);
     
            die;
