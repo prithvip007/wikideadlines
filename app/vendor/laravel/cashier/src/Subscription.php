@@ -1005,7 +1005,7 @@ class Subscription extends Model
 
         $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = false;
+        $subscription->cancel_at_period_end = true;
 
         if ($this->onTrial()) {
             $subscription->trial_end = $this->trial_ends_at->getTimestamp();
@@ -1013,6 +1013,9 @@ class Subscription extends Model
             $subscription->trial_end = 'now';
         }
 
+        echo "<pre>";
+        print_r(  $subscription);
+        exit();
         $subscription = $subscription->save();
 
         // Finally, we will remove the ending timestamp from the user's record in the
