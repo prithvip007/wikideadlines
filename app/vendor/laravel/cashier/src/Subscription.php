@@ -914,7 +914,7 @@ class Subscription extends Model
     }
 
     /**
-     * Cancel the subscription at a specific moment in time.
+     * Cancel  change the subscription at a specific moment in time.
      *
      * @param  \DateTimeInterface|int  $endsAt
      * @return $this
