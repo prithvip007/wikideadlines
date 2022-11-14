@@ -36,7 +36,7 @@ class PricingController extends Controller
     {
         // echo "reach hear ";
         // die;
-        return view('pricing.indexprice', compact('plans', 'publishableKey'));
+        return view('pricing.indexprice');
        
     }
     
