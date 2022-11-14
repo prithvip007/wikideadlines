@@ -1005,7 +1005,7 @@ class Subscription extends Model
 
         $subscription = $this->asStripeSubscription();
 
-        $subscription->immediately = false;
+        $subscription->cancel_at_period_end = false;
 
         if ($this->onTrial()) {
             $subscription->trial_end = $this->trial_ends_at->getTimestamp();
