@@ -15,16 +15,9 @@ class SocialAuthController extends Controller
 {
     public function connect(Request $request)
     {
-<<<<<<< HEAD
-        // redirect()->setIntendedUrl(request()->headers->get('referer'));
-=======
+
         redirect()->setIntendedUrl(request()->headers->get('referer'));
-<<<<<<< HEAD
-     
-=======
-        dd($request->network);
->>>>>>> parent of d9950958... google
->>>>>>> 530ad15caded1331b01e38c2c0834f23cd10c020
+
         return Socialite::driver($request->network)->redirect();
     }
 
@@ -68,8 +61,6 @@ class SocialAuthController extends Controller
 
         return redirect()->intended();
     }
-
-   
 
     public function disconnect(Request $request)
     {

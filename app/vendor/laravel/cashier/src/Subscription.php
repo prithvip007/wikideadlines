@@ -765,7 +765,7 @@ class Subscription extends Model
         ];
 
         if ($payload['payment_behavior'] !== StripeSubscription::PAYMENT_BEHAVIOR_PENDING_IF_INCOMPLETE) {
-            $payload['immediately'] = false;
+            $payload['cancel_at_period_end'] = false;
         }
 
         $payload = array_merge($payload, $options);
@@ -968,7 +968,7 @@ class Subscription extends Model
     {
         $this->asStripeSubscription()->cancel([
             'invoice_now' => true,
-            'subscription_cancel_now'=> true,
+          //  'subscription_cancel_now'=> true,
             'prorate' => $this->prorateBehavior() === 'create_prorations',
           
         ]);
@@ -1008,7 +1008,7 @@ class Subscription extends Model
 
         $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = true;
+        $subscription->cancel_at_period_end = false;
 
         if ($this->onTrial()) {
             $subscription->trial_end = $this->trial_ends_at->getTimestamp();

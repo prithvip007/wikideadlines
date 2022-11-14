@@ -67,7 +67,7 @@
                                     <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
                                 </li> -->
                                     <li class="nav-item {{ Request::route()->named('pricing') ? 'active' : '' }}">
-                                    <a class="nav-link" href="{{ route('pricing') }}">Pricing new</a>
+                                    <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
                                 </li> 
                                 <li class="nav-item">
                                     <a class="nav-link" href="#feedback">Feedback</a>
