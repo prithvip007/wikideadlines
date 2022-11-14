@@ -70,9 +70,6 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/pricing', 'PricingController@index')
             ->name('pricing');
-            
-            // Route::get('/pricingnow', 'PricingController@pricingnow')
-            // ->name('pricingnow');
 
         // TODO: remove
         Route::post('/beta-test', 'CalculatorController@calculate');
