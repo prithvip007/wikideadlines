@@ -42,6 +42,7 @@ class PricingController extends Controller
     {
         echo "reach hear";
         die;
+        exit ("gr00");
         $user = Auth::guard()->user();
       
         $subscription = $user->subscription();
