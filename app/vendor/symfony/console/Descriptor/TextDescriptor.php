@@ -253,7 +253,7 @@ class TextDescriptor extends Descriptor
     private function writeText(string $content, array $options = [])
     {
         $this->write(
-            isset($options['raw_text']) && $options['raw_text'] ? strip_tags($content) : $content,
+            isset($options['raw_text']) && $options['raw_text'] ? _tags($content) : $content,
             isset($options['raw_output']) ? !$options['raw_output'] : true
         );
     }

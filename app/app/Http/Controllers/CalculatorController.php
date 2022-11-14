@@ -131,7 +131,11 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
+<<<<<<< HEAD
         $document_type_id = (int) $request->input('document_type_id');
+=======
+       $do3ument_type_id = (int) $request->input('document_type_id');
+>>>>>>> parent of a401b03d... compair  check
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');
 

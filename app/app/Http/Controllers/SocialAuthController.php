@@ -15,7 +15,11 @@ class SocialAuthController extends Controller
 {
     public function connect(Request $request)
     {
+<<<<<<< HEAD
         redirect()->setIntendedUrl(request()->headers->get('referer'));
+=======
+        // redirect()->setIntendedUrl(request()->headers->get('referer'));
+>>>>>>> parent of a401b03d... compair  check
         return Socialite::driver($request->network)->redirect();
     }
 
