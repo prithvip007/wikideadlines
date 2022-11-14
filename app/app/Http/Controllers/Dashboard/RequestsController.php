@@ -126,9 +126,7 @@ class RequestsController extends Controller
                 }
             }
         }
-    //     echo "<pre>";
-    //    print_r($userRequest);
-    //     exit("gtjnk");
+    
         $userRequest->save();
 
         return response()->json([

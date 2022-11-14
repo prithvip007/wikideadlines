@@ -39,6 +39,7 @@ class WebhookController extends Controller
      */
     public function handleWebhook(Request $request)
     {
+      
         $payload = json_decode($request->getContent(), true);
         $method = 'handle'.Str::studly(str_replace('.', '_', $payload['type']));
 
@@ -122,6 +123,9 @@ class WebhookController extends Controller
     {
         if ($user = $this->getUserByStripeId($payload['data']['object']['customer'])) {
             $data = $payload['data']['object'];
+            echo "<pre>";
+            print_r($data);
+            exit("done");
 
             $user->subscriptions->filter(function (Subscription $subscription) use ($data) {
                 return $subscription->stripe_id === $data['id'];

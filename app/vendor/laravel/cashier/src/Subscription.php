@@ -765,7 +765,7 @@ class Subscription extends Model
         ];
 
         if ($payload['payment_behavior'] !== StripeSubscription::PAYMENT_BEHAVIOR_PENDING_IF_INCOMPLETE) {
-            $payload['cancel_at_period_end'] = false;
+            $payload['immediately'] = false;
         }
 
         $payload = array_merge($payload, $options);
@@ -891,7 +891,8 @@ class Subscription extends Model
     {
         $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = true;
+        // $subscription->immediately = true;
+        $subscription_cancel_now= true;
 
         $subscription = $subscription->save();
 
@@ -914,7 +915,7 @@ class Subscription extends Model
     }
 
     /**
-     * Cancel the subscription at a specific moment in time.
+     * Cancel  change the subscription at a specific moment in time.
      *
      * @param  \DateTimeInterface|int  $endsAt
      * @return $this
@@ -967,7 +968,9 @@ class Subscription extends Model
     {
         $this->asStripeSubscription()->cancel([
             'invoice_now' => true,
+            'subscription_cancel_now'=> true,
             'prorate' => $this->prorateBehavior() === 'create_prorations',
+          
         ]);
 
         $this->markAsCancelled();
@@ -1005,7 +1008,7 @@ class Subscription extends Model
 
         $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = false;
+        $subscription->cancel_at_period_end = true;
 
         if ($this->onTrial()) {
             $subscription->trial_end = $this->trial_ends_at->getTimestamp();
@@ -1013,6 +1016,9 @@ class Subscription extends Model
             $subscription->trial_end = 'now';
         }
 
+        // echo "<pre>";
+        // print_r($subscription);
+        // exit("strip end view");
         $subscription = $subscription->save();
 
         // Finally, we will remove the ending timestamp from the user's record in the

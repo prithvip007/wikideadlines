@@ -116,8 +116,8 @@ class Client
           'base_path' => self::API_BASE_PATH,
 
           // https://developers.google.com/console
-          'client_id' => '',
-          'client_secret' => '',
+          'client_id' =>'489215056474387',
+          'client_secret' => 'dfbcdf82f02fc0129def4410c16a3e83',
 
           // Can be a path to JSON credentials or an array representing those
           // credentials (@see Google\Client::setAuthConfig), or an instance of

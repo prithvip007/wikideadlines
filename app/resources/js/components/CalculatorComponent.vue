@@ -95,7 +95,7 @@
                             v-if="canChangeCounty === false"
                             data-toggle="tooltip"
                             data-placement="top"
-                            title="Double click the disabled element in order to change its value"
+                           
                             class="fa fa-question-circle-o help ml-1"
                         ></i>
                     </label>

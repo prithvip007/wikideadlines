@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use App\Models\DocumentType;
 use App\Models\User;
 
 class RequestsController extends Controller
@@ -17,7 +18,7 @@ class RequestsController extends Controller
     public function send(Request $request)
     {
 
-        // TODO: write custom validation rule
+ // TODO: write custom validation rule
         $rules = [
             'type' => 'required|in:edit_document_type,document_type,add_deadline,edit_deadline,feedback,jurisdiction',
             'data' => 'required|array|between:1,50'
@@ -188,10 +189,7 @@ class RequestsController extends Controller
 
 
         if ($savedUserRequest->type === 'document_type') {
-            // echo "I'm here";
-            // echo "<pre>";
-            // print_r($savedUserRequest);
-            // exit("tst");
+
             $addMoreDeadlinesMail = new AddMoreDeadlines(Auth::user(), $savedUserRequest);
             Mail::to($savedUserRequest->data['email'])
                 ->later(

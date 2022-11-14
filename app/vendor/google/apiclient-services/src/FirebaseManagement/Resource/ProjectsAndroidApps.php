@@ -110,7 +110,7 @@ class ProjectsAndroidApps extends \Google\Service\Resource
    * specified (or too large a value is specified), then the server will impose
    * its own limit.
    * @opt_param string pageToken Token returned from a previous call to
-   * `ListAndroidApps` indicating where in the set of Apps to resume listing.
+   * `ListAndroidApps` indicating where in the set of Apps to  listing.
    * @return ListAndroidAppsResponse
    */
   public function listProjectsAndroidApps($parent, $optParams = [])
