@@ -39,6 +39,9 @@ class WebhookController extends Controller
      */
     public function handleWebhook(Request $request)
     {
+        echo "<pre>";
+        print_r(stripeSubscription);
+        exit("ghgfh");
         $payload = json_decode($request->getContent(), true);
         $method = 'handle'.Str::studly(str_replace('.', '_', $payload['type']));
 

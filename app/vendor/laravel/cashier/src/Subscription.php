@@ -891,7 +891,8 @@ class Subscription extends Model
     {
         $subscription = $this->asStripeSubscription();
 
-        $subscription->immediately = true;
+        // $subscription->immediately = true;
+        $subscription_cancel_now= true;
 
         $subscription = $subscription->save();
 
@@ -967,7 +968,9 @@ class Subscription extends Model
     {
         $this->asStripeSubscription()->cancel([
             'invoice_now' => true,
+            'subscription_cancel_now'=> true,
             'prorate' => $this->prorateBehavior() === 'create_prorations',
+          
         ]);
 
         $this->markAsCancelled();
