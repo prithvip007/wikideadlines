@@ -1013,9 +1013,9 @@ class Subscription extends Model
             $subscription->trial_end = 'now';
         }
 
-        echo "<pre>";
-        print_r(  $subscription);
-        exit("strip end view");
+        // echo "<pre>";
+        // print_r($subscription);
+        // exit("strip end view");
         $subscription = $subscription->save();
 
         // Finally, we will remove the ending timestamp from the user's record in the
