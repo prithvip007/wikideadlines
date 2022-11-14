@@ -62,18 +62,6 @@ class SocialAuthController extends Controller
 
    
 
-
-
-
-
-
-
-
-
-
-
-    
-
     public function disconnect(Request $request)
     {
         $user = Auth::guard()->user();
