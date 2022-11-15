@@ -16,10 +16,8 @@ class PricingController extends Controller
         $cancelled = $subscription === null ? false : $subscription->cancelled();
 
         $stripePlans = StripePlan::all();
-echo "<pre>";
-print_r($stripePlans);
         $plans = [];
-
+     
         foreach ($stripePlans as $stripePlan) {
 
             $plans[] = [
@@ -31,7 +29,7 @@ print_r($stripePlans);
            
            
         }
-
+        print_r( $plans);
         $publishableKey = config('app.stripe.key');
        
 
