@@ -16,7 +16,8 @@ class PricingController extends Controller
         $cancelled = $subscription === null ? false : $subscription->cancelled();
 
         $stripePlans = StripePlan::all();
-
+echo "<pre>";
+print_r($stripePlans);
         $plans = [];
 
         foreach ($stripePlans as $stripePlan) {
