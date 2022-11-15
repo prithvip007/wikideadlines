@@ -8,7 +8,7 @@
                     Deadline Requests {{ isset($documentRequest) ? "for  {$documentRequest->mapToDocument()['document']['name']}" : ''  }}
                     @break
                 @case('documents')
-                    Document Request change
+                    Document Request
                     @break
                 @default
                     Requests

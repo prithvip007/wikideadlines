@@ -29,7 +29,6 @@ class PricingController extends Controller
            
            
         }
-        print_r( $plans);
         $publishableKey = config('app.stripe.key');
        
 
