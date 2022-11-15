@@ -52,9 +52,7 @@ class WebhookController extends CashierController
         if ($user) {
            
             $data = $payload['data']['object'];
-            echo "<pre>";
-            print_r($data);
-            die;
+           
             if (! $user->subscriptions->contains('stripe_id', $data['id'])) {
                 if (isset($data['trial_end'])) {
                     $trialEndsAt = Carbon::createFromTimestamp($data['trial_end']);
