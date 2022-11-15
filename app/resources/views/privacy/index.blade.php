@@ -225,8 +225,8 @@
                 <h1>Facebook Fan Page</h1>
                 <section>
                     <h2>Data Controller for the Facebook Fan Page</h2>
-                    <p>The Company is the Data Controller of Your Personal Data collected while using the Service. As operator of the Facebook Fan Page : <a href="https://www.facebook.com/WikiDeadines">  the Company and the operator of the social network Facebook are Joint Controllers.</p>
-                    <p>The Company has entered into agreements with Facebook that define the terms for use of the Facebook Fan Page, among other things. These terms are mostly based on the Facebook Terms of Service: https://www.facebook.com/terms.php</p>
+                    <p>The Company is the Data Controller of Your Personal Data collected while using the Service. As operator of the Facebook Fan Page : <a href="https://www.facebook.com/WikiDeadines"> https://www.facebook.com/WikiDeadines </a> the Company and the operator of the social network Facebook are Joint Controllers.</p>
+                    <p>The Company has entered into agreements with Facebook that define the terms for use of the Facebook Fan Page, among other things. These terms are mostly based on the Facebook Terms of Service: <a href="https://www.facebook.com/terms.php"> https://www.facebook.com/terms.php </a></p>
                     <p>Visit the Facebook Privacy Policy https://www.facebook.com/policy.php for more information about how Facebook manages Personal data or contact Facebook online, or by mail: Facebook, Inc. ATTN, Privacy Operations, 1601 Willow Road, Menlo Park, CA 94025, United States.</p>
                 </section>
                 <section>
@@ -234,7 +234,7 @@
                     <p>We use the Facebook Insights function in connection with the operation of the Facebook Fan Page and on the basis of the GDPR, in order to obtain anonymized statistical data about Our users.</p>
                     <p>For this purpose, Facebook places a Cookie on the device of the user visiting Our Facebook Fan Page. Each Cookie contains a unique identifier code and remains active for a period of two years, except when it is deleted before the end of this period.</p>
                     <p>Facebook receives, records, and processes the information stored in the Cookie, especially when the user visits the Facebook services, services that are provided by other members of the Facebook Fan Page, and services by other companies that use Facebook services.</p>
-                    <p>For more information on the privacy practices of Facebook, please visit Facebook Privacy Policy here: https://www.facebook.com/privacy/explanation</a></p>
+                    <p>For more information on the privacy practices of Facebook, please visit Facebook Privacy Policy here:  <a href="https://www.facebook.com/privacy/explanation">  https://www.facebook.com/privacy/explanation</a></p>
                 </section>
             </section>
             <section>
