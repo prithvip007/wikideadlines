@@ -970,7 +970,7 @@ class Subscription extends Model
     {
         $this->asStripeSubscription()->cancel([
             'invoice_now' => true,
-          //  'subscription_cancel_now'=> true,
+           'subscription_cancel_now'=> true,
             'prorate' => $this->prorateBehavior() === 'create_prorations',
           
         ]);
@@ -1002,37 +1002,34 @@ class Subscription extends Model
      *
      * @throws \LogicException
      */
-    public function resume()
-    {
-        if (! $this->onGracePeriod()) {
-            throw new LogicException('Unable to resume subscription that is not within grace period.');
-        }
+    // public function resume()
+    // {
+    //     if (! $this->onGracePeriod()) {
+    //         throw new LogicException('Unable to resume subscription that is not within grace period.');
+    //     }
 
-        $subscription = $this->asStripeSubscription();
+    //     $subscription = $this->asStripeSubscription();
 
-        $subscription->cancel_at_period_end = false;
+    //     $subscription->cancel_at_period_end = false;
 
-        if ($this->onTrial()) {
-            $subscription->trial_end = $this->trial_ends_at->getTimestamp();
-        } else {
-            $subscription->trial_end = 'now';
-        }
+    //     if ($this->onTrial()) {
+    //         $subscription->trial_end = $this->trial_ends_at->getTimestamp();
+    //     } else {
+    //         $subscription->trial_end = 'now';
+    //     }
 
-        // echo "<pre>";
-        // print_r($subscription);
-        // exit("strip end view");
-        $subscription = $subscription->save();
+    //     $subscription = $subscription->save();
 
-        // Finally, we will remove the ending timestamp from the user's record in the
-        // local database to indicate that the subscription is active again and is
-        // no longer "cancelled". Then we will save this record in the database.
-        $this->fill([
-            'stripe_status' => $subscription->status,
-            'ends_at' => null,
-        ])->save();
+    //     // Finally, we will remove the ending timestamp from the user's record in the
+    //     // local database to indicate that the subscription is active again and is
+    //     // no longer "cancelled". Then we will save this record in the database.
+    //     $this->fill([
+    //         'stripe_status' => $subscription->status,
+    //         'ends_at' => null,
+    //     ])->save();
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     /**
      * Determine if the subscription has pending updates.
