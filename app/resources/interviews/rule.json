@@ -40,7 +40,6 @@
         "id": 6,
         "key": "authority-source",
         "type": "select",
-        "conditions": null,
         "data": {
             "title": "What is the source of authority for the Deadline Rule?",
             "placeholder": "Select the authority",
