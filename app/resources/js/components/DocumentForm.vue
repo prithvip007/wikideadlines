@@ -155,7 +155,7 @@
                     </div>
                     <div v-if="id === undefined" class="form-group">
                         <label class="font-weight-bold">
-                            Add standard 16-9-5 motion deadline rules?
+                            Add standard 16-9-5 motion deadline rules change not?
                         <i
                             data-toggle="tooltip"
                             data-placement="top"

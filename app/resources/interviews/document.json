@@ -2487,7 +2487,7 @@
         "conditions": null,
         "data": {
             "defaultValue": "No",
-            "title": "Add standard 16-9-5 motion deadline rules?",
+            "title": "Add standard 16-9-5 motion deadline rules change doc?",
             "help": "When checked, deadline rules for the motion, opposition and reply filing and service, along with the hearing date, are automatically created.",
             "required": true,
             "items": [
