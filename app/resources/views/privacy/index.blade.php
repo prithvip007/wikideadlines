@@ -227,7 +227,7 @@
                     <h2>Data Controller for the Facebook Fan Page</h2>
                     <p>The Company is the Data Controller of Your Personal Data collected while using the Service. As operator of the Facebook Fan Page : <a href="https://www.facebook.com/WikiDeadines"> https://www.facebook.com/WikiDeadines </a> the Company and the operator of the social network Facebook are Joint Controllers.</p>
                     <p>The Company has entered into agreements with Facebook that define the terms for use of the Facebook Fan Page, among other things. These terms are mostly based on the Facebook Terms of Service: <a href="https://www.facebook.com/terms.php"> https://www.facebook.com/terms.php </a></p>
-                    <p>Visit the Facebook Privacy Policy https://www.facebook.com/policy.php for more information about how Facebook manages Personal data or contact Facebook online, or by mail: Facebook, Inc. ATTN, Privacy Operations, 1601 Willow Road, Menlo Park, CA 94025, United States.</p>
+                    <p>Visit the Facebook Privacy Policy  <a href="https://www.facebook.com/policy.php">  https://www.facebook.com/policy.php </a> for more information about how Facebook manages Personal data or contact Facebook online, or by mail: Facebook, Inc. ATTN, Privacy Operations, 1601 Willow Road, Menlo Park, CA 94025, United States.</p>
                 </section>
                 <section>
                     <h2>Facebook Insights</h2>
