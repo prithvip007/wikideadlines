@@ -70,7 +70,7 @@ class ProjectsAppsPlayIntegrityConfig extends \Google\Service\Resource
   }
   /**
    * Updates the PlayIntegrityConfig for the specified app. While this
-   * configuration is incomplete or invalid, the app will be unable to exchange
+   * configuration is  or invalid, the app will be unable to exchange
    * Play Integrity tokens for App Check tokens. (playIntegrityConfig.patch)
    *
    * @param string $name Required. The relative resource name of the Play

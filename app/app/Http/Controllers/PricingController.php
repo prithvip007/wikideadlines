@@ -13,6 +13,7 @@ class PricingController extends Controller
         $user = Auth::guard()->user();
       
         $subscription = $user->subscription();
+        print_r($subscription);
         $cancelled = $subscription === null ? false : $subscription->cancelled();
 
         $stripePlans = StripePlan::all();
@@ -27,6 +28,9 @@ class PricingController extends Controller
                 'interval' => $stripePlan->interval,
                 'canceled' => $cancelled,
             ];
+            echo "<pre>";
+            print_r( $plans);
+            die;
            
         }
 

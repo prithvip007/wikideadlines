@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+@php   echo "<pre>";
+  print_r(plans);  @endphp 
     <div class="container-lg">
         <div class="row h-100 flex-column">
             <div class="col-12 flex-basis-0">
