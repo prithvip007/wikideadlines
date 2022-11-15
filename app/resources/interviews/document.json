@@ -2345,11 +2345,12 @@
     {
         "id": 28,
         "type": "multiselect",
-        "conditions": null,
+       
         "data": {
             "title": "What is the triggering event used to calculate the deadline for this document?",
             "placeholder": "Select events",
             "required": true,
+            "null":false,
             "items": [
                 {
                     "id": 1,
@@ -2487,7 +2488,7 @@
         "conditions": null,
         "data": {
             "defaultValue": "No",
-            "title": "Add standard 16-9-5 motion deadline rules change doc?",
+            "title": "Add standard 16-9-5 motion deadline rules ",
             "help": "When checked, deadline rules for the motion, opposition and reply filing and service, along with the hearing date, are automatically created.",
             "required": true,
             "items": [
