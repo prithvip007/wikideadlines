@@ -214,7 +214,7 @@ class WebhookController extends Controller
             $user->subscriptions->filter(function ($subscription) use ($payload) {
                 return $subscription->stripe_id === $payload['data']['object']['id'];
             })->each(function ($subscription) {
-                $subscription->markAsCancelled();
+                $subscription->cancelNow();
             });
         }
 
@@ -246,7 +246,7 @@ class WebhookController extends Controller
     {
         if ($user = $this->getUserByStripeId($payload['data']['object']['id'])) {
             $user->subscriptions->each(function (Subscription $subscription) {
-                $subscription->skipTrial()->markAsCancelled();
+                $subscription->skipTrial()->cancelNow();
             });
 
             $user->forceFill([

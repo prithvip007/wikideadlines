@@ -69,7 +69,7 @@ class Subscription extends ApiResource
 
     const STATUS_ACTIVE = 'active';
     const STATUS_CANCELED = 'canceled';
-    const STATUS_INCOMPLETE = 'active';
+    const STATUS_INCOMPLETE = 'incomplete';
     const STATUS_INCOMPLETE_EXPIRED = 'incomplete_expired';
     const STATUS_PAST_DUE = 'past_due';
     const STATUS_TRIALING = 'trialing';
