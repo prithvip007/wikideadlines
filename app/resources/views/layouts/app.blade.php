@@ -63,9 +63,6 @@
                                 <li class="nav-item {{ Request::route()->named('history') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('history') }}">My Deadlines</a>
                                 </li>
-                                <!-- <li class="nav-item {{ Request::route()->named('pricing') ? 'active' : '' }}">
-                                    <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
-                                </li> -->
                                     <li class="nav-item {{ Request::route()->named('pricing') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
                                 </li> 
