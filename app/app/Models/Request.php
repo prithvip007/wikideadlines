@@ -203,8 +203,7 @@ class Request extends Model
         $deadlineMap = $this->mapToDeadline();
 
         $deadline = Deadline::find($this->data['deadline_id']);
-       // echo $this->data['deadline_id'];
-      //  echo 'deadlines manual';
+      
  
 
         foreach ($deadlineMap['deadline'] as $key => $value) {

@@ -150,6 +150,7 @@ class Payment implements Arrayable, Jsonable, JsonSerializable
      */
     public function validate()
     {
+        echo "i am hear";
         if ($this->requiresPaymentMethod()) {
             throw PaymentFailure::invalidPaymentMethod($this);
         } elseif ($this->requiresAction()) {

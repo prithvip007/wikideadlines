@@ -14,10 +14,7 @@ class PaymentActionRequired extends IncompletePayment
      */
     public static function incomplete(Payment $payment)
     {
-        echo "<pre>";
-        echo "in payment action page 0";
-        print_r($payment);
-        die;
+        
         return new static(
             $payment,
             'The payment attempt failed because additional action is required before it can be completed.'
