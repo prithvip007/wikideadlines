@@ -4,9 +4,7 @@
   <script src="https://js.stripe.com/v3/"></script>
 @endsection
 
-@section('content')
-@php   echo "<pre>";
-  print_r(plans);  @endphp 
+@section('content') 
     <div class="container-lg">
         <div class="row h-100 flex-column">
             <div class="col-12 flex-basis-0">
