@@ -15,7 +15,7 @@ class MotionToLimine extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Motion in Limine',
-            'keywords' => 'opposition, reply',
+            'keywords' => 'opposition, reply MotionTOLimine',
             'ask_hearing_courthouse' => true,
             'ask_hearing_courtroom' => true,
             'days_before_hd_court' => 16

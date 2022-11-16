@@ -15,7 +15,7 @@ class MotionToContinueHearing extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Motion to continue (postpone) trial/hearing [Motion]',
-            'keywords' => 'opposition, reply',
+            'keywords' => 'opposition, reply MotionToContinueHearing',
             'ask_hearing_courthouse' => true,
             'ask_hearing_courtroom' => true
         ]);

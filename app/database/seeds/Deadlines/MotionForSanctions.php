@@ -15,7 +15,7 @@ class MotionForSanctions extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Motion for Sanctions [CCP 128.7]',
-            'keywords' => 'opposition, reply',
+            'keywords' => 'opposition, reply MotionForSanctions ',
             'small_description' => 'filed with the court',
             'ask_hearing_courthouse' => true,
             'ask_hearing_courtroom' => true
