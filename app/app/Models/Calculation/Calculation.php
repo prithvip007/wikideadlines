@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models\Calculation;
-
 use App\Models\Calculation\Snapshots\DeadlineSnapshot;
 use App\Models\DeliveryMethod;
 use Illuminate\Database\Eloquent\Relations\HasMany;
