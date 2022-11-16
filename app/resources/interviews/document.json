@@ -82,7 +82,9 @@
                 }
             },
             "title": "Which of the following Methods of Delivery or Service are acceptable for this document (i.e. only service by regular mail, etc.)?",
-            "required": true,
+            "required": false,
+            "true-value":"[]",
+            "value":"resource.role_name",
             "items": [
                 {
                     "id": 7,
