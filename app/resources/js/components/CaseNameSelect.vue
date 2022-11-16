@@ -1,16 +1,10 @@
-<?php 
-$user = Calculation::get();
-echo "<pre>";
-print_r($user);  
-die;
-?>
 <template>
     <div class="form-group">
         <label class="font-weight-bold" for="case-name">
             Matter / Case Name
             <span class="text-muted"></span>
         </label>
-       
+
         <select
             v-if="dynamic"
             v-select2="getOptions()"
