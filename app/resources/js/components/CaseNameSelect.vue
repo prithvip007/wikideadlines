@@ -1,97 +1,55 @@
 <template>
-    <div class="form-group">
-        <label class="font-weight-bold" for="case-name">
-            Matter / Case Name
-            <span class="text-muted"></span>
-        </label>
-
-         <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title'}"
-                        v-model="form.document_type_id"
-                        id="case_name"
-                        class="form-control"
-                        name="case_name" required>
-                    <option></option>
-                    <option v-for="type in documentTypes" :value="type.id" :key="type.id"
-                            :data-select2-description="type.small_description"
-                            :data-select2-keywords="type.keywords">
-                        {{ type.name }}
-                    </option>
-                </select>
-
-    </div>
+    <div id="app">
+    <ejs-autocomplete ref='instance' :dataSource='sportsData' :fields='fields' :placeholder="waterMark" ></ejs-autocomplete>
+  </div>
 </template>
-
 <script>
-import { client } from '../client';
+import Vue from 'vue';
+import { AutoCompletePlugin } from '@syncfusion/ej2-vue-dropdowns';
 
+Vue.use(AutoCompletePlugin);
 export default {
-    props: {
-        dynamic: {
-            type: Boolean,
-            required: false,
-            default: true
-        },
-        errors: {
-            type: Array,
-            required: false,
-            default: () => []
-        },
-        value: {
-            type: String,
-            required: false,
-            default: ""
-        }
-    },
-    data() {
-        return {
-            cache: {},
-            current: []
-        }
-    },
-    methods: {
-        getOptions() {
-            const self = this;
-
-            return {
-                tags: true,
-                allowClear: true,
-                placeholder: {
-                    id: '-1', // the value of the option
-                    text: ''
-                },
-                ajax: {
-                    delay: 100,
-                    transport: function (params, success, failure) {
-                        function _success(data) {
-                            self.current = data.results;
-                            success(data);
-                        }
-
-                        const cacheKey = `${params.data.q}|${params.data.page}`;
-
-                        if (params.cache && self.cache[cacheKey]) {
-                            setTimeout(() => _success(self.cache[cacheKey]));
-                            return;
-                        }
-
-                        client
-                            .getCaseNames(params.data.q, params.data.page)
-                            .then((response) => {
-                                self.cache[cacheKey] = response.data;
-                                _success(self.cache[cacheKey]);
-                            })
-                            .catch(failure)
-                    },
-                    cache: true
-                },
-                placeholder: 'Select a Matter / Case Name Or Type'
-               // minimumInputLength: 1
-            };
-        },
-        handleChange(event) {
-            const result = this.current.find(({ id }) => event.currentTarget.value === id);
-            this.$emit("input", event.currentTarget.value, result);
-        }
+  name: 'app',
+   data () {
+    return {
+      waterMark : 'Find a game',
+      sportsData: [
+      { Id: 'Game1', Game: 'Badminton' },
+      { Id: 'Game2', Game: 'Basketball' },
+      { Id: 'Game3', Game: 'Cricket' },
+      { Id: 'Game4', Game: 'Football' },
+      { Id: 'Game5', Game: 'Golf' },
+      { Id: 'Game6', Game: 'Hockey' },
+      { Id: 'Game7', Game: 'Rugby' },
+      { Id: 'Game8', Game: 'Snooker' }
+      ],
+      fields: { value: 'Game' }
     }
-};
+  },
+  methods: {
+    keylistener: function(evt) {
+      if (event.altKey && event.keyCode === 84 /* t */) {
+            // press alt+t to focus the control.
+            this.$refs.instance.focusIn();
+        }
+
+    }
+  },
+  created: function() {
+    document.addEventListener('keyup', this.keylistener);
+  },
+}
 </script>
+<style>
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+  #app {
+    color: #008cff;
+    height: 40px;
+    left: 35%;
+    position: absolute;
+    top: 35%;
+    width: 30%;
+  }
+</style>
