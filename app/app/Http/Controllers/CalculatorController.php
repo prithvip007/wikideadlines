@@ -131,10 +131,7 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        echo "<pre>";
-       
-        print_r($request->all());
-        die;
+        
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');
