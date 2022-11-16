@@ -80,7 +80,7 @@ class RequestsController extends Controller
 
                     if ($validator->fails()) {
                         throw ValidationException::withMessages([
-                            "data.deadlines.{$key}.value" => 'This field can contain only letters and whitespaces'
+                            "data.deadlines.{$key}.value" => 'Unique keywords to help a user find this document'
                         ]);
                     }
                 }
