@@ -22,46 +22,9 @@
 <span v-for="error, index in getErrors('document_type_id')" class="invalid-feedback d-block" :key="index">
     {{ error }}
 </span>
+
 </div>
-    <div class="form-group">
-        <label class="font-weight-bold" for="case-name">
-            Matter / Case Name
-            <span class="text-muted"></span>
-        </label>
 
-        <select
-            v-if="dynamic"
-            v-select2="getOptions()"
-            v-on:change="handleChange"
-            id="case_name"
-            class="form-control"
-            name="case_name"
-            required
-            placeholder='Select a Matter / Case Name Or Type'
-            required = 'true'
-        >
-            <option v-if="value" selected="true" :value="value">
-                {{ value }}
-            </option>
-        </select>
-
-        <input
-            v-else
-            :class="{'form-control': true, 'is-invalid': errors.length > 0}"
-            name="case_name"
-            id="case-name"
-            placeholder= 'Select a Matter / Case Name Or Type'
-            required = 'true'
-            
-        >
-        <span
-            v-for="(error, index) in errors"
-            class="invalid-feedback"
-            :key="index"
-        >
-            {{ error }}
-        </span>
-    </div>
 </template>
 
 <script>
