@@ -132,8 +132,7 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
         echo "<pre>";
-        echo "i am hear ";
-        die;
+       
         print_r($request->all());
         die;
        $document_type_id = (int) $request->input('document_type_id');
