@@ -80,7 +80,7 @@ class RequestsController extends Controller
 
                     if ($validator->fails()) {
                         throw ValidationException::withMessages([
-                            "data.deadlines.{$key}.value" => 'Unique keywords to help a user find this document'
+                            "data.deadlines.{$key}.value" => 'Unique keywords to help a user find this document change'
                         ]);
                     }
                 }

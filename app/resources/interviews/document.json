@@ -82,7 +82,7 @@
                 }
             },
             "title": "Which of the following Methods of Delivery or Service are acceptable for this document (i.e. only service by regular mail, etc.)?",
-            "required": false,
+            "required": true,
             "items": [
                 {
                     "id": 7,
