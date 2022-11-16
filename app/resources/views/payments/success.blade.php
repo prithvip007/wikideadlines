@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container-lg">
-        <h1> After Payment sucesfully done </h1>
         <div class="row h-100 flex-column">
             <div class="col-12 flex-grow-1 flex-basis-auto">
                 <div class="row">

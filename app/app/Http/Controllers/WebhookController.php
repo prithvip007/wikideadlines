@@ -19,6 +19,8 @@ class WebhookController extends CashierController
      */
     protected function handleCustomerSubscriptionCreated(array $payload)
     {
+        echo "i am handleCustomerSubscriptionCreated in webhook page";
+        die;
         $this->setStripeCustomerId($payload);
 
         return parent::handleCustomerSubscriptionCreated($payload);
@@ -31,7 +33,10 @@ class WebhookController extends CashierController
      * @return \Symfony\Component\HttpFoundation\Response
      */
     protected function handleCustomerSubscriptionUpdated(array $payload)
+   
     {
+        echo "i am handleCustomerSubscriptionUpdated in webhook page";
+        die;
         $this->handleCustomerSubscriptionCreatedWithoutResponse($payload);
 
         return parent::handleCustomerSubscriptionUpdated($payload);
@@ -45,6 +50,8 @@ class WebhookController extends CashierController
      */
     protected function handleCustomerSubscriptionCreatedWithoutResponse(array $payload)
     {
+        echo "i am handleCustomerSubscriptionCreatedWithoutResponse in webhook page";
+        die;
         $this->setStripeCustomerId($payload);
 
         $user = $this->getUserByStripeId($payload['data']['object']['customer']);
@@ -92,6 +99,8 @@ class WebhookController extends CashierController
      */
     protected function handlePaymentIntentSucceeded(array $payload)
     {
+        echo "i am handlePaymentIntentSucceeded in webhook page";
+        die;
         $this->setStripeCustomerId($payload);
 
         $calculationId = (int) $payload['data']['object']['metadata']['calculation_id'];
@@ -115,6 +124,8 @@ class WebhookController extends CashierController
      */
     protected function setStripeCustomerId(array $payload)
     {
+        echo "i am setStripeCustomerId in webhook page";
+        die;
         if (isset(
             $payload['data']['object']['metadata']['user_id']
         )) {
