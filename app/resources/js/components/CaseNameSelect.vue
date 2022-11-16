@@ -5,38 +5,19 @@
             <span class="text-muted"></span>
         </label>
 
-        <select
-            v-if="dynamic"
-            v-select2="getOptions()"
-            v-on:change="handleChange"
-            id="case_name"
-            class="form-control"
-            name="case_name"
-            required
-            placeholder='Select a Matter / Case Name Or Type'
-            required = 'true'
-        >
-            <option v-if="value" selected="true" :value="value">
-                {{ value }}
-            </option>
-        </select>
+         <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title'}"
+                        v-model="form.document_type_id"
+                        id="case_name"
+                        class="form-control"
+                        name="case_name" required>
+                    <option></option>
+                    <option v-for="type in documentTypes" :value="type.id" :key="type.id"
+                            :data-select2-description="type.small_description"
+                            :data-select2-keywords="type.keywords">
+                        {{ type.name }}
+                    </option>
+                </select>
 
-        <input
-            v-else
-            :class="{'form-control': true, 'is-invalid': errors.length > 0}"
-            name="case_name"
-            id="case-name"
-            placeholder= 'Select a Matter / Case Name Or Type'
-            required = 'true'
-            
-        >
-        <span
-            v-for="(error, index) in errors"
-            class="invalid-feedback"
-            :key="index"
-        >
-            {{ error }}
-        </span>
     </div>
 </template>
 
