@@ -13,7 +13,7 @@
             class="form-control"
             name="case_name"
             required
-            placeholder='Select a Matter / Case Name Or Type 123'
+            placeholder='Select a Matter / Case Name Or Type'
             
         >
             <option v-if="value" selected="true" :value="value">
@@ -26,7 +26,7 @@
             :class="{'form-control': true, 'is-invalid': errors.length > 0}"
             name="case_name"
             id="case-name"
-            placeholder= 'Select a Matter / Case Name Or Type 555'
+            placeholder= 'Select a Matter / Case Name Or Type'
             required = 'true'
             
         >
@@ -103,8 +103,7 @@ export default {
                     },
                     cache: true
                 },
-                placeholder: 'Select a Matter / Case Name Or Type 5676' ,
-                value: ( {value} )
+                placeholder: 'Select a Matter / Case Name Or Type'
                // minimumInputLength: 1
             };
         },
