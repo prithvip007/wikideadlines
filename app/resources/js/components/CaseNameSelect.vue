@@ -4,17 +4,7 @@
         <label class="font-weight-bold" for="case-name">
             Matter / Case Name now hear
         </label>
-        <select ref="documentType"
-                v-model="formData.document_type_id"
-                id="case-name" class="form-control"
-                name="case_name" required>
-            <option></option>
-            <option v-for="type in documentTypes" :value="type.id" :key="type.id"
-                    :data-select2-description="type.small_description"
-                    :data-select2-keywords="type.keywords">
-                {{  casename}}
-            </option>
-        </select>
+        
     </div>
 </template>
 
