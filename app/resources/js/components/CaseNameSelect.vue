@@ -103,7 +103,8 @@ export default {
                     },
                     cache: true
                 },
-                placeholder: 'Select a Matter / Case Name Or Type 5676'
+                placeholder: 'Select a Matter / Case Name Or Type 5676' ,
+                value: ( {casename} )
                // minimumInputLength: 1
             };
         },
