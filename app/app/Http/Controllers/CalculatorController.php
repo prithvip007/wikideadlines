@@ -24,10 +24,7 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        $calculations = Calculation::orderBy('id', 'DESC')->get();
-                echo "<pre>";
-                print_r($calculations );
-                die;
+        $casename = Calculation::orderBy('id', 'DESC')->get();
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
         }
@@ -72,7 +69,7 @@ class CalculatorController extends Controller
                 ->first();
         }
 
-        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest'));
+        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest','casename'));
     }
 
     // TODO: remove
