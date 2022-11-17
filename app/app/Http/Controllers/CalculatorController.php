@@ -24,7 +24,7 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        $calculations = Calculation::get();
+        $calculations = Calculation::orderBy('id', 'DESC')->get();
                 echo "<pre>";
                 print_r($calculations );
                 die;
