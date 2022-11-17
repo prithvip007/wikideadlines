@@ -1,8 +1,8 @@
 <template>
-   
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label class="font-weight-bold" for="case-name">
             Matter / Case Name
+            <span class="text-muted"></span>
         </label>
 
         <select
@@ -35,6 +35,26 @@
             class="invalid-feedback"
             :key="index"
         >
+            {{ error }}
+        </span>
+    </div> -->
+    <div class="form-group">
+        <label class="font-weight-bold" for="document-type-id">
+            Document or Pleading Title
+        </label>
+        <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title'}"
+                v-model="form.document_type_id"
+                id="document-type-id"
+                class="form-control"
+                name="document_type_id" required>
+            <option></option>
+            <option v-for="type in documentTypes" :value="type.id" :key="type.id"
+                    :data-select2-description="type.small_description"
+                    :data-select2-keywords="type.keywords">
+                {{ type.name }}
+            </option>
+        </select>
+        <span v-for="error, index in getErrors('document_type_id')" class="invalid-feedback d-block" :key="index">
             {{ error }}
         </span>
     </div>
