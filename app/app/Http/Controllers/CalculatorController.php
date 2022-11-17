@@ -534,11 +534,11 @@ class CalculatorController extends Controller
     {
         $paginator = Calculation::
             select('case_name')
-            ->groupby('case_name');
-          //  ->distinct()
-          //  ->where('case_name', 'ilike', '%' . $request->query->get('search') . '%')
-          //  ->where('user_id', Auth::user()->id)
-         //   ->paginate(20);
+            ->groupby('case_name')
+           ->distinct()
+           ->where('case_name', 'ilike', '%' . $request->query->get('search') . '%')
+        //    ->where('user_id', Auth::user()->id)
+           ->paginate(20);
 
         $results = $paginator->map(function ($calculation) use ($request) {
             $last = Calculation::select('id', 'hearing_courthouse', 'hearing_courtroom', 'county_id', 'state_id')
