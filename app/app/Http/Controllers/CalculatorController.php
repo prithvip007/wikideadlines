@@ -24,9 +24,7 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        $calculations = Calculation::select('case_name')
-                ->groupby('case_name')
-                ->distinct()->get();
+        $calculations = Calculation::get();
                 echo "<pre>";
                 print_r($calculations );
                 die;
