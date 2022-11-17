@@ -535,7 +535,7 @@ class CalculatorController extends Controller
             ->groupby('case_name')
             ->distinct()
             ->where('case_name', 'ilike', '%' . $request->query->get('search') . '%')
-            ->where('user_id', Auth::user()->id)
+            // ->where('user_id', Auth::user()->id)
             ->paginate(20);
 
         $results = $paginator->map(function ($calculation) use ($request) {
