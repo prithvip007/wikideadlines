@@ -538,6 +538,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
                         noResults: function() {
                             const $container = $('<span>', { text: 'Not found. ' });
                             const $link =  $('<a>', { href: '#document', text: 'Click here to add new document', click: () => {
+                                console.log(response)
                                 const mouseDownEvent = new MouseEvent('mousedown');
                                 document.querySelector('body').dispatchEvent(mouseDownEvent);
                             } });
