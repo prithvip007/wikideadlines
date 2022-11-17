@@ -24,9 +24,12 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        echo "<pre>";
-        print_r($request->all());
-        die;
+        $calculations = Calculation::select('case_name')
+                ->groupby('case_name')
+                ->distinct();
+                echo "<pre>";
+                print_r($calculations );
+                die;
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
         }
