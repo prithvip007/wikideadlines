@@ -15,7 +15,7 @@
             required
             placeholder='Select a Matter / Case Name Or Type 123'
             
-        >{{casename}}
+        >
             <option v-if="value" selected="true" :value="value">
                 {{ value }}
             </option>
@@ -104,7 +104,7 @@ export default {
                     cache: true
                 },
                 placeholder: 'Select a Matter / Case Name Or Type 5676' ,
-                value: ( {casename} )
+                value: ( {value} )
                // minimumInputLength: 1
             };
         },
