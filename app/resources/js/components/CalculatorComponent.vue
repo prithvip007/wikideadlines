@@ -533,7 +533,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             },
             getDocumentTypeSelect2Options() {
                 return {
-                    placeholder: 'Search Pleadings and Documents by Title  rhgejrg',
+                    placeholder: 'Search Pleadings and Documents by Title',
                     language: {
                         noResults: function() {
                             const $container = $('<span>', { text: 'Not found. ' });
