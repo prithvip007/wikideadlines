@@ -26,7 +26,7 @@ class CalculatorController extends Controller
         // TODO: remove
         $calculations = Calculation::select('case_name')
                 ->groupby('case_name')
-                ->distinct();
+                ->distinct()->get();
                 echo "<pre>";
                 print_r($calculations );
                 die;
