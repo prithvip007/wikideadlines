@@ -15,7 +15,7 @@ class MotionToStrikeCosts extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Motion to strike costs',
-            'keywords' => 'opposition, reply motionToStrikeCost',
+            'keywords' => 'opposition, reply',
             'days_before_hd_court' => 16
         ]);
 

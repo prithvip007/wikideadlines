@@ -24,6 +24,9 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
+        echo "<pre>";
+        print_r($request->all());
+        die;
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
         }

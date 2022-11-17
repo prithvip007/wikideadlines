@@ -15,7 +15,7 @@ class MotionToStrikeSeeder extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Motion to Strike',
-            'keywords' => 'opposition, reply motionTOStrikeSeeder',
+            'keywords' => 'opposition, reply',
             'ask_hearing_courthouse' => true,
             'ask_hearing_courtroom' => true
         ]);

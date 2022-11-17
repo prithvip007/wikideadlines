@@ -14,7 +14,7 @@
             name="case_name"
             required
             placeholder='Select a Matter / Case Name Or Type'
-            required = 'true'
+            
         >
             <option v-if="value" selected="true" :value="value">
                 {{ value }}

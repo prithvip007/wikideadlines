@@ -15,7 +15,7 @@ class NoticeOfMotionForSanctionsBeforeFiledWithTheCourt extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Notice of Motion for Sanctions [CCP 128.7]',
-            'keywords' => 'opposition, reply NoticOfMotion' ,
+            'keywords' => 'opposition, reply' ,
             'small_description' => 'before motion is filed with the court',
             'ask_hearing_courthouse' => true,
             'ask_hearing_courtroom' => true,
