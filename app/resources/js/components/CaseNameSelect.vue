@@ -96,6 +96,7 @@ export default {
                         client
                             .getCaseNames(params.data.q, params.data.page)
                             .then((response) => {
+                                console.log(response)
                                 self.cache[cacheKey] = response.data;
                                 _success(self.cache[cacheKey]);
                             })

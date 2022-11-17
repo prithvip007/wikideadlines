@@ -1,8 +1,7 @@
 @extends('layouts.app', ['_CONTAINER_CLASS' => 'container_mw620'])
 
 @section('content')
-<?php print_r($casename);
-die("fgfgffg");  ?>
+
 <div class="container container_mw600">
     <div class="row justify-content-center">
         <div class="col-12 mb-3">
