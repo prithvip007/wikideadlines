@@ -35,6 +35,7 @@
                     :errors="{{ $errors->get('*') ? json_encode($errors->get('*')): '{}' }}"
                     :states="{{ json_encode($states) }}"
                     :document-types="{{ json_encode($document_types) }}"
+                    :casename="{{ json_encode($casename) }}"
                     :delivery-methods="{{ json_encode($delivery_methods) }}"
                     :old-form-data="{{ old() ? json_encode(old()) : '{}' }}"
                     :can-calculate="{{ $canCalculate ? 'true' : 'false' }}"
