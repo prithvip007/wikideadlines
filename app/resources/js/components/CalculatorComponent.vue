@@ -533,13 +533,12 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             },
             getDocumentTypeSelect2Options() {
                 return {
-                    placeholder: 'Search Pleadings and Documents by Title',
+                    placeholder: 'Search Pleadings and Documents by Title  rhgejrg',
                     language: {
                         noResults: function() {
                             const $container = $('<span>', { text: 'Not found. ' });
                             const $link =  $('<a>', { href: '#document', text: 'Click here to add new document', click: () => {
                                 const mouseDownEvent = new MouseEvent('mousedown');
-                                console.log(mouseDownEvent);
                                 document.querySelector('body').dispatchEvent(mouseDownEvent);
                             } });
                             return $container.append($link);
