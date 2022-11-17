@@ -539,6 +539,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
                             const $container = $('<span>', { text: 'Not found. ' });
                             const $link =  $('<a>', { href: '#document', text: 'Click here to add new document', click: () => {
                                 const mouseDownEvent = new MouseEvent('mousedown');
+                                console.log(mouseDownEvent);
                                 document.querySelector('body').dispatchEvent(mouseDownEvent);
                             } });
                             return $container.append($link);
@@ -547,7 +548,6 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
                 }
             },
             getDateQuestionSelect2Options(date_question) {
-                console.log(date_question);
                 const options = {
                     onlyDate: date_question.date_question_type.type !== 'datetime',
                     todayMidday: true,
