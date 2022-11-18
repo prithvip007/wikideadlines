@@ -51,9 +51,6 @@ class WebhookController extends CashierController
         $user = $this->getUserByStripeId($payload['data']['object']['customer']);
 
         if ($user) {
-            echo "<pre>";
-            print_r($user);
-            die;
             $data = $payload['data']['object'];
            
             if (! $user->subscriptions->contains('stripe_id', $data['id'])) {
