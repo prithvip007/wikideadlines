@@ -13,6 +13,7 @@
 </head>
 <body class="font-sans text-gray-600 bg-gray-100 leading-normal p-4 h-full">
     <div id="app" class="h-full md:flex md:justify-center md:items-center">
+        <h1> confirm pay </h1>
         <div class="w-full max-w-lg">
             <!-- Status Messages -->
             <p class="flex items-center bg-red-100 border border-red-200 px-5 py-2 rounded-lg text-red-500" v-if="errorMessage">
