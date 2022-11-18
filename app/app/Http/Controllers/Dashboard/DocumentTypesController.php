@@ -132,6 +132,9 @@ class DocumentTypesController extends Controller
 
     public function getRequests(Request $request)
     {
+
+        echo "i am hera";
+        die;
         $this->validatePagination();
 
         $requests = RequestModel::whereIn('type', ['document_type', 'edit_document_type'])->orderByDesc('id')->paginate($request->per_page);;
