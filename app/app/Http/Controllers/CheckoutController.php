@@ -48,9 +48,7 @@ class CheckoutController extends Controller
                 ]
             ]
         ]);
-echo "<pre>";
-print_r( $checkout_session);
-die;
+
         return response()->json(['session_id' => $checkout_session['id']]);
     }
 }

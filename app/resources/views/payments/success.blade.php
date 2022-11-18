@@ -1,5 +1,5 @@
 
-Illuminate\Http\Response
+
 @extends('layouts.app', ['_TITLE' => 'Success payment – WikiDeadlines'])
 
 @section('content')
