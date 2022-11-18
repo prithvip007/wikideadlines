@@ -15,9 +15,7 @@ class SubscriptionUpdateFailure extends Exception
      */
     public static function incompleteSubscription(Subscription $subscription)
     {
-        echo "<pre>";
-        print_r($subscription->all());
-        die;
+        
         return new static(
             "The subscription \"{$subscription->stripe_id}\" cannot be updated because its payment is incomplete."
         );

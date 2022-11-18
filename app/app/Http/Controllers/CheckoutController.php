@@ -10,9 +10,7 @@ class CheckoutController extends Controller
 {
     public function create(Request $request)
     {
-        echo "<pre>";
-        print_r($request->all());
-        die;
+       
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
@@ -51,7 +49,11 @@ class CheckoutController extends Controller
                 ]
             ]
         ]);
-
-        return response()->json(['session_id' => $checkout_session['id']]);
+      
+    $response= response()->json(['session_id' => $checkout_session['id']]);
+    echo   "<pre>";
+    print_r( $response);
+    die;
+      
     }
 }
