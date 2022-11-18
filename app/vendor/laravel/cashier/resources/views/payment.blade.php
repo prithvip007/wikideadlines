@@ -200,6 +200,7 @@
                                 self.requestPaymentMethod();
                             }
                         } else {
+                            console.log(result)
                             self.paymentProcessed = true;
 
                             self.successMessage = '{{ __('The payment was successful.') }}';
