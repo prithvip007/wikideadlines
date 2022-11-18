@@ -13,7 +13,6 @@
 </head>
 <body class="font-sans text-gray-600 bg-gray-100 leading-normal p-4 h-full">
     <div id="app" class="h-full md:flex md:justify-center md:items-center">
-        <h1> confirm pay </h1>
         <div class="w-full max-w-lg">
             <!-- Status Messages -->
             <p class="flex items-center bg-red-100 border border-red-200 px-5 py-2 rounded-lg text-red-500" v-if="errorMessage">
@@ -37,7 +36,7 @@
             <div class="bg-white rounded-lg shadow-xl p-4 sm:p-6 mt-4">
                 @if ($payment->isSucceeded())
                     <h1 class="text-xl mb-4 text-gray-600">
-                        {{ __('Payment Successful') }}
+                        {{ __('Payment message change') }}
                     </h1>
 
                     <p class="mb-6">
@@ -45,10 +44,10 @@
                     </p>
                 @elseif ($payment->isCancelled())
                     <h1 class="text-xl mb-4 text-gray-600">
-                        {{ __('Payment Cancelled') }}
+                        {{ __('Payment Cancelled for some resion') }}
                     </h1>
 
-                    <p class="mb-6">{{ __('This payment was cancelled.') }}</p>
+                    <p class="mb-6">{{ __('This payment was cancelled message.') }}</p>
                 @else
                     <div id="payment-elements" v-if="! paymentProcessed">
                         <!-- Payment Method Form -->
@@ -163,18 +162,18 @@
                         }
                     ).then(function (result) {
                         self.paymentProcessing = false;
-                        echo "<script>console.log('Debug Objects: " . $result . "' );</script>";
+
                         if (result.error) {
                             if (result.error.code === '{{ Stripe\ErrorObject::CODE_PARAMETER_INVALID_EMPTY }}' &&
                                 result.error.param === 'payment_method_data[billing_details][name]') {
                                 self.errorMessage = '{{ __('Please provide your name.') }}';
                             } else {
-                                self.errorMessage = result.error.message;
+                                self.errorMessage = result;
                             }
                         } else {
                             self.paymentProcessed = true;
 
-                            self.successMessage = '{{ __('The payment was successful.') }}';
+                            self.successMessage = result;
                         }
                     });
                 },
@@ -195,16 +194,15 @@
                         self.paymentProcessing = false;
 
                         if (result.error) {
-                            self.errorMessage = result.error.message;
+                            self.errorMessage = result;
 
                             if (result.error.code === '{{ Stripe\ErrorObject::CODE_PAYMENT_INTENT_AUTHENTICATION_FAILURE }}') {
                                 self.requestPaymentMethod();
                             }
                         } else {
-                            console.log(result)
                             self.paymentProcessed = true;
 
-                            self.successMessage = '{{ __('The payment was successful.') }}';
+                            self.successMessage = result;
                         }
                     });
                 },
