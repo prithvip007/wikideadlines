@@ -30,9 +30,7 @@ class CheckoutController extends Controller
         }
 
         $plan = StripePlan::where('interval', $request->input('billing_plan'))->first();
-      echo "<pre>";
-      print_r($plan);
-      exit("eefe");
+     
 
         $checkout_session = \Stripe\Checkout\Session::create([  
             'mode' => 'subscription',
@@ -52,7 +50,10 @@ class CheckoutController extends Controller
             ]
         ]);
        
-        return response()->json(['session_id' => $checkout_session['id']]);
+        $val= response()->json(['session_id' => $checkout_session['id']]);
+        echo "<pre>";
+        print_r($val);
+        exit("eefe");
         
 }
 }
