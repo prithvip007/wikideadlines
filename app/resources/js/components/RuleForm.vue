@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
-                            Document or Pleading Title uu
+                            Document or Pleading Title 
                         </label>
                         <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title'}"
                                 v-model="form.document_type_id"
