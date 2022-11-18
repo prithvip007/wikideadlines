@@ -45,12 +45,12 @@ class WebhookController extends CashierController
      */
     protected function handleCustomerSubscriptionCreatedWithoutResponse(array $payload)
     {
-      
+       echo "fdf";
+       die;
         $this->setStripeCustomerId($payload);
 
         $user = $this->getUserByStripeId($payload['data']['object']['customer']);
-        echo "<pre>";
-        print_r($user);
+       
         if ($user) {
             $data = $payload['data']['object'];
            
@@ -83,9 +83,7 @@ class WebhookController extends CashierController
                 }
             }
         }
-        echo "<pre>";
-        print_r($user);
-        exit("fgfggfg");
+       
     }
 
     /**
