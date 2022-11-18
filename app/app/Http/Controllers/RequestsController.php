@@ -73,14 +73,14 @@ class RequestsController extends Controller
             $request->input('type') === 'edit_document_type'
         ) {
             foreach ($request->input('data.deadlines') as $key => $deadline) {
-                echo "<pre>";
-                print_r($deadline);
-                die;
+               
                 if ($deadline['meta']['key'] === 'keywords') {
                     $validator = Validator::make($deadline, [
                         'value' => 'nullable|regex:/^[\pL\s\-]+$/u',
                     ]);
-
+                    echo "<pre>";
+                    print_r($validator);
+                    die;
                     if ($validator->fails()) {
                         throw ValidationException::withMessages([
                             "data.deadlines.{$key}.value" => 'Unique keywords to help a user find this document '
