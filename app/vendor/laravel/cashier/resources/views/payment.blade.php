@@ -36,7 +36,7 @@
             <div class="bg-white rounded-lg shadow-xl p-4 sm:p-6 mt-4">
                 @if ($payment->isSucceeded())
                     <h1 class="text-xl mb-4 text-gray-600">
-                        {{ __('Payment message change') }}
+                        {{ __('Payment Successful') }}
                     </h1>
 
                     <p class="mb-6">
@@ -44,10 +44,10 @@
                     </p>
                 @elseif ($payment->isCancelled())
                     <h1 class="text-xl mb-4 text-gray-600">
-                        {{ __('Payment Cancelled for some resion') }}
+                        {{ __('Payment Cancelled') }}
                     </h1>
 
-                    <p class="mb-6">{{ __('This payment was cancelled message.') }}</p>
+                    <p class="mb-6">{{ __('This - was cancelled.') }}</p>
                 @else
                     <div id="payment-elements" v-if="! paymentProcessed">
                         <!-- Payment Method Form -->
@@ -168,12 +168,12 @@
                                 result.error.param === 'payment_method_data[billing_details][name]') {
                                 self.errorMessage = '{{ __('Please provide your name.') }}';
                             } else {
-                                self.errorMessage = result;
+                                self.errorMessage = result.error.message;
                             }
                         } else {
                             self.paymentProcessed = true;
 
-                            self.successMessage = result;
+                            self.successMessage = '{{ __('The payment was successful.') }}';
                         }
                     });
                 },
@@ -194,7 +194,7 @@
                         self.paymentProcessing = false;
 
                         if (result.error) {
-                            self.errorMessage = result;
+                            self.errorMessage = result.error.message;
 
                             if (result.error.code === '{{ Stripe\ErrorObject::CODE_PAYMENT_INTENT_AUTHENTICATION_FAILURE }}') {
                                 self.requestPaymentMethod();
@@ -202,7 +202,7 @@
                         } else {
                             self.paymentProcessed = true;
 
-                            self.successMessage = result;
+                            self.successMessage = '{{ __('The payment was successful.') }}';
                         }
                     });
                 },
@@ -235,6 +235,9 @@
                 },
             },
         })
+        alert(new)
+    console.log(app);
+    console.log(new);
     </script>
 </body>
 </html>
