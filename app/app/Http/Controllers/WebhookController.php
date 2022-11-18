@@ -45,8 +45,7 @@ class WebhookController extends CashierController
      */
     protected function handleCustomerSubscriptionCreatedWithoutResponse(array $payload)
     {
-       echo "fdf";
-       die;
+       
         $this->setStripeCustomerId($payload);
 
         $user = $this->getUserByStripeId($payload['data']['object']['customer']);

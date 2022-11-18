@@ -17,9 +17,7 @@ class RequestsController extends Controller
 {
     public function send(Request $request)
     {
-echo "<pre>";
-print_r($request->all());
-die;
+
  // TODO: write custom validation rule
         $rules = [
             'type' => 'required|in:edit_document_type,document_type,add_deadline,edit_deadline,feedback,jurisdiction',
@@ -75,6 +73,9 @@ die;
             $request->input('type') === 'edit_document_type'
         ) {
             foreach ($request->input('data.deadlines') as $key => $deadline) {
+                echo "<pre>";
+                print_r($deadline);
+                die;
                 if ($deadline['meta']['key'] === 'keywords') {
                     $validator = Validator::make($deadline, [
                         'value' => 'nullable|regex:/^[\pL\s\-]+$/u',
