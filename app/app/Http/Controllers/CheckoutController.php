@@ -10,7 +10,6 @@ class CheckoutController extends Controller
 {
     public function create(Request $request)
     {
-       
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
@@ -30,6 +29,8 @@ class CheckoutController extends Controller
         }
 
         $plan = StripePlan::where('interval', $request->input('billing_plan'))->first();
+      
+
         $checkout_session = \Stripe\Checkout\Session::create([  
             'mode' => 'subscription',
             'success_url' => route('payment.success') . '?session_id={CHECKOUT_SESSION_ID}',
@@ -47,9 +48,9 @@ class CheckoutController extends Controller
                 ]
             ]
         ]);
-       
-        return response()->json(['session_id' => $checkout_session['id']]);
-        
-}
-}
 
+        $res= response()->json(['session_id' => $checkout_session['id']]);
+        print_r($res);
+        die;
+    }
+}
