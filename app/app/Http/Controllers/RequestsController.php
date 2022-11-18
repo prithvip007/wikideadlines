@@ -78,9 +78,7 @@ class RequestsController extends Controller
                     $validator = Validator::make($deadline, [
                         'value' => 'nullable|regex:/^[\pL\s\-]+$/u',
                     ]);
-                    echo "<pre>";
-                    print_r($validator);
-                    die;
+                   
                     if ($validator->fails()) {
                         throw ValidationException::withMessages([
                             "data.deadlines.{$key}.value" => 'Unique keywords to help a user find this document '
