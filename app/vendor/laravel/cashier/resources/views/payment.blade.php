@@ -163,7 +163,7 @@
                         }
                     ).then(function (result) {
                         self.paymentProcessing = false;
-
+                        echo "<script>console.log('Debug Objects: " . $result . "' );</script>";
                         if (result.error) {
                             if (result.error.code === '{{ Stripe\ErrorObject::CODE_PARAMETER_INVALID_EMPTY }}' &&
                                 result.error.param === 'payment_method_data[billing_details][name]') {
