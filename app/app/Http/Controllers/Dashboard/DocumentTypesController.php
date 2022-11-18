@@ -138,11 +138,7 @@ class DocumentTypesController extends Controller
         $requests = RequestModel::whereIn('type', ['document_type', 'edit_document_type'])->orderByDesc('id')->paginate($request->per_page);;
 
         $requestsCount = RequestModel::whereIn('type', ['document_type', 'edit_document_type'])->count();
-echo "<pre>";
-print_r( $requests);
-print_r( $requestsCount);
 
-die;
         return view('dashboard.pages.requests', [ 'requests' => $requests, 'requestsCount' => $requestsCount, 'type' => 'documents' ]);
     }
 
