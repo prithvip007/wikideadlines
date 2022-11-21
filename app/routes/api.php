@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+ //test
 Route::post('/request/send', 'RequestsController@send');
 
 Route::post('/social-auth/{network}/disconnect', 'SocialAuthController@disconnect')->where('network', 'facebook|google');
