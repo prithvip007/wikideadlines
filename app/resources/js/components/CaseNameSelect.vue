@@ -12,7 +12,7 @@
             id="case_name"
             class="form-control"
             name="case_name"
-            required
+            required = "true"
             placeholder='Select a Matter / Case Name Or Type'
             
         >

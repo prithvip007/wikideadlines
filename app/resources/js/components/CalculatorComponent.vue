@@ -117,7 +117,7 @@
 
                 <div class="form-group mb-4">
                     <label class="font-weight-bold" for="document-type-id">
-                        Document or Pleading Title 1
+                        Document or Pleading Title  %%
                         <div class="text-muted"> 
                             (If you don't see a document title, 
                             <a
@@ -533,7 +533,7 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             },
             getDocumentTypeSelect2Options() {
                 return {
-                    placeholder: 'Search Pleadings and Documents by Title hear',
+                    placeholder: 'Search Pleadings and Documents by Title',
                     language: {
                         noResults: function() {
                             const $container = $('<span>', { text: 'Not found. ' });
