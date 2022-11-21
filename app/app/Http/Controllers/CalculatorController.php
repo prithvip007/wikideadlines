@@ -24,7 +24,7 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        $casename = Calculation::orderBy('id', 'DESC')->get();
+     
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
         }
@@ -69,7 +69,7 @@ class CalculatorController extends Controller
                 ->first();
         }
 
-        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest','casename'));
+        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest'));
     }
 
     // TODO: remove
