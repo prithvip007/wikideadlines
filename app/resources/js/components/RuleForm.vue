@@ -28,7 +28,7 @@
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
                         </label>
-                        <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title'}"
+                        <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title change hear' }"
                                 v-model="form.document_type_id"
                                 id="document-type-id"
                                 class="form-control"
