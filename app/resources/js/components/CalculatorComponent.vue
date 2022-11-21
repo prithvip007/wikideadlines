@@ -117,7 +117,7 @@
 
                 <div class="form-group mb-4">
                     <label class="font-weight-bold" for="document-type-id">
-                        Document or Pleading Title 
+                        Document or Pleading Title 1
                         <div class="text-muted"> 
                             (If you don't see a document title, 
                             <a
@@ -541,7 +541,6 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
                                 const mouseDownEvent = new MouseEvent('mousedown');
                                 document.querySelector('body').dispatchEvent(mouseDownEvent);
                             } });
-                            console.log('test1.2345679')
                             return $container.append($link);
                         }
                     }
