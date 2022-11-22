@@ -108,6 +108,7 @@
         "key": "triggering-event",
         "type": "select",
         "conditions": null,
+        "required": true,
         "data": {
             "title": "Select a Triggering Event",
             "placeholder": "Select an event",

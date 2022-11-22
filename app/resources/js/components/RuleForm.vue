@@ -269,7 +269,7 @@
                                         class="custom-control-input"
                                         :value="item.value"
                                         :id="item.value"
-                                        name="visibility-scope" required
+                                        name="visibility-scope"
                                     >
                                     <label
                                         :for="item.value"
