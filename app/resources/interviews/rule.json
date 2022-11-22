@@ -525,7 +525,7 @@
     },
     {
         "id": 20,
-        "type": "input-checkbox",
+        "type": "input-checkbox required",
         "key": "visibility-scope",
         "conditions": null,
 
@@ -534,10 +534,6 @@
         "data": {
             "title": "How should it be filtered",
             "required": false,
-            
-
-            
-            
             
             "items": [
                 {
