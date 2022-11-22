@@ -534,12 +534,11 @@
         "data": {
             "title": "How should it be filtered",
             "required": false,
-            items = 0;
+            
 
-            if ($request->has('checkox')) {
-                $items = 1;
-            }
-
+            
+            
+            
             "items": [
                 {
                     "id": 0,
