@@ -329,6 +329,8 @@ class SubscriptionBuilder
      */
     protected function createSubscription(StripeSubscription $stripeSubscription)
     {
+        echo "<pre>";
+        print_r($stripeSubscription);
         /** @var \Stripe\SubscriptionItem $firstItem */
         $firstItem = $stripeSubscription->items->first();
         $isSinglePlan = $stripeSubscription->items->count() === 1;
