@@ -8,7 +8,7 @@
                 <div ref="body">
                     <div class="form-group">
                         <label for="deadline-rule-title" class="font-weight-bold">
-                            Title of Deadline Rule
+                            Title of Deadline Rule 1
                             <small class="text-muted">
                                 (optional)
                             </small>
@@ -253,9 +253,9 @@
                             <label class="font-weight-bold">
                                 How should it be filtered?
                             </label>
-                                <div 
+                                <div
                                     v-for="item, index in [
-                                        { title: 'No Display - Doc Received', value: 'no_display:document_received'},
+                                        { title: 'No Display - Doc Received', value: 'no_display:document_received' },
                                         { title: 'No Check - Doc Received', value: 'no_check:document_received' },
                                         { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' },
                                         { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' }
@@ -308,7 +308,7 @@
             },
             id: {
                 type: Number,
-                required: true,
+                required: false,
             },
             events: {
                 type: Object,
