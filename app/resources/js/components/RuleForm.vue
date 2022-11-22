@@ -251,9 +251,9 @@
                     </div>
                     <div class="form-group">
                             <label class="font-weight-bold">
-                                How should it be filtered124?
+                                How should it be filtered?
                             </label>
-                                <div
+                                <div v-model="checked"
                                     v-for="item, index in [
                                         { title: 'No Display - Doc Received', value: 'no_display:document_received'},
                                         { title: 'No Check - Doc Received', value: 'no_check:document_received' },
