@@ -8,7 +8,7 @@
                 <div ref="body">
                     <div class="form-group">
                         <label for="deadline-rule-title" class="font-weight-bold">
-                            Title of Deadline Rule 123
+                            Title of Deadline Rule
                             <small class="text-muted">
                                 (optional)
                             </small>
