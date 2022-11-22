@@ -253,7 +253,7 @@
                             <label class="font-weight-bold">
                                 How should it be filtered?
                             </label>
-                                <div v-model="checked"
+                                <div 
                                     v-for="item, index in [
                                         { title: 'No Display - Doc Received', value: 'no_display:document_received'},
                                         { title: 'No Check - Doc Received', value: 'no_check:document_received' },
