@@ -528,17 +528,19 @@
         "type": "input-checkbox",
         "key": "visibility-scope",
         "conditions": null,
+        "minimum": 1,
 
         "data": {
             "title": "How should it be filtered1234",
-            "required": true,
+            "required": false,
+
             
 
             "items": [
                 {
                     "id": 0,
                     "referenceKey": "no_display:document_received",
-                    "title": "No Display - Doc Received",
+                    "title": "No Display - Doc Received"
                     
                 },
                 {
