@@ -12,7 +12,7 @@ class CheckoutController extends Controller
     {
         echo "<pre>";
         print_r($request);
-        die;
+     
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
