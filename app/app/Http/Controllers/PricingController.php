@@ -10,7 +10,6 @@ class PricingController extends Controller
 {
     public function index()
     {
-       
         $user = Auth::guard()->user();
       
         $subscription = $user->subscription();

@@ -9,7 +9,9 @@ use App\Models\StripePlan;
 class CheckoutController extends Controller
 {
     public function create(Request $request)
-    {
+    {   echo "<pre>";
+        echo "in api section ";
+        die;
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
