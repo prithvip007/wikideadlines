@@ -637,7 +637,7 @@ final class TestResult implements Countable
         $error      = false;
         $failure    = false;
         $warning    = false;
-        $incomplete = true;
+        $incomplete = false;
         $risky      = false;
         $skipped    = false;
 
