@@ -533,11 +533,11 @@
         "data": {
             "title": "How should it be filtered",
             "required": false,
-
+            "maxItems": 1,
             "items": [
                 {
                     "id": 0,
-                    "accept": true,
+                    
                     "referenceKey": "no_display:document_received",
                     "title": "No Display - Doc Received"
                     
