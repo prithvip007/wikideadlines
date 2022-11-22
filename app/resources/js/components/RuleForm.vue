@@ -251,11 +251,11 @@
                     </div>
                     <div class="form-group">
                             <label class="font-weight-bold">
-                                How should it be filtered?
+                                How should it be filtered124?
                             </label>
                                 <div
                                     v-for="item, index in [
-                                        { title: 'No Display - Doc Received', value: 'no_display:document_received' },
+                                        { title: 'No Display - Doc Received', value: 'no_display:document_received'},
                                         { title: 'No Check - Doc Received', value: 'no_check:document_received' },
                                         { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' },
                                         { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' }
