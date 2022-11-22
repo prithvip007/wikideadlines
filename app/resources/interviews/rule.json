@@ -534,31 +534,26 @@
             "title": "How should it be filtered",
             "required": false,
 
-            
-
             "items": [
                 {
                     "id": 0,
-                    "defaultChecked": true,
+                    "accept": true,
                     "referenceKey": "no_display:document_received",
                     "title": "No Display - Doc Received"
                     
                 },
                 {
                     "id": 1,
-                    "defaultChecked": false,
                     "referenceKey": "no_check:document_received",
                     "title": "No Check - Doc Received"
                 },
                 {
                     "id": 2,
-                    "defaultChecked": true,
                     "referenceKey": "no_display:document_to_send",
                     "title": "No Display - Doc to Send"
                 },
                 {
                     "id": 3,
-                    "accept": true,
                     "referenceKey": "no_check:document_to_send",
                     "title": "No Check - Doc to Send"
                 }
