@@ -10,8 +10,7 @@ class PricingController extends Controller
 {
     public function index()
     {
-        echo "ifdf";
-        die;
+       
         $user = Auth::guard()->user();
       
         $subscription = $user->subscription();
