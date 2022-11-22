@@ -134,7 +134,7 @@
                         <option v-for="type in documentTypes" :value="type.id" :key="type.id"
                                 :data-select2-description="type.small_description"
                                 :data-select2-keywords="type.keywords">
-                            {{  }}
+                            {{ type.name }}
                         </option>
                     </select>
                 </div>
