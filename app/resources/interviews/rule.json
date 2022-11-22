@@ -532,9 +532,8 @@
 
         
         "data": {
-            "title": "How should it be filtered",
+            "title": "How should it be filtered?????",
            
-            "required_min:1": true,
             "items": [
                 {
                     "id": 0,
