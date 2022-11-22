@@ -28,7 +28,7 @@
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
                         </label>
-                        <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title select 2 in RuleForm' }"
+                        <select ref="documentType" v-select2="{placeholder: 'Search Pleadings and Documents by Title ' }"
                                 v-model="form.document_type_id"
                                 id="document-type-id"
                                 class="form-control"
@@ -261,7 +261,7 @@
                                         { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' }
                                     ]"
                                     :key="index"
-                                    class="custom-control custom-checkbox"
+                                    class="custom-control custom-checkbox" 
                                 >
                                     <input
                                         v-model="form.visibility_scopes"
@@ -269,7 +269,7 @@
                                         class="custom-control-input"
                                         :value="item.value"
                                         :id="item.value"
-                                        name="visibility-scope"
+                                        name="visibility-scope" required
                                     >
                                     <label
                                         :for="item.value"
