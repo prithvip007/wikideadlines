@@ -117,7 +117,7 @@
 
                 <div class="form-group mb-4">
                     <label class="font-weight-bold" for="document-type-id">
-                        Document or Pleading Title  %%
+                        Document or Pleading Title 
                         <div class="text-muted"> 
                             (If you don't see a document title, 
                             <a
