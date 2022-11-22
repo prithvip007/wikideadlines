@@ -40,6 +40,7 @@
         "id": 6,
         "key": "authority-source",
         "type": "select",
+        "required": true,
         "data": {
             "title": "What is the source of authority for the Deadline Rule?",
             "placeholder": "Select the authority",
@@ -533,7 +534,7 @@
         "data": {
             "title": "How should it be filtered",
             "required": false,
-            "maxitems": 1,
+            
             "items": [
                 {
                     "id": 0,
