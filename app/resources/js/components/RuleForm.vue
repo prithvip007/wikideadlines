@@ -308,7 +308,7 @@
             },
             id: {
                 type: Number,
-                required: false,
+                required: true,
             },
             events: {
                 type: Object,
