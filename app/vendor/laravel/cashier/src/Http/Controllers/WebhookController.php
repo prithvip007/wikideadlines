@@ -123,9 +123,9 @@ class WebhookController extends Controller
     {
         if ($user = $this->getUserByStripeId($payload['data']['object']['customer'])) {
             $data = $payload['data']['object'];
-            echo "<pre>";
-            print_r($data);
-            exit("done");
+            // echo "<pre>";
+            // print_r($data);
+            // exit("done");
 
             $user->subscriptions->filter(function (Subscription $subscription) use ($data) {
                 return $subscription->stripe_id === $data['id'];
