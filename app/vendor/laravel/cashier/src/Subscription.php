@@ -161,6 +161,7 @@ class Subscription extends Model
      */
     public function incomplete()
     { 
+       echo "incomplete";
         return $this->stripe_status === StripeSubscription::STATUS_INCOMPLETE;
     }
 
@@ -647,8 +648,7 @@ class Subscription extends Model
         $stripeSubscription = StripeSubscription::update(
             $this->stripe_id, $this->getSwapOptions($items, $options), $this->owner->stripeOptions()
         );
-        echo "<pre>";
-        print_r($stripeSubscription);
+
         /** @var \Stripe\SubscriptionItem $firstItem */
         $firstItem = $stripeSubscription->items->first();
         $isSinglePlan = $stripeSubscription->items->count() === 1;
