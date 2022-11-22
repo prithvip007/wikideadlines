@@ -533,7 +533,13 @@
         
         "data": {
             "title": "How should it be filtered",
-            "required_if|min:1": true,
+            "required": false,
+            items = 0;
+
+            if ($request->has('checkox')) {
+                $items = 1;
+            }
+
             "items": [
                 {
                     "id": 0,
