@@ -20,9 +20,7 @@
                             class="form-control"
                            
                         >
-                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
-                            {{ error }}
-                        </span>
+                      
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
