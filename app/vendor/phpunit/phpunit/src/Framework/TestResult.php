@@ -621,9 +621,6 @@ final class TestResult implements Countable
      */
     public function run(Test $test): void
     {
-        echo "<pre>";
-        print_r($test);
-        die;
         Assert::resetCount();
 
         $size = TestUtil::UNKNOWN;
@@ -640,7 +637,7 @@ final class TestResult implements Countable
         $error      = false;
         $failure    = false;
         $warning    = false;
-        $incomplete = false;
+        $incomplete = true;
         $risky      = false;
         $skipped    = false;
 

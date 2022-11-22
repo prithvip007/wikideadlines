@@ -9,7 +9,7 @@ use App\Models\StripePlan;
 class CheckoutController extends Controller
 {
     public function create(Request $request)
-    {  
+    {
         $rules = [
             'billing_plan' => ['string', 'regex:(month|year)']
         ];
@@ -18,12 +18,10 @@ class CheckoutController extends Controller
 
         $user = Auth::guard()->user();
 
-        print_r($user);
         if (!$user->stripe_id) {
             $user->createAsStripeCustomer();
         }
 
-         print_r($user->subscribed);
         if ($user->subscribed('default', null, true)) {
             $url = $user->billingPortalUrl(route('home'));
             
@@ -31,9 +29,9 @@ class CheckoutController extends Controller
         }
 
         $plan = StripePlan::where('interval', $request->input('billing_plan'))->first();
-      print_r($plan);
+      
 
-        $checkout_session = \Stripe\Checkout\Session::create([ 
+        $checkout_session = \Stripe\Checkout\Session::create([  
             'mode' => 'subscription',
             'success_url' => route('payment.success') . '?session_id={CHECKOUT_SESSION_ID}',
             'cancel_url' => route('payment.fail'),
@@ -51,9 +49,6 @@ class CheckoutController extends Controller
             ]
         ]);
 
-        $res= response()->json(['session_id' => $checkout_session['id']]);
-        echo "<pre>";
-        print_r($res);
-        die;
+        return response()->json(['session_id' => $checkout_session['id']]);
     }
 }

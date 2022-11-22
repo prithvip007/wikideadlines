@@ -161,7 +161,6 @@ class Subscription extends Model
      */
     public function incomplete()
     { 
-       echo "incomplete";
         return $this->stripe_status === StripeSubscription::STATUS_INCOMPLETE;
     }
 
