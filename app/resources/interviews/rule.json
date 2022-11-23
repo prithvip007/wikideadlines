@@ -529,18 +529,15 @@
         "id": 20,
         "type": "input-checkbox",
         "key": "visibility-scope",
-        "conditions": null,
+       "required": true,
         
         "data": {
             "title": "How should it be filtered",
-            
             "items": [
                 {
                     "id": 0,
-                    
                     "referenceKey": "no_display:document_received",
                     "title": "No Display - Doc Received"
-                    
                 },
                 {
                     "id": 1,
