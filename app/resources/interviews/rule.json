@@ -530,7 +530,7 @@
         "type": "input-checkbox",
         "key": "visibility-scope",
         "conditions": null,
-        
+        "select-first": true,
         "data": {
             "title": "How should it be filtered",
             
