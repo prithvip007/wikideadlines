@@ -15,7 +15,7 @@ class MotionToAmendJudgment extends Seeder
     {
         $document = \App\Models\DocumentType::create([
             'name' => 'Motion to Amend Judgment',
-            'keywords' => 'Notice of judgment provided, opposition, reply',
+            'keywords' => 'Notice of judgment provided opposition,reply',
             'ask_hearing_courthouse' => true,
             'ask_hearing_courtroom' => true,
             'days_before_hd_court' => 16
