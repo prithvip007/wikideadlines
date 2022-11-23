@@ -3,7 +3,7 @@
         <section class="row">
             <h5 class="col-12">General Methods</h5>
             <div class="col-12 col-md-6">
-                <profile-phone-number :initial-phone-number="phoneNumber"></profile-phone-number>
+                <profile-phone-number :initial-phone-number="phoneNumber1"></profile-phone-number>
             </div>
             <div class="col-12 col-md-6">
                 <profile-email :initialEmail="email"></profile-email>
