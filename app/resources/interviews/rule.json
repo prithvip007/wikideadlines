@@ -529,10 +529,10 @@
         "id": 20,
         "type": "input-checkbox",
         "key": "visibility-scope",
-       "required": true,
+       "required_without": true,
         "data": {
             "title": "How should it be filtered",
-            "required": true,
+            
             "items": [
                 {
                     "id": 0,
