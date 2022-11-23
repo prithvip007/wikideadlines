@@ -530,12 +530,12 @@
         "type": "input-checkbox",
         "key": "visibility-scope",
         "conditions": null,
-        "required_with": true,
+        "required_without": true,
         
 
         "data": {
             "title": "How should it be filtered12345",
-            "required_with": true,
+            "required_without": true,
             
             "items": [
                 {
