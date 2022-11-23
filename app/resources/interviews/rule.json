@@ -534,8 +534,8 @@
         
 
         "data": {
-            "title": "How should it be filtered",
-            "required": false,
+            "title": "How should it be filtered12345",
+            "required_with": true,
             
             "items": [
                 {
