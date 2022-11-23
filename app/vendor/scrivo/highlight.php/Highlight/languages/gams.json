@@ -146,8 +146,8 @@
                             "className": "comment",
                             "variants": [
                                 {
-                                    "begin": "'",
-                                    "end": "'"
+                                    "begin": "",
+                                    "end": ""
                                 },
                                 {
                                     "begin": "\"",
