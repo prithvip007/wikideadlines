@@ -532,7 +532,7 @@
        
         "data": {
             "title": "How should it be filtered",
-            "required": 1,
+            "required_if": 1,
             
             "items": [
                 {
