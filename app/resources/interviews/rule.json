@@ -108,7 +108,7 @@
         "key": "triggering-event",
         "type": "select",
         "conditions": null,
-        "required": true,
+        
         "data": {
             "title": "Select a Triggering Event",
             "placeholder": "Select an event",
@@ -530,7 +530,8 @@
         "type": "input-checkbox",
         "key": "visibility-scope",
         "conditions": null,
-        "minimum": 1,
+        "required_with": true,
+        
 
         "data": {
             "title": "How should it be filtered",
