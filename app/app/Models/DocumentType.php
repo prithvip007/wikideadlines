@@ -15,7 +15,6 @@ use phpDocumentor\Reflection\Types\Integer;
  * @package App\Models
  *
  * @property string $name
- * @property string $keywords
  * @property \Illuminate\Database\Eloquent\Collection|Deadline[] $deadlines
  * @property DeliveryMethod[] $delivery_methods
  * @property int[] $delivery_method_ids
