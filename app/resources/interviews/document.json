@@ -2347,11 +2347,12 @@
     {
         "id": 28,
         "type": "multiselect",
-        "required": true,
+        "allow-empty":"false",
         "data": {
             "title": "What is the triggering event used to calculate the deadline for this document? ",
             "placeholder": "Select events",
             "required": true,
+            "allow-empty":"false",
             "items": [
                 {
                     "id": 1,
