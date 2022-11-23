@@ -529,8 +529,9 @@
         "id": 20,
         "type": "input-checkbox",
         "key": "visibility-scope",
+        "conditions": null,
        "required": true,
-       "between": false,
+       
         "data": {
             "title": "How should it be filtered",
             "items": [
