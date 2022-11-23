@@ -261,7 +261,7 @@
         props: {
             excludeItems: {
                 type: Array,
-                required: false
+                required: true,
             },
             errors: {
                 type: Object,

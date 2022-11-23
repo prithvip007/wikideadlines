@@ -71,7 +71,7 @@
                             v-model="form.delivery_methods"
                             label="name"
                             track-by="id"
-                            :options="deliveryMethods" required></multiselect>
+                            :options="deliveryMethods"></multiselect>
                         <span v-for="error, index in getErrors('name')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
