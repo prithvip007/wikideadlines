@@ -76,7 +76,7 @@ class RequestsController extends Controller
                
                 if ($deadline['meta']['key'] === 'keywords') {
                     $validator = Validator::make($deadline, [
-                        'value' => 'nullable|regex:/^[\pL\s\-]',
+                        'value' => 'nullable|regex:/^[\pL\s\-]/',
                     ]);
                    
                     if ($validator->fails()) {
