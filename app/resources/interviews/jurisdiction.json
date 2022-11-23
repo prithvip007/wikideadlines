@@ -9,17 +9,18 @@
             "maxlength": 200,
             "required": true
         }
-    }
+    },
 
-    
-     
-     
-     
-     
-     
-     
-     
-     
-    
+    {
+        "id": 20,
+        "type": "input-checkb",
+        "key": "visibility-sc",
+        "conditions": null,
+        "required":true,
+        
+        "data": {
+                   "required": true
+        }
+    }
 
 ]
