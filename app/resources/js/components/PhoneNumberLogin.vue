@@ -11,7 +11,7 @@
         <h5 v-else-if="currentStep === CODE_STEP" class="card-header text-center bg-white">Verify your phone number</h5>
         <div class="card-body">
             <form @submit.prevent="sendForm" class="p-0 px-md-5 py-md-2">
-                <div v-if="currentStep === PHONE_STEP">Please enter a new phone number
+                <div v-if="currentStep === PHONE_STEP">
                     <div class="form-group d-flex align-items-center flex-column">
                         <div v-if="mode === 'logging'" class="text-center mb-3">Please enter your phone number<br>to log in to WikiDeadlines</div>
                         <div v-if="mode === 'update'"  class="text-center mb-3">Please enter a new phone number<br>that you will use to log in to WikiDeadlines</div>
