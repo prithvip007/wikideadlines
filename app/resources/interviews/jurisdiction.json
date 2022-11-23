@@ -13,8 +13,8 @@
 
     {
         "id": 20,
-        "type": "input-checkb",
-        "key": "visibility-sc",
+        "type": "input-checkbox",
+        "key": "visibility-scope",
         "conditions": null,
         "required":true,
         
