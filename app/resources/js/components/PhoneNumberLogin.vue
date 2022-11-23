@@ -13,8 +13,8 @@
             <form @submit.prevent="sendForm" class="p-0 px-md-5 py-md-2">
                 <div v-if="currentStep === PHONE_STEP">Please enter a new phone number
                     <div class="form-group d-flex align-items-center flex-column">
-                        <div v-if="mode === 'logging'" class="text-center mb-3">Please enter your phone number123456login<br>to log in to WikiDeadlines</div>
-                        <div style="display: block;" v-if="mode === 'update'"  class="text-center mb-3">Please enter a new phone number123<br>that you will use to log in to WikiDeadlines</div>
+                        <div v-if="mode === 'logging'" class="text-center mb-3">Please enter your phone number<br>to log in to WikiDeadlines</div>
+                        <div v-if="mode === 'update'"  class="text-center mb-3">Please enter a new phone number<br>that you will use to log in to WikiDeadlines</div>
                         <div v-if="mode === 'signup'" class="text-center mb-3">Please enter your phone number<br>to sign up to WikiDeadlines</div>
                             <vue-phone-number-input border-radius="10" class="w-100" size="sm" :no-example="true" autofocus v-on:update="handlePhoneNumberUpdate" autocomplete="tel" required v-model="phone"></vue-phone-number-input>
                         <div v-if="isPhoneNumberValid === false" class="invalid-feedback">
