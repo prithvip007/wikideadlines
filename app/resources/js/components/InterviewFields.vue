@@ -256,8 +256,7 @@
 
     export default {
         components: {
-            Multiselect,
-            required: true
+            Multiselect
         },
         props: {
             excludeItems: {
