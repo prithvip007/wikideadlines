@@ -15,6 +15,7 @@
     <div id="app" class="h-full md:flex md:justify-center md:items-center">
         <div class="w-full max-w-lg">
             <!-- Status Messages -->
+            <h1> i am in payment.bladepage</h1>
             <p class="flex items-center bg-red-100 border border-red-200 px-5 py-2 rounded-lg text-red-500" v-if="errorMessage">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flex-shrink-0 w-6 h-6">
                     <path class="fill-current text-red-300" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z"/>
@@ -30,7 +31,7 @@
                     <path class="fill-current text-green-500" d="M10 14.59l6.3-6.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 0 1 1.4-1.42l2.3 2.3z"/>
                 </svg>
 
-                <span class="ml-3">@{{ successMessage }}</span>
+                <span class="ml-3"> <h1>My message</h1>@{{ successMessage }}</span>
             </p>
 
             <div class="bg-white rounded-lg shadow-xl p-4 sm:p-6 mt-4">
@@ -162,7 +163,7 @@
                         }
                     ).then(function (result) {
                         self.paymentProcessing = false;
-
+                         console.log(result)
                         if (result.error) {
                             if (result.error.code === '{{ Stripe\ErrorObject::CODE_PARAMETER_INVALID_EMPTY }}' &&
                                 result.error.param === 'payment_method_data[billing_details][name]') {
@@ -235,9 +236,7 @@
                 },
             },
         })
-        alert(new)
-    console.log(app);
-    console.log(new);
+       
     </script>
 </body>
 </html>

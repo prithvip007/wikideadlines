@@ -545,11 +545,7 @@ TAGSPUBKEY
      */
     protected function validatePhar($pharFile, &$error)
     {
-
-        echo "<pre>";
-        echo "i am in validatephare";
-        print_r($error);
-        if ( ('phar.readonly')) {
+        if (ini_get('phar.readonly')) {
             return true;
         }
 
@@ -560,18 +556,13 @@ TAGSPUBKEY
             unset($phar);
             $result = true;
         } catch (\Exception $e) {
-
-            echo "<pre>";
-            echo "i am in validatephare";
-            print_r($e);
             if (!$e instanceof \UnexpectedValueException && !$e instanceof \PharException) {
                 throw $e;
             }
             $error = $e->getMessage();
             $result = false;
         }
-        print_r($result);
-        die;
+
         return $result;
     }
 

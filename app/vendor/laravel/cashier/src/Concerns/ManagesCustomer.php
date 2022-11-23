@@ -164,6 +164,10 @@ trait ManagesCustomer
      */
     public function billingPortalUrl($returnUrl = null)
     {
+        echo "<pre>";
+        echo "i m in return url";
+        print_r($returnUrl);
+        die;
         $this->assertCustomerExists();
 
         return StripeBillingPortalSession::create([
