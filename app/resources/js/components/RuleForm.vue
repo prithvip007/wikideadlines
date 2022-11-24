@@ -6,24 +6,32 @@
         <form @submit.prevent="save" method="post">
             <modal-body>
                 <div ref="body">
+                   
+
                     <div class="form-group">
-                        <label for="deadline-rule-title" class="font-weight-bold">
+                        <label for="bestPractices" class="font-weight-bold">
                             Title of Deadline Rule
                             <small class="text-muted">
                                 (optional)
                             </small>
                         </label>
-                        <input
+                        <textarea
                             id="deadline-rule-title"
-                            v-model="form.title"
                             type="text"
+                            maxlength="2000"
                             class="form-control"
-                            :class="{'is-invalid': hasError('title')}"
-                        >
-                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
+                            :class="{'is-invalid': hasError('best_practices')}"
+                            rows="3"
+                            v-model="form.title"
+                        ></textarea>
+                        <span v-for="error, index in getErrors('best_practices')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
+
+
+
+
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
