@@ -13,19 +13,17 @@
                                 (optional)
                             </small>
                         </label>
-                        <textarea
+                        <input
                             id="deadline-rule-title"
+                            v-model="form.title"
                             type="text"
                             class="form-control"
-                            :class="{'is-invalid': hasError('best_practices')}"
-                            v-model="form.title"
-                        ></textarea>
+                            :class="{'is-invalid': hasError('title')}"
+                        >
                         <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
-                  
-     
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
