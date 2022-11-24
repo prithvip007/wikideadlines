@@ -70,7 +70,8 @@
                             data-toggle="tooltip"
                             data-placement="top"
                             title="Double click the disabled element in order to change its value"
-                            class="fa fa-question-circle-o help ml-1"
+                            class="fa fa-question-circle-o help "
+                            
                         ></i>
                         <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
                         <div class="text-muted"> 
