@@ -249,7 +249,7 @@
                             {{ error }}
                         </span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                             <label class="font-weight-bold">
                                 How should it be filtered?
                             </label>
@@ -261,7 +261,7 @@
                                         { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' }
                                     ]"
                                     :key="index"
-                                    class="custom-control custom-checkbox"
+                                    class="custom-control custom-checkbox" 
                                 >
                                     <input
                                         v-model="form.visibility_scopes"
@@ -270,6 +270,7 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        required
                                     >
                                     <label
                                         :for="item.value"

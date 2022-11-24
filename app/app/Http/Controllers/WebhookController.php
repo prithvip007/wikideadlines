@@ -122,14 +122,8 @@ class WebhookController extends CashierController
             $userId = (int) $payload['data']['object']['metadata']['user_id'];
 
             $user = User::find($userId);
-echo  "<pre>";
-print_r($user);
 
             if ($user) {
-                echo  "<pre>";
-                echo "i am in  if conditinon";
-               print_r($user);
-
                 $user->stripe_id = $payload['data']['object']['customer'];
 
                 $user->save();
