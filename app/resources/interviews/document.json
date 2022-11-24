@@ -2377,7 +2377,7 @@
                 {
                     "id": 5,
                     "referenceKey": "dcc",
-                    "title": "Date Service of the Complaint or Cross-Complaint was completed"
+                    "title": "Date Service of the Complaint or '\\n' Cross-Complaint was completed" 
                 },
                 {
                     "id": 6,
