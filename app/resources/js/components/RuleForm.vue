@@ -6,32 +6,24 @@
         <form @submit.prevent="save" method="post">
             <modal-body>
                 <div ref="body">
-                   
-
                     <div class="form-group">
-                        <label for="bestPractices" class="font-weight-bold">
+                        <label for="deadline-rule-title" class="font-weight-bold">
                             Title of Deadline Rule
                             <small class="text-muted">
                                 (optional)
                             </small>
                         </label>
-                        <textarea
+                        <input
                             id="deadline-rule-title"
-                            type="text"
-                            maxlength="2000"
-                            class="form-control"
-                            :class="{'is-invalid': hasError('best_practices')}"
-                            rows="3"
                             v-model="form.title"
-                        ></textarea>
-                        <span v-for="error, index in getErrors('best_practices')" class="invalid-feedback d-block" :key="index">
+                            type="text"
+                            class="form-control"
+                            :class="{'is-invalid': hasError('title')}"
+                        >
+                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
-
-
-
-
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
@@ -278,7 +270,11 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        :class="{'is-invalid': hasError('title')}"
                                     >
+                                    <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
+                                        {{ error }}
+                                    </span>
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
