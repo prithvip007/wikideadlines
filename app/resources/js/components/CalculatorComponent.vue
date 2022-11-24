@@ -70,13 +70,11 @@
                             data-toggle="tooltip"
                             data-placement="top"
                             title="Double click the disabled element in order to change its value"
-                            class="fa fa-question-circle-o help "
-                            
-                            onclick="this.title.display = 'none'"
+                            class="fa fa-question-circle-o help ml-1"
                             
                         ></i>
 
-                        <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
+                        <span class="text-muted">(Court or arbitration company where the case is or will be filed)123</span>
                         <div class="text-muted"> 
                             (If you don't see your jurisdiction, 
                             <a
@@ -87,7 +85,7 @@
                     </label>
                     <select v-select2="{placeholder: 'Select a Jurisdiction'}" v-model="formData.state_id" id="state-id"
                             class="form-control"
-                            name="state_id" required :readonly="canChangeJurisdiction === false">
+                            name="state_id" required :readonly="canChangeJurisdiction === true">
                         <option></option>
                         <option v-for="state in states" :value="state.id" :key="state.id">{{ state.name }}</option>
                     </select>
