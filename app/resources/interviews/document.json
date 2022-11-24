@@ -2350,7 +2350,7 @@
         "data": {
             "title": "What is the triggering event used to calculate the deadline for this document?",
             "placeholder": "Select events",
-            
+            "width":"fit-contents",
             "items": [
                 {
                     "id": 1,
@@ -2377,7 +2377,7 @@
                 {
                     "id": 5,
                     "referenceKey": "dcc",
-                    "title": "Date Service of the Complaint or \\n\\ Cross-Complaint was completed" 
+                    "title": "Date Service of the Complaint or Cross-Complaint was completed" 
                 },
                 {
                     "id": 6,
