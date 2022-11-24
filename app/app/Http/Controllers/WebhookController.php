@@ -93,10 +93,6 @@ class WebhookController extends CashierController
      */
     protected function handlePaymentIntentSucceeded(array $payload)
     {
-
-
-        echo "payment hgera ";
-        Exit ("i m reach in webhook controller");
         $this->setStripeCustomerId($payload);
 
         $calculationId = (int) $payload['data']['object']['metadata']['calculation_id'];
@@ -126,8 +122,14 @@ class WebhookController extends CashierController
             $userId = (int) $payload['data']['object']['metadata']['user_id'];
 
             $user = User::find($userId);
+echo  "<pre>";
+print_r($user);
 
             if ($user) {
+                echo  "<pre>";
+                echo "i am in  if conditinon";
+               print_r($user);
+
                 $user->stripe_id = $payload['data']['object']['customer'];
 
                 $user->save();
