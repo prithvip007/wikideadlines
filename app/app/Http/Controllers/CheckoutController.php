@@ -50,6 +50,10 @@ class CheckoutController extends Controller
             ]
         ]);
 
-        return response()->json(['session_id' => $checkout_session['id']]);
-    }
+        
+        $val= response()->json(['session_id' => $checkout_session['id']]);
+        echo "<pre>";
+        print_r($val);
+
+Exit ("frrere");    }
 }
