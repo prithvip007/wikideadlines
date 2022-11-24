@@ -70,9 +70,9 @@
                             data-toggle="tooltip"
                             data-placement="top"
                             title="Double click the disabled element in order to change its value"
-                            class="fa fa-question-circle-o help ml-1"
+                            class="fa fa-question-circle-o help "
                             
-                            ondblclick="this.title.display = 'none'"
+                            onclick="this.title.display = 'none'"
                             
                         ></i>
 
