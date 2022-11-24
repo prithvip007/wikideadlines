@@ -2350,7 +2350,8 @@
         "data": {
             "title": "What is the triggering event used to calculate the deadline for this document?",
             "placeholder": "Select events",
-            "display": "block",
+            
+            "overflow-x": "scroll",
             "items": [
                 {
                     "id": 1,
