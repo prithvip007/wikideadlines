@@ -85,7 +85,7 @@
                     </label>
                     <select v-select2="{placeholder: 'Select a Jurisdiction'}" v-model="formData.state_id" id="state-id"
                             class="form-control"
-                            name="state_id" required :readonly="canChangeJurisdiction === true">
+                            name="state_id" required :readonly="canChangeJurisdiction === false">
                         <option></option>
                         <option v-for="state in states" :value="state.id" :key="state.id">{{ state.name }}</option>
                     </select>
@@ -495,6 +495,9 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
         methods: {
             onJurisdictionDBClick( ) {
                 this.canChangeJurisdiction = true;
+            },
+            onJurisdictionDBClick(){
+                onclick="this.title.display = 'none'"
             },
             onCountyDBClick( ) {
                 this.canChangeCounty = true;
