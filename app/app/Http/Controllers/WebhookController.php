@@ -93,6 +93,10 @@ class WebhookController extends CashierController
      */
     protected function handlePaymentIntentSucceeded(array $payload)
     {
+
+
+        echo "payment hgera ";
+        Exit ("i m reach in webhook controller");
         $this->setStripeCustomerId($payload);
 
         $calculationId = (int) $payload['data']['object']['metadata']['calculation_id'];
