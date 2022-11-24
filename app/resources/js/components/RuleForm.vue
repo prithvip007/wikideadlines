@@ -24,24 +24,7 @@
                             {{ error }}
                         </span>
                     </div>
-                    <div class="form-group">
-                        <label for="description" class="font-weight-bold">
-                            Description new
-                        </label>
-                        <textarea
-                            id="deadline-rule-title"
-                            type="text"
-                            maxlength="2000"
-                            class="form-control"
-                            :class="{'is-invalid': hasError('title')}"
-                            rows="3"
-                            v-model="form.title"
-                            required
-                        ></textarea>
-                        <span v-for="error, index in getErrors('name')" class="invalid-feedback d-block" :key="index">
-                            {{ error }}
-                        </span>
-                    </div>
+                   
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
