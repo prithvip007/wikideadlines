@@ -92,16 +92,16 @@
                     </select>
                 </div>
                 <div @dblclick="onCountyDBClick" v-if="getCountiesForCurrentState().length > 0" class="form-group mb-4">
-                    <!-- <label class="font-weight-bold" for="county-id"> -->
-                        <!-- County -->
-                        <!-- <i -->
-                            <!-- v-if="canChangeCounty === false" -->
-                            <!-- data-toggle="tooltip" -->
-                            <!-- data-placement="top" -->
-<!--                             -->
-                            <!-- class="fa fa-question-circle-o help ml-1" -->
-                        <!-- ></i> -->
-                    <!-- </label> -->
+                    <label class="font-weight-bold" for="county-id">
+                        County
+                        <i
+                            v-if="canChangeCounty === false"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                           
+                            class="fa fa-question-circle-o help ml-1"
+                        ></i>
+                    </label>
                     <select v-select2="{placeholder: 'Select a County'}" v-model="formData.county_id" id="county-id"
                             class="form-control"
                             name="county_id" required :readonly="canChangeCounty === false">
