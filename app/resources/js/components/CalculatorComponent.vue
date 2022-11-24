@@ -496,9 +496,9 @@ button.btn.document-tabs__button.document-tabs__button_active:focus {
             onJurisdictionDBClick( ) {
                 this.canChangeJurisdiction = true;
             },
-            onJurisdictionDBClick(){
-                ondblclick="this.title.display = 'none'"
-            },
+            // onJurisdictionDBClick(){
+                // ondblclick="this.title.display = 'none'"
+            // },
             onCountyDBClick( ) {
                 this.canChangeCounty = true;
             },
