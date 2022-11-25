@@ -273,14 +273,13 @@
                                         required="true"
                                         :class="{'is-invalid': hasError('reaj')}"
                                     >
-
-                                    <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
-                                        {{ error }}
-                                    </span>
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
                                     >
+                                    <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
+                                        {{ error }}
+                                    </span>
                                         {{ item.title }}
                                     </label>
                                 </div>
@@ -382,7 +381,6 @@
             },
             getFormData() {
                 return {
-                    title: '',
                     document_type_id: '',
                     visibility_scopes: [],
                     name: '',
