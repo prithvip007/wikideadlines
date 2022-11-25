@@ -262,7 +262,7 @@
                                     ]"
                                     :key="index"
                                     class="custom-control custom-checkbox"
-                                    :class="{'is-invalid': hasError('title')}"
+                                    :class="{'is-invalid': hasError('reaj')}"
 
                                 >
                                     <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
