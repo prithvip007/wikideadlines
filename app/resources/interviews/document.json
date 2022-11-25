@@ -2351,7 +2351,7 @@
         "data": {
             "title": "What is the triggering event used to calculate the deadline for this document?123",
             "placeholder": "Select events",
-            
+            "var numWordToDisplay ": 10,
             "items": [
                 {
                     "id": 1,
