@@ -71,7 +71,7 @@ class RequestsController extends Controller
 
         if (
             $request->input('type') === 'document_type' || 
-            $request->input('type') === 'edit_document_type|required'
+            $request->input('type') === 'edit_document_type'
         ) {
             foreach ($request->input('data.deadlines') as $key => $deadline) {
                
