@@ -249,7 +249,7 @@
                             {{ error }}
                         </span>
                     </div>
-                    <div class="form-group"  :class="{'is-invalid': hasError('title')}">
+                    <div class="form-group">
                             <label class="font-weight-bold"  >
                                 How should it be filtered?
                             </label>
@@ -260,41 +260,36 @@
                                         { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' ,id:'3' },
                                         { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' ,id:'4' }
                                     ]"
-                                    
                                     :key="index"
                                     class="custom-control custom-checkbox"
                                    
                                 >
-                                    <input
-                                        v-model="form.visibility_scopes"
-                                        type="checkbox"
-                                        class="custom-control-input netcheck"
-                                        :value="item.value"
-                                        :id="item.value"
-                                        name="visibility-scope"
-                                      
-                                    >
-                                    <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
-                                        {{ error }}
-                                    </span>
-                                    <label
-                                        :for="item.value"
-                                        class="custom-control-label"
-                                    >
-                                   
-                                        {{ item.title }}
-                                    </label>
+                                <input
+                                    class="custom-control-input"
+                                    type="checkbox"
+                                    v-model="form.days_type"
+                                    :id="`item-${value}`"
+                                    name="visibility-scope"
+                                    :value="label"
+                                    required
+                                >
+
+                                <label
+                                    :for="`item-${value}`"
+                                    class="custom-control-label text-capitalize"
+                                >
+                                    {{ item.title  }}
+                                </label>   
                                 </div>
                         </div>
                 </div>
             </modal-body>
-            <modal-footer-button :loading="isSaving" @click="incrementCounter">
+            <modal-footer-button :loading="isSaving">
                 Save
             </modal-footer-button>
         </form>
     </modal>
 </template>
-
 
 <script>
     import Modal from './Modal/Modal';
@@ -416,9 +411,6 @@
                 return '';
             }
         },
-        incrementCounter() {
-            console.log("dfdfdfddfsdfsdfds");
-            },
         created: function () {
             this.initializeTooltips();
         },
@@ -427,5 +419,7 @@
         }
     }
 
-  
+    $("#netcheck").change(function() {
+    alert("fgdfdf");
+});
 </script>
