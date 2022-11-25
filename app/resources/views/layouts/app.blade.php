@@ -69,7 +69,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#feedback">Feedback</a>
                                 </li>
-                                <li class="nav-item dropdown {{ Request::route()->named('profile') ? 'active' : '' }}">
+                                <li class="nav-item dropdown {{ Request::route()->named('profile') ? 'active' : '' }}" style="width: 100px;">
                                     <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="d-inline-block" style="max-width: 200px; overflow:hidden; text-overflow:ellipsis">
                                             {{ Auth::user()->first_name . ' ' . Auth::user()->second_name }}
