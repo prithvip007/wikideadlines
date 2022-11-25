@@ -522,7 +522,7 @@
         "conditions": null,
         "data": {
             "title": "Suggest a Best Practice for this Rule",
-            "required": true,
+            "required": false,
             "maxlength": 2000
         }
     },
