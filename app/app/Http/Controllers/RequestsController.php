@@ -21,7 +21,8 @@ class RequestsController extends Controller
  // TODO: write custom validation rule
         $rules = [
             'type' => 'required|in:edit_document_type,document_type,add_deadline,edit_deadline,feedback,jurisdiction',
-            'data' => 'required|array|between:1,50'
+            'data' => 'required|array|between:1,50',
+            'multiselect' => 'required'
         ];
 
         if (
