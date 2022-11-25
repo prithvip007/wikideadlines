@@ -249,16 +249,16 @@
                             {{ error }}
                         </span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"  :class="{'is-invalid': hasError('title')}">
                             <label class="font-weight-bold"  >
                                 How should it be filtered?
                             </label>
                                 <div
                                     v-for="item, index in [
-                                        { title: 'No Display - Doc Received', value: 'no_display:document_received' },
-                                        { title: 'No Check - Doc Received', value: 'no_check:document_received' },
-                                        { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' },
-                                        { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' }
+                                        { title: 'No Display - Doc Received', value: 'no_display:document_received',id:'1' },
+                                        { title: 'No Check - Doc Received', value: 'no_check:document_received',id:'2' },
+                                        { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' ,id:'3' },
+                                        { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' ,id:'4' }
                                     ]"
                                     :key="index"
                                     class="custom-control custom-checkbox"
@@ -267,11 +267,11 @@
                                     <input
                                         v-model="form.visibility_scopes"
                                         type="checkbox"
-                                        class="custom-control-input"
+                                        class="custom-control-input netcheck"
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
-                                        :class="{'is-invalid': hasError('title')}"
+                                      
                                     >
                                     <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
                                         {{ error }}
@@ -421,4 +421,8 @@
             this.initializeTooltips();
         }
     }
+
+    $("#netcheck").change(function() {
+    alert("fgdfdf");
+});
 </script>
