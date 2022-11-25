@@ -260,6 +260,7 @@
                                         { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' ,id:'3' },
                                         { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' ,id:'4' }
                                     ]"
+                                    
                                     :key="index"
                                     class="custom-control custom-checkbox"
                                    
@@ -287,12 +288,13 @@
                         </div>
                 </div>
             </modal-body>
-            <modal-footer-button :loading="isSaving">
+            <modal-footer-button :loading="isSaving" @click="incrementCounter">
                 Save
             </modal-footer-button>
         </form>
     </modal>
 </template>
+
 
 <script>
     import Modal from './Modal/Modal';
@@ -414,6 +416,9 @@
                 return '';
             }
         },
+        incrementCounter() {
+            console.log("dfdfdfddfsdfsdfds");
+            },
         created: function () {
             this.initializeTooltips();
         },
@@ -422,7 +427,5 @@
         }
     }
 
-    $("#netcheck").change(function() {
-    alert("fgdfdf");
-});
+  
 </script>
