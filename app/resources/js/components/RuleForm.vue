@@ -250,7 +250,7 @@
                         </span>
                     </div>
                     <div class="form-group">
-                            <label class="font-weight-bold"  :class="{'is-invalid': hasError('reaj')}">
+                            <label class="font-weight-bold"  >
                                 How should it be filtered?
                             </label>
                                 <div
@@ -270,6 +270,7 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        :class="{'is-invalid': hasError('reaj')}"
                                     >
                                     <label
                                         :for="item.value"
