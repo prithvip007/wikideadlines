@@ -108,11 +108,13 @@
         "key": "triggering-event",
         "type": "select",
         "conditions": null,
-        
+        "overflow-x": "hidden",
         "data": {
             "title": "Select a Triggering Event",
             "placeholder": "Select an event",
             "required": true,
+            "overflow-x": "hidden",
+            
             "items": [
                 {
                     "id": 1,
