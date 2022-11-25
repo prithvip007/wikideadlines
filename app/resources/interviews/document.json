@@ -2349,7 +2349,7 @@
         "type": "multiselect", 
         
         "data": {
-            "title": "What is the triggering event used to calculate the deadline for this document?111",
+            "title": "What is the triggering event used to calculate the deadline for this document?",
             "placeholder": "Select events",
             
             "items": [
