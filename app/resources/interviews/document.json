@@ -2358,99 +2358,115 @@
                 {
                     "id": 1,
                     "title": "Proof of Service Date",
-                       "smallDescription": "i.e. Date Document Mailed, faxed, etc."
+                    "referenceKey": "dps",
+                    "smallDescription": "i.e. Date Document Mailed, faxed, etc."
                 },
                 {
                     "id": 2,
                     "title": "Date Document Served",
-                       "smallDescription": "accounting for Delivery Method"
+                    "referenceKey": "dds",
+                    "smallDescription": "accounting for Delivery Method"
                 },
                 {
                     "id": 3,
-                       "title": "Date document filed with court"
+                    "referenceKey": "fcd",
+                    "title": "Date document filed with court"
                 },
                 {
                     "id": 4,
-                       "title": "Date Complaint or Cross-Complaint Filed"
+                    "referenceKey": "dcf",
+                    "title": "Date Complaint or Cross-Complaint Filed"
                 },
                 {
                     "id": 5,
-                       "title": "Date Service of the Complaint or Cross-Complaint was completed"
+                    "referenceKey": "dcc",
+                    "title": "Date Service of the Complaint or Cross-Complaint was completed"
                 },
                 {
                     "id": 6,
-    ,
+                    "referenceKey": "dfcmch",
                     "title": "Date of First Case Management Conference Hearing"
                 },
                 {
                     "id": 7,
                     "smallDescription": "other than a Case Management Conference",
-                  "title": "Hearing Date"
+                    "referenceKey": "hd",
+                    "title": "Hearing Date"
                 },
                 {
                     "id": 8,
-                        "title": "First Trial Date Set"
+                    "referenceKey": "ftds",
+                    "title": "First Trial Date Set"
                 },
                 {
                     "id": 9,
-                        "title": "Trial or Arbitration Starting Date"
+                    "referenceKey": "tasd",
+                    "title": "Trial or Arbitration Starting Date"
                 },
                 {
                     "id": 10,
-                       "title": "Last Date Arbitration Conducted"
+                    "referenceKey": "lad",
+                    "title": "Last Date Arbitration Conducted"
                 },
                 {
                     "id": 11,
                     "smallDescription": "other than an order or judgment",
-                        "title": "Date Document Signed by Court"
+                    "referenceKey": "ddsc",
+                    "title": "Date Document Signed by Court"
                 },
                 {
                     "id": 12,
-    
+                    "referenceKey": "doorjsbc",
                     "title": "Date Order or Judgment Signed by Court"
                 },
                 {
                     "id": 13,
-    
+                    "referenceKey": "dnmbc",
                     "title": "Date Any Notice Mailed by Court "
                 },
                 {
                     "id": 15,
+                    "referenceKey": "dsnejk",
                     "title": "Date of Service of \"Notice of Entry\" of Judgment by Clerk"
                 },
                 {
                     "id": 16,
-                        "title": "Date of Completion of Deposition Record"
+                    "referenceKey": "dcdr",
+                    "title": "Date of Completion of Deposition Record"
                 },
                 {
                     "id": 17,
-                        "title": "Date lis pendens is recorded"
+                    "referenceKey": "dlpr",
+                    "title": "Date lis pendens is recorded"
                 },
                 {
                     "id": 18,
-    
+                    "referenceKey": "daafwcoc",
                     "title": "Date arbitration award is filed with the clerk of the court"
                 },
                 {
                     "id": 19,
-                       "title": "Date Answer Filed"
+                    "referenceKey": "daf",
+                    "title": "Date Answer Filed"
                 },
                 {
                     "id": 20,
-    
+                    "referenceKey": "ddpodot",
                     "title": "Date Deposition Production of Documents Objected to"
                 },
                 {
                     "id": 21,
-                       "title": "Final Status Conference"
+                    "referenceKey": "fsc",
+                    "title": "Final Status Conference"
                 },
                 {
                     "id": 22,
-                       "title": "Date of Meet and Confer"
+                    "referenceKey": "dmc",
+                    "title": "Date of Meet and Confer"
                 },
                 {
                     "id": 23,
-    
+                    "referenceKey": "dfaop",
                     "title": "Date of First Appearance by Opposing Party"
                 }
             ]
