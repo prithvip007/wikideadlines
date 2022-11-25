@@ -18,9 +18,9 @@
                             v-model="form.title"
                             type="text"
                             class="form-control"
-                            :class="{'is-invalid': hasError('titled')}"
+                            :class="{'is-invalid': hasError('title')}"
                         >
-                        <span v-for="error, index in getErrors('titled')" class="invalid-feedback d-block" :key="index">
+                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
@@ -250,34 +250,31 @@
                         </span>
                     </div>
                     <div class="form-group">
-                            <label class="font-weight-bold"  >
+                            <label class="font-weight-bold">
                                 How should it be filtered?
                             </label>
                                 <div
                                     v-for="item, index in [
-                                        { title: 'No Display - Doc Received', value: 'no_display:document_received',id:'1' },
-                                        { title: 'No Check - Doc Received', value: 'no_check:document_received',id:'2' },
-                                        { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' ,id:'3' },
-                                        { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' ,id:'4' }
+                                        { title: 'No Display - Doc Received', value: 'no_display:document_received' },
+                                        { title: 'No Check - Doc Received', value: 'no_check:document_received' },
+                                        { title: 'No Display - Doc to Send', value: 'no_display:document_to_send' },
+                                        { title: 'No Check - Doc to Send', value: 'no_check:document_to_send' }
                                     ]"
                                     :key="index"
                                     class="custom-control custom-checkbox"
-                                   
                                 >
                                     <input
                                         v-model="form.visibility_scopes"
                                         type="checkbox"
-                                        class="custom-control-input netcheck"
+                                        class="custom-control-input"
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
                                     >
-                                   
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
                                     >
-                                   
                                         {{ item.title }}
                                     </label>
                                 </div>
@@ -379,14 +376,12 @@
             },
             getFormData() {
                 return {
-                    title :'',
                     document_type_id: '',
                     visibility_scopes: [],
                     name: '',
                     best_practices: '',
                     days: '',
                     add_to: '',
-                    reaj:'',
                     days_type: '',
                     check_dps_preciseness: false,
                     calculate_if_same_judge: false,
@@ -418,8 +413,4 @@
             this.initializeTooltips();
         }
     }
-
-    $("#netcheck").change(function() {
-    alert("fgdfdf");
-});
 </script>
