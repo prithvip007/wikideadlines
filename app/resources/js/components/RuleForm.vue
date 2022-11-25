@@ -264,22 +264,22 @@
                                     class="custom-control custom-checkbox"
                                    
                                 >
-                                <input
-                                    class="custom-control-input"
-                                    type="checkbox"
-                                    v-model="form.days_type"
-                                    :id="`item-${value}`"
-                                    name="visibility-scope"
-                                    :value="label"
-                                    required
-                                >
-
-                                <label
-                                    :for="`item-${value}`"
-                                    class="custom-control-label text-capitalize"
-                                >
-                                    {{ item.title  }}
-                                </label>   
+                                    <input
+                                        v-model="form.visibility_scopes"
+                                        type="checkbox"
+                                        class="custom-control-input netcheck"
+                                        :value="item.value"
+                                        :id="item.value"
+                                        name="visibility-scope"
+                                    >
+                                   
+                                    <label
+                                        :for="item.value"
+                                        class="custom-control-label"
+                                    >
+                                   
+                                        {{ item.title }}
+                                    </label>
                                 </div>
                         </div>
                 </div>
