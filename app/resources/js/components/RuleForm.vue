@@ -270,7 +270,11 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        :class="{'is-invalid': hasError('title')}"
                                     >
+                                    <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
+                                        {{ error }}
+                                    </span>
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
