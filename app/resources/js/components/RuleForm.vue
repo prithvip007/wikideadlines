@@ -262,6 +262,7 @@
                                     ]"
                                     :key="index"
                                     class="custom-control custom-checkbox"
+
                                 >
                                     <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
                                         {{ error }}
@@ -273,6 +274,7 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        :class="{'is-invalid': hasError('title')}"
                                     >
                                     <label
                                         :for="item.value"
