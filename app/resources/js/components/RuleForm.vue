@@ -18,9 +18,9 @@
                             v-model="form.title"
                             type="text"
                             class="form-control"
-                            :class="{'is-invalid': hasError('title')}"
+                            :class="{'is-invalid': hasError('titled')}"
                         >
-                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
+                        <span v-for="error, index in getErrors('titled')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
@@ -262,7 +262,7 @@
                                     ]"
                                     :key="index"
                                     class="custom-control custom-checkbox"
-                                    :class="{'is-invalid': hasError('reaj')}"
+                                    :class="{'is-invalid': hasError('title')}"
                                 >
                                     <input
                                         v-model="form.visibility_scopes"
@@ -271,9 +271,8 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
-                                       
                                     >
-                                    <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
+                                    <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
                                         {{ error }}
                                     </span>
                                     <label
@@ -382,6 +381,7 @@
             },
             getFormData() {
                 return {
+                    title :'',
                     document_type_id: '',
                     visibility_scopes: [],
                     name: '',
