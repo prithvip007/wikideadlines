@@ -131,8 +131,8 @@ class CalculatorController extends Controller
     }
 
     public function calculate(Request $request)
-    { 
-       
+    {
+        
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');
@@ -339,7 +339,6 @@ class CalculatorController extends Controller
 
     public function calculation(string $key)
     {
-      
         $calculation = Calculation::findByKeyOrFail($key);
 
         $ruleInterview = new RuleInterview();
