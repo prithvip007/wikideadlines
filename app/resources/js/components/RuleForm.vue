@@ -271,11 +271,12 @@
                                         :id="item.value"
                                         name="visibility-scope"
                                         required="true"
-                                        :class="{'is-invalid': hasError('reaj')}"
+                                       
                                     >
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
+                                        :class="{'is-invalid': hasError('reaj')}"
                                     >
                                     <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
                                         {{ error }}
