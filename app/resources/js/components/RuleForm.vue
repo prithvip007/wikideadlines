@@ -263,11 +263,7 @@
                                     :key="index"
                                     class="custom-control custom-checkbox"
                                     :class="{'is-invalid': hasError('reaj')}"
-
                                 >
-                                    <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
-                                        {{ error }}
-                                    </span>
                                     <input
                                         v-model="form.visibility_scopes"
                                         type="checkbox"
@@ -277,6 +273,9 @@
                                         name="visibility-scope"
                                        
                                     >
+                                    <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
+                                        {{ error }}
+                                    </span>
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
