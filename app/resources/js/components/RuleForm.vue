@@ -18,25 +18,12 @@
                             v-model="form.title"
                             type="text"
                             class="form-control"
-                            :class="{'is-invalid': hasError('outside_state_days')}"
+                            :class="{'is-invalid': hasError('title')}"
                         >
-                        <span v-for="error, index in getErrors('outside_state_days')" class="invalid-feedback d-block" :key="index">
+                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
-
-
-
-                  
-
-
-
-
-
-
-
-
-
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
@@ -283,8 +270,13 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
-                                        required: true,
+                                        required="true"
+                                        :class="{'is-invalid': hasError('reaj')}"
                                     >
+
+                                    <span v-for="error, index in getErrors('reaj')" class="invalid-feedback d-block" :key="index">
+                                        {{ error }}
+                                    </span>
                                     <label
                                         :for="item.value"
                                         class="custom-control-label"
@@ -397,6 +389,7 @@
                     best_practices: '',
                     days: '',
                     add_to: '',
+                    reaj:'',
                     days_type: '',
                     check_dps_preciseness: false,
                     calculate_if_same_judge: false,
