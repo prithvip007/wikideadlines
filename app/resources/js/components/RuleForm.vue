@@ -18,12 +18,25 @@
                             v-model="form.title"
                             type="text"
                             class="form-control"
-                            :class="{'is-invalid': hasError('title')}"
+                            :class="{'is-invalid': hasError('outside_state_days')}"
                         >
-                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
+                        <span v-for="error, index in getErrors('outside_state_days')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
+
+
+
+                  
+
+
+
+
+
+
+
+
+
                     <div class="form-group">
                         <label class="font-weight-bold" for="document-type-id">
                             Document or Pleading Title 2
@@ -270,6 +283,7 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        required: true,
                                     >
                                     <label
                                         :for="item.value"
