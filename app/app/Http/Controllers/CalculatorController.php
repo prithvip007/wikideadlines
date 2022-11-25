@@ -131,7 +131,9 @@ class CalculatorController extends Controller
     }
 
     public function calculate(Request $request)
-    {
+    { 
+        echo "ftoo";
+        die;
         
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
@@ -339,6 +341,8 @@ class CalculatorController extends Controller
 
     public function calculation(string $key)
     {
+        echo "dfgd";
+        die;
         $calculation = Calculation::findByKeyOrFail($key);
 
         $ruleInterview = new RuleInterview();
