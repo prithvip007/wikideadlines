@@ -147,7 +147,7 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        $event = new Event;
+        // $event = new Event;
 
         $event->name = 'A new event';
         $event->description = 'Event description';
@@ -158,7 +158,7 @@ class CalculatorController extends Controller
     
         $events = Event::get();
     
-        // dd($events);
+        dd($events);
     
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
