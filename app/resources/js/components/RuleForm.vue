@@ -289,18 +289,18 @@
     </modal>
 </template>
     <script>
-        $(document).ready(function(){
-             $(".custom-control-input").click(function(){
-                 if($("input:checkbox").filter(":cheked").length < 1){
-                     $(".err").show();
-                     return false;
-                 }
-                 else{
-                     $(".err").hide();
-                     return true;
-                 }
-             })
-        })              
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </script>
 <script>
     import Modal from './Modal/Modal';
@@ -428,4 +428,16 @@
             this.initializeTooltips();
         }
     }
+    $(document).ready(function(){
+     $(".custom-control-input").click(function(){
+         if($("input:checkbox").filter(":cheked").length < 1){
+             $(".err").show();
+             return false;
+         }
+         else{
+             $(".err").hide();
+             return true;
+         }
+     })
+})              
 </script>
