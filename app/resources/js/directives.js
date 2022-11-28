@@ -3,7 +3,7 @@ Vue.directive('datetimepicker', {
         const { onlyDate, todayMidday, todayMorning, ...userOptions } = binding.value || {};
 
         const defaultOptions = {
-            enableTime: true,
+            enableTime: false,
             altInput: true,
             altFormat: 'LLLL',
             dateFormat: 'YYYY-MM-DD\\\\THH:mm:ss.SSSZ',
