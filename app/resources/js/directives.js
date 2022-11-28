@@ -40,7 +40,7 @@ Vue.directive('datetimepicker', {
         const options = Object.assign({}, defaultOptions, userOptions);
 
         if (onlyDate) {
-            options.enableTime = true;
+            options.enableTime = false;
             options.altFormat = 'dddd, MMMM D, YYYY';
         }
 
