@@ -18,7 +18,7 @@ return [
 
         /*
          * Authenticate with actual google user account.
-         */
+         */ 
         'oauth' => [
             /*
              * Path to the json file containing the oauth2 credentials.

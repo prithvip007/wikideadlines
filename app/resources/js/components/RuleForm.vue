@@ -270,7 +270,7 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
-                                        required
+                                        
                                     >
                                     <label
                                         :for="item.value"
@@ -286,9 +286,24 @@
             <modal-footer-button :loading="isSaving">
                 Save
             </modal-footer-button>
+            
         </form>
     </modal>
 </template>
+    <script>
+        $(document).ready(function(){
+            $(".custom-control-input").click(function(){
+                if($("input:checkbox").filter(":item.value").length < 1){
+                    $(".err").show();
+                    return false;
+                }
+                else{
+                    $(".err").hide();
+                    return true;
+                }
+            })
+        })
+    </script>
 <script>
     import Modal from './Modal/Modal';
     import ModalHeaderPrimary from './Modal/ModalHeaderPrimary';
@@ -414,17 +429,5 @@
         updated: function () {
             this.initializeTooltips();
         }
-    }
-    $(document).ready(function(){
-     $(".custom-control-input").click(function(){
-         if($("input:checkbox").filter(":item.value").length < 1){
-             $(".err").show();
-             return "false";
-         }
-        //  else{
-            //  $(".err").hide();
-            //  return true;
-        //  }
-     })
-})              
+    }              
 </script>
