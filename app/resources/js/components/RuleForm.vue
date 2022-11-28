@@ -289,20 +289,6 @@
         </form>
     </modal>
 </template>
-    <script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </script>
 <script>
     import Modal from './Modal/Modal';
     import ModalHeaderPrimary from './Modal/ModalHeaderPrimary';
@@ -433,7 +419,7 @@
      $(".custom-control-input").click(function(){
          if($("input:checkbox").filter(":item.value").length < 1){
              $(".err").show();
-             return false;
+             return "false";
          }
          else{
              $(".err").hide();
