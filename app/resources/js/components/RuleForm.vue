@@ -18,9 +18,9 @@
                             v-model="form.title"
                             type="text"
                             class="form-control"
-                            :class="{'is-invalid': hasError('title')}"
+                            :class="{'is-invalid': hasError('titlev')}"
                         >
-                        <span v-for="error, index in getErrors('title')" class="invalid-feedback d-block" :key="index">
+                        <span v-for="error, index in getErrors('titlev')" class="invalid-feedback d-block" :key="index">
                             {{ error }}
                         </span>
                     </div>
