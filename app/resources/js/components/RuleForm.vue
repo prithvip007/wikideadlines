@@ -270,6 +270,7 @@
                                         :value="item.value"
                                         :id="item.value"
                                         name="visibility-scope"
+                                        required
                                     >
                                     <label
                                         :for="item.value"
@@ -430,7 +431,7 @@
     }
     $(document).ready(function(){
      $(".custom-control-input").click(function(){
-         if($("input:checkbox").filter(":cheked").length < 1){
+         if($("input:checkbox").filter(":item.value").length < 1){
              $(".err").show();
              return false;
          }
