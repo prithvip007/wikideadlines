@@ -1,5 +1,6 @@
 <?php
-
+use Spatie\GoogleCalendar\Event;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +11,27 @@
 | contains the "web" middleware group. Now create something great!
 | something grea
 */
+
+Route::get('/', function () {
+    
+    $event = new Event;
+
+    $event->name = 'A new event';
+    $event->description = 'Event description';
+    $event->startDateTime = Carbon\Carbon::now();
+    $event->endDateTime = Carbon\Carbon::now()->addHour();
+
+    $event->save();
+
+    $events = Event::get();
+
+    dd($events);
+
+});
+
+
+
+
 
 Route::get('/', function () {
     return redirect(route('calculate'));
