@@ -277,10 +277,27 @@
                                     >
                                         {{ item.title }}
                                     </label>
+                                    <div class="err">Select At Least One checkbox</div>
                                 </div>
                         </div>
                 </div>
             </modal-body>
+
+            $(document).ready(function(){
+                $(".custom-control-input").click(function(){
+                    if($("input:checkbox").filter(":cheked").length < 1){
+                        $(".err").show();
+                        return false;
+                    }
+                    else{
+                        $(".err").hide();
+                        return true;
+                    }
+                })
+
+            })
+            
+
             <modal-footer-button :loading="isSaving">
                 Save
             </modal-footer-button>
