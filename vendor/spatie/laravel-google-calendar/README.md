@@ -21,17 +21,19 @@ $event->name = 'A new event';
 $event->description = 'Event description';
 $event->startDateTime = Carbon\Carbon::now();
 $event->endDateTime = Carbon\Carbon::now()->addHour();
-$event->addAttendee([
-    'email' => 'john@example.com',
-    'name' => 'John Doe',
-    'comment' => 'Lorum ipsum',
-]);
-$event->addAttendee(['email' => 'anotherEmail@gmail.com']);
+// $event->addAttendee([
+//     'email' => 'john@example.com',
+//     'name' => 'John Doe',
+//     'comment' => 'Lorum ipsum',
+// ]);
+// $event->addAttendee(['email' => 'anotherEmail@gmail.com']);
 
 $event->save();
 
 // get all future events on a calendar
 $events = Event::get();
+
+dd($events);
 
 // update existing event
 $firstEvent = $events->first();
