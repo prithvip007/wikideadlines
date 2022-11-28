@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\BookingController;
 use Spatie\GoogleCalendar\Event;
 use Illuminate\Support\Facades\Route;
 /*
@@ -12,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 | something grea
 */
 
+
+Route::resource('booking', BookingController::class);
+
+
+
 Route::get('/', function () {
-    
     $event = new Event;
 
     $event->name = 'A new event';
@@ -26,14 +32,6 @@ Route::get('/', function () {
     $events = Event::get();
 
     dd($events);
-
-});
-
-
-
-
-
-Route::get('/', function () {
     return redirect(route('calculate'));
 })->name('home');
 
