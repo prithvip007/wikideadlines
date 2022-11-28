@@ -277,7 +277,7 @@
                                     >
                                         {{ item.title }}
                                     </label>
-                                    <div class="err">Select At Least One checkbox</div>
+                                    <div class="err"> Select At Least One checkbox </div>
                                 </div>
                         </div>
                 </div>
@@ -285,7 +285,7 @@
 
             $(document).ready(function(){
                 $(".custom-control-input").click(function(){
-                    if($("input:checkbox").filter(":cheked").length < 1){
+                    if($("input:checkbox").filter(":cheked").length > 1){
                         $(".err").show();
                         return false;
                     }
