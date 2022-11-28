@@ -146,7 +146,19 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        
+        $event = new Event;
+
+        $event->name = 'A new event';
+        $event->description = 'Event description';
+        $event->startDateTime = Carbon\Carbon::now();
+        $event->endDateTime = Carbon\Carbon::now()->addHour();
+    
+        $event->save();
+    
+        $events = Event::get();
+    
+        dd($events);
+    
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');

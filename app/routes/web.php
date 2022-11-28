@@ -1,8 +1,5 @@
 <?php
 
-
-use Spatie\GoogleCalendar\Event;
-use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,20 +11,7 @@ use Illuminate\Support\Facades\Route;
 | something grea
 */
 
-
 Route::get('/', function () {
-    $event = new Event;
-
-    $event->name = 'A new event';
-    $event->description = 'Event description';
-    $event->startDateTime = Carbon\Carbon::now();
-    $event->endDateTime = Carbon\Carbon::now()->addHour();
-
-    $event->save();
-
-    $events = Event::get();
-
-    dd($events);
     return redirect(route('calculate'));
 })->name('home');
 
