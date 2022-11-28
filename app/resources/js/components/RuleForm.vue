@@ -278,7 +278,7 @@
                                     >
                                         {{ item.title }}
                                     </label>
-                                    <div class="err"> Select At Least One checkbox </div>
+                                    <div class="err" style="color:red; font-size:14px;"> Select At Least One checkbox </div>
                                 </div>
                         </div>
                 </div>
@@ -421,10 +421,10 @@
              $(".err").show();
              return "false";
          }
-         else{
-             $(".err").hide();
-             return true;
-         }
+        //  else{
+            //  $(".err").hide();
+            //  return true;
+        //  }
      })
 })              
 </script>
