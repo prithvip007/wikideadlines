@@ -78,7 +78,7 @@ return [
         'document_to_send' => 'Trial or Arbitration Starting Date'
     ],
     'hd' => [
-        'document_received' => 'Hearing Date and Time',
+        'document_received' => 'Hearing Date and Time event change',
         'document_to_send' => 'Estimated Hearing Date'
     ],
     'decr' => [
