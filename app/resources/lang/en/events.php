@@ -78,8 +78,12 @@ return [
         'document_to_send' => 'Trial or Arbitration Starting Date'
     ],
     'hd' => [
-        'document_received' => 'Hearing Date and Time event change',
+        'document_received' => 'Hearing Date and Time',
         'document_to_send' => 'Estimated Hearing Date'
+    ],
+    'hdat' => [
+        'document_received' => 'Hearing Date and  Self  created',
+        'document_to_send' => 'Estimated Hearing Date add time also'
     ],
     'decr' => [
         'document_received' => 'Date the Order Entered in the Court Record',
