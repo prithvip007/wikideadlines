@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BookingController;
+
 use Spatie\GoogleCalendar\Event;
 use Illuminate\Support\Facades\Route;
 /*
@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 | something grea
 */
-
-
-Route::resource('booking', BookingController::class);
-
 
 
 Route::get('/', function () {

@@ -21,6 +21,20 @@ use App\Models\StripeProduct;
 
 class CalculatorController extends Controller
 {
+
+    public function store(Request $request){
+        $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
+        $endTime = (clone $startTime)->addHour();
+
+        Event::create([
+            'name' => $request->input('name'),
+            'startDateTime' => $startTime,
+            'endDateTime' => $endTime
+        ]);
+
+        return redirect()->back()->withMessage('evnt added');
+    }
+
     public function index(Request $request)
     {
         // TODO: remove
