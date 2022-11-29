@@ -147,9 +147,9 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        // $event = new Event;
-
-        $event->name = 'A new event';
+        $event = new Event;
+        // 'A new event';
+        $event->name = $request->input('name');
         $event->description = 'Event description';
         $event->startDateTime = Carbon\Carbon::now();
         $event->endDateTime = Carbon\Carbon::now()->addHour();
