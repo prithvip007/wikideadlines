@@ -20,8 +20,6 @@
                 :errors="{{ $errors->get('*') ? json_encode($errors->get('*')): '{}' }}"
                 :states="{{ json_encode($states) }}"
                 :document-types="{{ json_encode($document_types) }}"
-
-              
                 :delivery-methods="{{ json_encode($delivery_methods) }}"
                 :old-form-data="{{ old() ? json_encode(old()) : '{}' }}"
                 :holidays="{{ json_encode( App\Models\State::with('holidays')->get()->makeVisible('holidays')->toArray() ) }}"
