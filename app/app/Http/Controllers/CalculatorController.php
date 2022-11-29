@@ -25,7 +25,7 @@ class CalculatorController extends Controller
     {
         // TODO: remove
          $loginuseremail = Auth::user()->email;
-         $documentalldata = UserRequest::get();
+        //  $documentalldata = UserRequest::get();
         //  foreach ($documentalldata as $key1 => $level1){
             
             // $email =  $level1->data;
@@ -40,9 +40,7 @@ class CalculatorController extends Controller
         $documentaddondrop = UserRequest::where('status_id', '=', 1)
         ->orWhere('data->email', '=', 'loginuseremail')->get();
 
-        echo "<pre>";
-        print_r($documentaddondrop);
-        die;
+       
 
         
         if ($request->session()->has('beta-tester')) {
@@ -89,7 +87,7 @@ class CalculatorController extends Controller
                 ->first();
         }
 
-        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest'));
+        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest','documentaddondrop'));
     }
 
     // TODO: remove

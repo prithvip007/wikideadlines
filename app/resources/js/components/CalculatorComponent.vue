@@ -131,11 +131,13 @@
                             id="document-type-id" class="form-control"
                             name="document_type_id" required>
                         <option></option>
-                        <option v-for="type in documentTypes" :value="type.id" :key="type.id"
+                        <!-- <option v-for="type in documentTypes" :value="type.id" :key="type.id"
                                 :data-select2-description="type.small_description"
                                 :data-select2-keywords="type.keywords" >
                             {{ type.name }}
-                        </option>
+                        </option> -->
+                        <!-- documentaddondrop -->
+                        <option v-for="state in documentaddondrop" :value="documentaddondrop.id" :key="documentaddondrop.small_description">{{ state.keywords }}</option>
                     </select>
                 </div>
                 
