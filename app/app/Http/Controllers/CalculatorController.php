@@ -25,6 +25,7 @@ class CalculatorController extends Controller
     {
         // TODO: remove
         $documentaddondrop = UserRequest::where('status_id', 1)->get();
+        echo "<pre>";
         print_r($documentaddondrop);
         die;
 
