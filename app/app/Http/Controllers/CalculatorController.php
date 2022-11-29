@@ -140,41 +140,41 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
                 // =================
-        $event = new Event;
-        // 'A new event';
-        $event->name = "An Event Added";
-        $event->description = 'Event description';
-        $event->startDateTime = Carbon\Carbon::now();
-        $event->endDateTime = Carbon\Carbon::now()->addHour();
+        // $event = new Event;
+        // // 'A new event';
+        // $event->name = "An Event Added";
+        // $event->description = 'Event description';
+        // $event->startDateTime = Carbon\Carbon::now();
+        // $event->endDateTime = Carbon\Carbon::now()->addHour();
     
-        $event->save();
+        // $event->save();
     
-        $events = Event::get();
+        $events = Calculattion::get();
     
         // dd($events);
 
-        Event::create([
-            'name' => 'A new event',
-            'startDateTime' => Carbon\Carbon::now(),
-            'endDateTime' => Carbon\Carbon::now()->addHour(),
-         ]);
+        // Event::create([
+        //     'name' => 'A new event',
+        //     'startDateTime' => Carbon\Carbon::now(),
+        //     'endDateTime' => Carbon\Carbon::now()->addHour(),
+        //  ]);
 
-         $event = new Event;
+        //  $event = new Event;
 
-        $event->name = 'A new full day event';
-        $event->startDate = Carbon\Carbon::now();
-        $event->endDate = Carbon\Carbon::now()->addDay();
+        // $event->name = 'A new full day event';
+        // $event->startDate = Carbon\Carbon::now();
+        // $event->endDate = Carbon\Carbon::now()->addDay();
 
-        $event->save();
+        // $event->save();
 
         // get the id of the first upcoming event in the calendar.
-        $eventId = Event::get()->first()->id;
+        $eventId = Calculation::get()->first()->id;
 
-        Event::find($eventId);
+        Calculation::find($eventId);
 
         $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
         $endTime = (clone $startTime)->addHour();
-        Event::create([
+        Calculation::create([
             'name' => $request->input('name'),
             'startDateTime' => $startTime,
             'endDateTime' => $endTime
