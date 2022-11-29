@@ -28,12 +28,15 @@ class CalculatorController extends Controller
          $documentalldata = UserRequest::get();
         // $documentaddondrop = UserRequest::where('status_id', '=', 1)
         // ->orWhere('email', '=', 'loginuseremail');
-        print_r($documentalldata->items);
-        var_dump($documentalldata['items'][0]["attributes"]);
-        die;
+        // print_r($documentalldata->items);
+        // var_dump($documentalldata['items'][0]["attributes"]);
+        // die;
         
         foreach ($documentalldata as $key1 => $level1){
+            echo "<pre>";
+            print_r($level1);
             foreach ($level1 as $key2 => $level2){
+               
                 // echo $level2['data']['email'];
                 print_r( $level2);
                 die;
