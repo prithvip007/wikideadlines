@@ -25,6 +25,7 @@ class CalculatorController extends Controller
     {
         // TODO: remove
         $loginuseremail = Auth::user();
+        echo "<pre>";
         print_r( $loginuseremail);
         die;
    
