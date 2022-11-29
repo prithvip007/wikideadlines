@@ -154,11 +154,12 @@ class CalculatorController extends Controller
 
         // get the id of the first upcoming event in the calendar.
         $eventId = Calculation::get()->first()->id;
-        Calculation::create([
-                'name' => $request->input('name'),
-                'startDateTime' => $startTime,
-                'endDateTime' => $endTime
-            ]);
+
+            Calculation::create([
+                    'name' => 'A new event',
+                    'startDateTime' => Carbon\Carbon::now(),
+                    'endDateTime' => Carbon\Carbon::now()->addHour(),
+                 ]);
         // dd($events);
         // echo "<pre>";
         // print_r ($events);
