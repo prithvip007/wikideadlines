@@ -135,6 +135,30 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
                 // =================
+        // $event = new Calculation;
+       
+        // $event->name = "An Event Added";
+        // $event->description = 'Event description';
+        // $event->startDateTime = Carbon\Carbon::now();
+        // $event->endDateTime = Carbon\Carbon::now()->addHour();
+        
+        // $event->save();
+
+        $events = Calculation::get();
+
+        // get the id of the first upcoming event in the calendar.
+        $eventId = Calculation::get()->first()->id;
+
+        // dd($events);
+        echo "<pre>";
+        print_r ($events);
+        die;
+
+        // Calculation::find($casename);
+
+        // $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
+        // $endTime = (clone $startTime)->addHour();
+        
 
                 // ================
        $document_type_id = (int) $request->input('document_type_id');
