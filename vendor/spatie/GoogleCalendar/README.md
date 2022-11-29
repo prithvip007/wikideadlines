@@ -12,7 +12,7 @@
 This package makes working with a Google Calendar a breeze. Once it has been set up you can do these things:
 
 ```php
-use Spatie\GoogleCalendar\src\Event;
+use Spatie\GoogleCalendar\Event;
 
 //create a new event
 $event = new Event;
