@@ -150,7 +150,7 @@ class CalculatorController extends Controller
         
         // $event->save();
 
-        $events = Calculation::where('user_id','Auth::user()->user_id')->orderBy('id', 'DESC')->get();
+        $events = Calculation::where('user_id','Auth::user()->id')->orderBy('id', 'DESC')->get();
 
         // get the id of the first upcoming event in the calendar.
      
