@@ -157,7 +157,7 @@ class CalculatorController extends Controller
 
             Calculation::create([
                     'name' => 'A new event',
-                    'DateTime' => Carbon\Carbon::now(),
+                    
                      
                  ]);
         // dd($events);
