@@ -32,10 +32,10 @@ class CalculatorController extends Controller
         // print_r($useremail);
         // die;
 
-        $documentaddondrop = UserRequest::select('id', 'data','state_id')
-            ->where('status_id', 1)
-            ->where('data->email', Auth::user()->email)
-            ->get();
+        // $documentaddondrop = UserRequest::select('id', 'data','state_id')
+        //     ->where('status_id', 1)
+        //     ->where('data->email', Auth::user()->email)
+        //     ->get();
 
         
         if ($request->session()->has('beta-tester')) {
@@ -82,7 +82,7 @@ class CalculatorController extends Controller
                 ->first();
         }
 
-        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest','documentaddondrop'));
+        return view('calculator.index', compact('states', 'delivery_methods', 'calculation', 'document_types', 'documentElements', 'deadlineRuleElements', 'jurisdictionElements', 'canCalculate', 'documentRequest'));
     }
 
     // TODO: remove
