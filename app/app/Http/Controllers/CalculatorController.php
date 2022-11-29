@@ -18,7 +18,8 @@ use App\Models\Interviews\RuleInterview;
 use App\Models\Interviews\DocumentInterview;
 use App\Models\Interviews\JurisdictionInterview;
 use App\Models\StripeProduct;
-use Spatie\GoogleCalendar\src\Event;
+// use Spatie\GoogleCalendar\Event;
+use App\Verify\Event;
 
 class CalculatorController extends Controller
 {
