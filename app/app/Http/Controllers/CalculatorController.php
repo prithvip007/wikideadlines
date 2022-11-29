@@ -136,6 +136,7 @@ class CalculatorController extends Controller
         $loginuseremail = Auth::user()->email;
         print_r( $loginuseremail);
         die;
+        $documentalldata = $UserRequest->get();
         $documentaddondrop = UserRequest::where('status_id', '=', 1)
         ->orWhere('email', '=', 'loginuseremail');
          $document_type_id = (int) $request->input('document_type_id');
