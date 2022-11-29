@@ -31,7 +31,8 @@ class CalculatorController extends Controller
 
         foreach ($documentalldata as $key1 => $level1){
             foreach ($level1 as $key2 => $level2){
-                echo $level2['data']['email'];
+                // echo $level2['data']['email'];
+                print_r( $level2);
                 die;
             }
           
