@@ -153,15 +153,15 @@ class CalculatorController extends Controller
         echo "<pre>";
         print_r ($user);
         die;
-        $events = Calculation::where('user_id','Auth::user()->id')->orderBy('id', 'DESC')->get();
+        $events = Calculation::orderBy('id', 'DESC')->get();
 
         // get the id of the first upcoming event in the calendar.
      
-            // Calculation::create([
-            //         'casename' =>$events->case_name 
+            Calculation::create([
+                    'casename' =>$events->case_name 
                     
                      
-            //      ]);
+                 ]);
         // dd($events);
         echo "<pre>";
         print_r ($events);
