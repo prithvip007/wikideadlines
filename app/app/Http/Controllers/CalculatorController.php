@@ -154,7 +154,7 @@ class CalculatorController extends Controller
 
         // get the id of the first upcoming event in the calendar.
         $eventId = Calculation::get()->first()->id;
-        return redirect()->back()->withMessage('evnt added');
+
         // dd($events);
         // echo "<pre>";
         // print_r ($events);
