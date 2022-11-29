@@ -149,10 +149,7 @@ class CalculatorController extends Controller
         // $event->endDateTime = Carbon\Carbon::now()->addHour();
         
         // $event->save();
-        $user=Auth::user()->id;
-        echo "<pre>";
-        print_r ($user);
-        die;
+       
         $events = Calculation::orderBy('id', 'DESC')->get();
 
         // get the id of the first upcoming event in the calendar.
