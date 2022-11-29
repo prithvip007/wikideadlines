@@ -155,7 +155,7 @@ class CalculatorController extends Controller
         // get the id of the first upcoming event in the calendar.
      
             Calculation::create([
-                    'casename' =>$events->case_name 
+                    'name' =>$events->case_name 
                     
                      
                  ]);
