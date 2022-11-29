@@ -24,7 +24,7 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        $loginuseremail = Auth::user()->email;
+        $loginuseremail = Auth::user();
         print_r( $loginuseremail);
         die;
    
