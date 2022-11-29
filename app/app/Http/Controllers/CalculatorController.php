@@ -24,16 +24,7 @@ class CalculatorController extends Controller
 {
 
     public function store(Request $request){
-        // $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
-        // $endTime = (clone $startTime)->addHour();
-
-        // Event::create([
-        //     'name' => $request->input('name'),
-        //     'startDateTime' => $startTime,
-        //     'endDateTime' => $endTime
-        // ]);
-
-        // return redirect()->back()->withMessage('evnt added');
+        
     }
 
     public function index(Request $request)
@@ -179,6 +170,16 @@ class CalculatorController extends Controller
         $eventId = Event::get()->first()->id;
 
         Event::find($eventId);
+
+        $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
+        $endTime = (clone $startTime)->addHour();
+        Event::create([
+            'name' => $request->input('name'),
+            'startDateTime' => $startTime,
+            'endDateTime' => $endTime
+        ]);
+
+        return redirect()->back()->withMessage('evnt added');
                 // ================
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
