@@ -25,7 +25,7 @@ class CalculatorController extends Controller
     {
         // TODO: remove
         $loginuseremail = Auth::user();
-        $documentalldata = $UserRequest->get();
+        $documentalldata = UserRequest->get();
         echo "<pre>";
         print_r( $documentalldata);
         die;
