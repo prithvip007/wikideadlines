@@ -26,20 +26,23 @@ class CalculatorController extends Controller
         // TODO: remove
          $loginuseremail = Auth::user()->email;
          $documentalldata = UserRequest::get();
-         foreach ($documentalldata as $key1 => $level1){
+        //  foreach ($documentalldata as $key1 => $level1){
             
-            $email =  $level1->data;
+            // $email =  $level1->data;
+            // print_r($email[]);
             // echo $email->email;
-           $userEmail[] = $email['email'];
+        //    $userEmail[] = $email['email'];
            
           
-        }
+        // }
         echo "<pre>";
         print_r($userEmail);
         $documentaddondrop = UserRequest::where('status_id', '=', 1)
-        ->orWhere('$userEmail', '=', 'loginuseremail')->get();
+        ->orWhere('data[email]', '=', 'loginuseremail')->get();
 
-
+        echo "<pre>";
+        print_r($documentaddondrop);
+        die;
 
         
         if ($request->session()->has('beta-tester')) {
