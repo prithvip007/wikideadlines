@@ -132,7 +132,8 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-
+echo  "i am in get ";
+die;
         $loginuseremail = Auth::user()->email;
         print_r( $loginuseremail);
         die;
