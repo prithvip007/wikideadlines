@@ -74,7 +74,7 @@
                             
                         ></i>
 
-                        <span class="text-muted">(Court or arbitration company where the case is or will be filed)123</span>
+                        <span class="text-muted">(Court or arbitration company where the case is or will be filed)</span>
                         <div class="text-muted"> 
                             (If you don't see your jurisdiction, 
                             <a
