@@ -149,7 +149,7 @@ class CalculatorController extends Controller
     
         // $event->save();
     
-        $events = Calculattion::get();
+        $events = Calculation::get();
     
         // dd($events);
 
