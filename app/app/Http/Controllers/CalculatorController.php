@@ -31,6 +31,8 @@ class CalculatorController extends Controller
 
         foreach ($documentalldata as $key1 => $level1){
             echo "<pre>";
+            print_r($key1);
+            echo "key end";
             print_r($level1);
             die;
         }
