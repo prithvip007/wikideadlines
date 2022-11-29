@@ -24,9 +24,9 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        // $documentaddondrop = UserRequest::Where('data->email', Auth::user()->email)->get();
-        // print_r($documentaddondrop);
-        // die;
+        $documentaddondrop = UserRequest::where('status_id', 1)->get();
+        print_r($documentaddondrop);
+        die;
 
         //  $useremail=  Auth::user()->id;
         
