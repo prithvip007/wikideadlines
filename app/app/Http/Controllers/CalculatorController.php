@@ -18,22 +18,22 @@ use App\Models\Interviews\RuleInterview;
 use App\Models\Interviews\DocumentInterview;
 use App\Models\Interviews\JurisdictionInterview;
 use App\Models\StripeProduct;
-// use Spatie\GoogleCalendar\Event;
+use Spatie\GoogleCalendar\Event;
 
 class CalculatorController extends Controller
 {
 
     public function store(Request $request){
-        $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
-        $endTime = (clone $startTime)->addHour();
+        // $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
+        // $endTime = (clone $startTime)->addHour();
 
-        Event::create([
-            'name' => $request->input('name'),
-            'startDateTime' => $startTime,
-            'endDateTime' => $endTime
-        ]);
+        // Event::create([
+        //     'name' => $request->input('name'),
+        //     'startDateTime' => $startTime,
+        //     'endDateTime' => $endTime
+        // ]);
 
-        return redirect()->back()->withMessage('evnt added');
+        // return redirect()->back()->withMessage('evnt added');
     }
 
     public function index(Request $request)
@@ -147,19 +147,39 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        // $event = new Event;
-        // // 'A new event';
-        // $event->name = "An Event Added";
-        // $event->description = 'Event description';
-        // $event->startDateTime = Carbon\Carbon::now();
-        // $event->endDateTime = Carbon\Carbon::now()->addHour();
+                // =================
+        $event = new Event;
+        // 'A new event';
+        $event->name = "An Event Added";
+        $event->description = 'Event description';
+        $event->startDateTime = Carbon\Carbon::now();
+        $event->endDateTime = Carbon\Carbon::now()->addHour();
     
-        // $event->save();
+        $event->save();
     
-        // $events = Event::get();
+        $events = Event::get();
     
         // dd($events);
-    
+
+        Event::create([
+            'name' => 'A new event',
+            'startDateTime' => Carbon\Carbon::now(),
+            'endDateTime' => Carbon\Carbon::now()->addHour(),
+         ]);
+
+         $event = new Event;
+
+        $event->name = 'A new full day event';
+        $event->startDate = Carbon\Carbon::now();
+        $event->endDate = Carbon\Carbon::now()->addDay();
+
+        $event->save();
+
+        // get the id of the first upcoming event in the calendar.
+        $eventId = Event::get()->first()->id;
+
+        Event::find($eventId);
+                // ================
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');

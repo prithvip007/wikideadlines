@@ -15,6 +15,15 @@ use Illuminate\Support\Str;
 
 class Event
 {
+
+
+        
+
+
+
+
+
+
     /** @var \Google_Service_Calendar_Event */
     public $googleEvent;
 
