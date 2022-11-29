@@ -34,7 +34,7 @@ class CalculatorController extends Controller
         //     ->where('status_id', 1)
         //     ->where('data->email', Auth::user()->email)
         //     ->get();
-
+echo "<pre>";
             print_r($documentaddondrop);
             die;
 
