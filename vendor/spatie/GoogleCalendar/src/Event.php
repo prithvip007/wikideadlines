@@ -44,7 +44,7 @@ class Event
         $event->googleEvent = $googleEvent;
         $event->calendarId = $calendarId;
 
-        return $event;
+        return "dedsksk";
     }
 
     /**

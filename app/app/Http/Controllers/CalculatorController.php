@@ -23,6 +23,12 @@ use Spatie\GoogleCalendar\src\Event;
 
 class CalculatorController extends Controller
 {
+
+    // public function store(Request $request){
+    //     $startTime = Carborn::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
+    //     $endTime = (clone $startTime)->addhour();
+    // }
+
     public function index(Request $request)
     {
         // TODO: remove
@@ -150,9 +156,9 @@ class CalculatorController extends Controller
         $eventId = Calculation::get()->first()->id;
 
         // dd($events);
-        echo "<pre>";
-        print_r ($events);
-        die;
+        // echo "<pre>";
+        // print_r ($events);
+        // die;
 
         // Calculation::find($casename);
 
