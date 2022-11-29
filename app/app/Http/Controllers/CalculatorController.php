@@ -18,7 +18,7 @@ use App\Models\Interviews\RuleInterview;
 use App\Models\Interviews\DocumentInterview;
 use App\Models\Interviews\JurisdictionInterview;
 use App\Models\StripeProduct;
-use Spatie\GoogleCalendar\Event;
+// use Spatie\GoogleCalendar\Event;
 
 class CalculatorController extends Controller
 {
@@ -147,18 +147,18 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        $event = new Event;
-        // 'A new event';
-        $event->name = $request->input('name');
-        $event->description = 'Event description';
-        $event->startDateTime = Carbon\Carbon::now();
-        $event->endDateTime = Carbon\Carbon::now()->addHour();
+        // $event = new Event;
+        // // 'A new event';
+        // $event->name = $request->input('name');
+        // $event->description = 'Event description';
+        // $event->startDateTime = Carbon\Carbon::now();
+        // $event->endDateTime = Carbon\Carbon::now()->addHour();
     
-        $event->save();
+        // $event->save();
     
-        $events = Event::get();
+        // $events = Event::get();
     
-        dd($events);
+        // dd($events);
     
        $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
