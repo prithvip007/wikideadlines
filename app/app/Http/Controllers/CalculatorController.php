@@ -132,8 +132,13 @@ class CalculatorController extends Controller
 
     public function calculate(Request $request)
     {
-        
-       $document_type_id = (int) $request->input('document_type_id');
+
+        $loginuseremail = Auth::user()->email;
+        print_r( $loginuseremail);
+        die;
+        $documentaddondrop = UserRequest::where('status_id', '=', 1)
+        ->orWhere('email', '=', 'loginuseremail');
+         $document_type_id = (int) $request->input('document_type_id');
         $state_id = (int) $request->input('state_id');
         $county_id = (int) $request->input('county_id');
 
