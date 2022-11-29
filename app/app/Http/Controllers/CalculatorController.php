@@ -24,15 +24,9 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        // $loginuseremail = Auth::user()->email;
+         $loginuseremail = Auth::user()->email;
          $documentalldata = UserRequest::get();
-        // $documentaddondrop = UserRequest::where('status_id', '=', 1)
-        // ->orWhere('email', '=', 'loginuseremail');
-        // print_r($documentalldata->items);
-        // var_dump($documentalldata['items'][0]["attributes"]);
-        // die;
-        
-        foreach ($documentalldata as $key1 => $level1){
+         foreach ($documentalldata as $key1 => $level1){
             
             $email =  $level1->data;
             // echo $email->email;
@@ -40,12 +34,14 @@ class CalculatorController extends Controller
            
           
         }
-        print_r($userEmail);
-       
         echo "<pre>";
-        print_r( $documentalldata[data]);
-        die;
-   
+        print_r($userEmail);
+        $documentaddondrop = UserRequest::where('status_id', '=', 1)
+        ->orWhere('$userEmail', '=', 'loginuseremail')->get();
+
+
+
+        
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
         }
