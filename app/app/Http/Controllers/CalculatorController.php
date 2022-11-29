@@ -36,11 +36,11 @@ class CalculatorController extends Controller
             
             $email =  $level1->data;
             // echo $email->email;
-           $userEmail = $email['email'];
+           $userEmail[] = $email['email'];
            
           
         }
-        echo  $userEmail;
+        print_r($userEmail);
        
         echo "<pre>";
         print_r( $documentalldata[data]);
