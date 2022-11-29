@@ -27,10 +27,10 @@ class CalculatorController extends Controller
         // $documentaddondrop = UserRequest::where('status_id', '=', 1)
         // ->orWhere('data->email', Auth::user()->id)->get();
 
-        $useremail=Auth::user();
-        echo "<pre>";
-        print_r($useremail);
-        die;
+        // $useremail=Auth::user();
+        // echo "<pre>";
+        // print_r($useremail);
+        // die;
 
         $documentaddondrop = UserRequest::select('id', 'data','state_id')
             ->where('status_id', 1)
