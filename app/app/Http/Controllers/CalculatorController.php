@@ -24,16 +24,16 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        // $documentaddondrop = UserRequest::where('status_id', '=', 1)
-        // ->orWhere('data->email', Auth::user()->id)->get();
+        $documentaddondrop = UserRequest::where('status_id', '=', 1)
+        ->orWhere('data->email', Auth::user()->id)->get();
 
          $useremail=  Auth::user()->id;
         
 
-        $documentaddondrop = UserRequest::select('id', 'data','state_id')
-            ->where('status_id', 1)
-            ->where('data->email', Auth::user()->email)
-            ->get();
+        // $documentaddondrop = UserRequest::select('id', 'data','state_id')
+        //     ->where('status_id', 1)
+        //     ->where('data->email', Auth::user()->email)
+        //     ->get();
 
             print_r($documentaddondrop);
             die;
