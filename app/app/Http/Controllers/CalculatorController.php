@@ -150,7 +150,7 @@ class CalculatorController extends Controller
         
         // $event->save();
 
-        $events = Calculation::get();
+        $events = Calculation::orderBy('id', 'DESC')->get();
 
         // get the id of the first upcoming event in the calendar.
      
