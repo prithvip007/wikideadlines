@@ -156,7 +156,7 @@ class CalculatorController extends Controller
         $eventId = Calculation::get()->first()->id;
 
             Calculation::create([
-                    'name' => 'A new event',
+                    'casename' => 'A new event',
                     
                      
                  ]);
