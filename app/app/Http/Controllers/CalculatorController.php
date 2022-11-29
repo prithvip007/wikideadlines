@@ -154,11 +154,11 @@ class CalculatorController extends Controller
 
         // get the id of the first upcoming event in the calendar.
      
-            // Calculation::create([
-            //         'casename' => 'A new event',
+            Calculation::create([
+                    'casename' =>$events->case_name 
                     
                      
-            //      ]);
+                 ]);
         // dd($events);
         echo "<pre>";
         print_r ($events);
