@@ -134,7 +134,7 @@
                         <option v-for="type in documentTypes" :value="type.id" :key="type.id"
                                 :data-select2-description="type.small_description"
                                 :data-select2-keywords="type.keywords">
-                            {{ type.name }}
+                           
                         </option>
                     </select>
                 </div>
@@ -193,7 +193,7 @@
                     </div>
                 </div>
 
-                <template v-for="question in getDeadlineQuestions()" >
+                <template v-for="question in getDeadlineQuestions()">
                     <div :key="question.modelKey" class="form-group mb-4">
                         <label class="font-weight-bold" :for="question.modelKey">
                             {{ question.question }} 
