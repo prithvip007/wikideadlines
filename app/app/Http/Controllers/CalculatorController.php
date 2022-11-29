@@ -35,8 +35,8 @@ class CalculatorController extends Controller
            
           
         // }
-        echo "<pre>";
-        print_r($userEmail);
+        // echo "<pre>";
+        // print_r($userEmail);
         $documentaddondrop = UserRequest::where('status_id', '=', 1)
         ->orWhere('data[email]', '=', 'loginuseremail')->get();
 
