@@ -24,9 +24,10 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-       
-     echo "error o.oo5";
-     die;
+        $loginuseremail = Auth::user()->email;
+        print_r( $loginuseremail);
+        die;
+   
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
         }
