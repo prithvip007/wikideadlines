@@ -24,11 +24,14 @@ class CalculatorController extends Controller
     public function index(Request $request)
     {
         // TODO: remove
-        // $loginuseremail = Auth::user();
-        // $documentalldata = UserRequest::get();
-        // echo "<pre>";
-        // print_r( $documentalldata);
-        // die;
+        // $loginuseremail = Auth::user()->email;
+         $documentalldata = UserRequest::get();
+        // $documentaddondrop = UserRequest::where('status_id', '=', 1)
+        // ->orWhere('email', '=', 'loginuseremail');
+
+        echo "<pre>";
+        print_r( $documentalldata[data]);
+        die;
    
         if ($request->session()->has('beta-tester')) {
             return redirect(route('beta-test', $request->query()));
