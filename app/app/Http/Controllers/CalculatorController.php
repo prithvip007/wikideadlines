@@ -28,13 +28,15 @@ class CalculatorController extends Controller
         // ->orWhere('data->email', Auth::user()->id)->get();
 
          $useremail=  Auth::user()->id;
-         print_r($useremail);
-        die;
+        
 
-        // $documentaddondrop = UserRequest::select('id', 'data','state_id')
-        //     ->where('status_id', 1)
-        //     ->where('data->email', Auth::user()->email)
-        //     ->get();
+        $documentaddondrop = UserRequest::select('id', 'data','state_id')
+            ->where('status_id', 1)
+            ->where('data->email', Auth::user()->email)
+            ->get();
+
+            print_r($documentaddondrop);
+            die;
 
         
         if ($request->session()->has('beta-tester')) {
