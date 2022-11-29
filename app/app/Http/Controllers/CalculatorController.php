@@ -135,15 +135,22 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
                 // =================
+        $event = new Calculation;
+       
+        $event->name = "An Event Added";
+        $event->description = 'Event description';
+        $event->startDateTime = Carbon\Carbon::now();
+        $event->endDateTime = Carbon\Carbon::now()->addHour();
         
+        $event->save();
+
         $events = Calculation::get();
-    
         dd($events);
 
-        Calculation::find($casename);
+        // Calculation::find($casename);
 
-        $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
-        $endTime = (clone $startTime)->addHour();
+        // $startTime = Carbon::parse($request->input('meeting_date').' '. $request->input('meeting_time'));
+        // $endTime = (clone $startTime)->addHour();
         
 
                 // ================
