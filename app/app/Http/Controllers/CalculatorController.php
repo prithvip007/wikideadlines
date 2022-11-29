@@ -30,11 +30,11 @@ class CalculatorController extends Controller
         // ->orWhere('email', '=', 'loginuseremail');
 
         foreach ($documentalldata as $key1 => $level1){
-            echo "<pre>";
-            print_r($key1);
-            echo "key end";
-            print_r($level1);
-            die;
+            foreach ($level1 as $key2 => $level2){
+                echo $level2['data']['email'];
+                die;
+            }
+          
         }
        
         echo "<pre>";
