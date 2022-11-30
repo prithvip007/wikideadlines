@@ -141,7 +141,7 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
                 // =================
-                $event = new Event;
+                $event = new Calculation;
        
                 $event->name = "An Event Added";
                 $event->description = 'Event description';
