@@ -153,7 +153,7 @@ class CalculatorController extends Controller
         $events = Calculation::orderBy('id', 'DESC')->get();
 
 
-        Calculation::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
+     $events=   Calculation::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
 
         // get the id of the first upcoming event in the calendar.
      
@@ -163,9 +163,9 @@ class CalculatorController extends Controller
                      
             //      ]);
         // dd($events);
-        // echo "<pre>";
-        // print_r ($events);   
-        // die;
+        echo "<pre>";
+        print_r ($events);   
+        die;
 
         // Calculation::find($casename);
 
