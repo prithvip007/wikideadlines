@@ -2358,7 +2358,8 @@
                     "id": 1,
                     "title": "Proof of Service Date",
                     "referenceKey": "dps",
-                    "smallDescription": "i.e. Date Document Mailed, faxed, etc."
+                    "smallDescription": "i.e. Date Document Mailed, faxed, etc.",
+                    "required": true
                 },
                 {
                     "id": 2,
