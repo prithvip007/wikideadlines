@@ -199,6 +199,10 @@ class RequestsController extends Controller
                 );
         }
 
+      echo "<pre>";
+      print_r(response());
+      die;
+
         return response()->json([
             'data' => [
                 'id' => $savedUserRequest->id
