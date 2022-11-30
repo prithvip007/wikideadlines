@@ -94,7 +94,7 @@ class DataSnapshot
             return new static($calculation->snapshot, $calculation);
         }
 
-        $holidays = ['name'];
+        $holidays = [];
         $dynamicHolidays = [];
 
         foreach ($calculation->state->holidays as $holiday) {
