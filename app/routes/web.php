@@ -1,5 +1,5 @@
 <?php
-
+use Spatie\GoogleCalendar\src\Event;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,38 @@
 */
 
 Route::get('/', function () {
+     $event = new Event;
+       
+        $event->name = "An Event Added";
+        $event->description = 'Event description';
+        $event->startDateTime = Carbon\Carbon::now();
+        $event->endDateTime = Carbon\Carbon::now()->addHour();
+    
+        $event->save();
+
+        Event::create([
+            'name' => 'A new event',
+            'startDateTime' => Carbon\Carbon::now(),
+            'endDateTime' => Carbon\Carbon::now()->addHour(),
+         ]);
+
+         $event = new Event;
+
+        $event->name = 'A new full day event';
+        $event->startDate = Carbon\Carbon::now();
+        $event->endDate = Carbon\Carbon::now()->addDay();
+
+        $event->save();
+
+        // get the id of the first upcoming event in the calendar.
+        $eventId = Calculation::get()->first()->id;
+
+        Calculation::create([
+            'name' => $request->input('name'),
+            'startDateTime' => $startTime,
+            'endDateTime' => $endTime
+        ]);
+
     return redirect(route('calculate'));
 })->name('home');
 

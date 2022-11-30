@@ -18,7 +18,7 @@ use App\Models\Interviews\RuleInterview;
 use App\Models\Interviews\DocumentInterview;
 use App\Models\Interviews\JurisdictionInterview;
 use App\Models\StripeProduct;
-use Spatie\GoogleCalendar\src\Event;
+// use Spatie\GoogleCalendar\src\Event;
 
 
 class CalculatorController extends Controller
@@ -143,14 +143,14 @@ class CalculatorController extends Controller
                 // =================
 
                
-        $event = new Calculation;
+        // $event = new Calculation;
        
-        $event->name = "An Event Added";
+        // $event->name = "An Event Added";
         // $event->description = 'Event description';
        
-        $event->save();
+        // $event->save();
        
-        $events = Calculation::orderBy('id', 'DESC')->get();
+        // $events = Calculation::orderBy('id', 'DESC')->get();
 
 
     //  $events=   Calculation::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
