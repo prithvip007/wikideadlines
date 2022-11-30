@@ -2359,14 +2359,14 @@
                     "title": "Proof of Service Date",
                     "referenceKey": "dps",
                     "smallDescription": "i.e. Date Document Mailed, faxed, etc.",
-                    "required": true
+                  
                 },
                 {
                     "id": 2,
                     "title": "Date Document Served",
                     "referenceKey": "dds",
                     "smallDescription": "accounting for Delivery Method",
-                    "required": true
+                  
                 },
                 {
                     "id": 3,
@@ -2381,7 +2381,7 @@
                 {
                     "id": 5,
                     "referenceKey": "dcc",
-                    "title": "Date Service of the Complaint or Cross-Complaint was completed"
+                    "title": "Date Service Cross-Complaint was completed"
                 },
                 {
                     "id": 6,
