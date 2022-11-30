@@ -2346,7 +2346,7 @@
     },
     {
         "id": 28,
-        "type": "multiselect",
+     
         "allow-empty":"false",
         "required": true,
         "multiple":"true",
@@ -2366,7 +2366,7 @@
                     "title": "Date Document Served",
                     "referenceKey": "dds",
                     "smallDescription": "accounting for Delivery Method",
-                    "required": "true"
+                    "required": ""
                 },
                 {
                     "id": 3,
