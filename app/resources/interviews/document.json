@@ -2365,7 +2365,8 @@
                     "id": 2,
                     "title": "Date Document Served",
                     "referenceKey": "dds",
-                    "smallDescription": "accounting for Delivery Method"
+                    "smallDescription": "accounting for Delivery Method",
+                    "required": "true"
                 },
                 {
                     "id": 3,
