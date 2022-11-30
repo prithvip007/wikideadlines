@@ -141,28 +141,31 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
                 // =================
-        // $event = new Calculation;
+
+               
+        $event = new Calculation;
        
-        // $event->name = "An Event Added";
-        // $event->description = 'Event description';
-        // $event->startDateTime = Carbon\Carbon::now();
-        // $event->endDateTime = Carbon\Carbon::now()->addHour();
-        
-        // $event->save();
+        $event->name = "An Event Added";
+        $event->description = 'Event description';
+       
+        $event->save();
        
         $events = Calculation::orderBy('id', 'DESC')->get();
 
+
+        Event::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
+
         // get the id of the first upcoming event in the calendar.
      
-            Calculation::create([
-                    'name' =>$events
+            // Calculation::create([
+            //         'name' =>$events
                     
                      
-                 ]);
+            //      ]);
         // dd($events);
-        echo "<pre>";
-        print_r ($events);
-        die;
+        // echo "<pre>";
+        // print_r ($events);   
+        // die;
 
         // Calculation::find($casename);
 
