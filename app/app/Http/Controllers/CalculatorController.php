@@ -18,7 +18,7 @@ use App\Models\Interviews\RuleInterview;
 use App\Models\Interviews\DocumentInterview;
 use App\Models\Interviews\JurisdictionInterview;
 use App\Models\StripeProduct;
-// use Spatie\GoogleCalendar\src\Event;
+use Spatie\GoogleCalendar\src\Event;
 
 
 class CalculatorController extends Controller
@@ -141,7 +141,37 @@ class CalculatorController extends Controller
     public function calculate(Request $request)
     {
                 // =================
-
+                $event = new Event;
+       
+                $event->name = "An Event Added";
+                $event->description = 'Event description';
+                $event->startDateTime = Carbon\Carbon::now();
+                $event->endDateTime = Carbon\Carbon::now()->addHour();
+            
+                $event->save();
+        
+                Event::create([
+                    'name' => 'A new event',
+                    'startDateTime' => Carbon\Carbon::now(),
+                    'endDateTime' => Carbon\Carbon::now()->addHour(),
+                 ]);
+        
+                 $event = new Event;
+        
+                $event->name = 'A new full day event';
+                $event->startDate = Carbon\Carbon::now();
+                $event->endDate = Carbon\Carbon::now()->addDay();
+        
+                $event->save();
+        
+                // get the id of the first upcoming event in the calendar.
+                $eventId = Calculation::get()->first()->id;
+        
+                Calculation::create([
+                    'name' => $request->input('name'),
+                    'startDateTime' => $startTime,
+                    'endDateTime' => $endTime
+                ]);
                
         // $event = new Calculation;
        
