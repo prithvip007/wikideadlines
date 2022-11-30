@@ -1,5 +1,5 @@
 <?php
-use Spatie\GoogleCalendar\src\Event;
+use Spatie\GoogleCalendar\Event;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
