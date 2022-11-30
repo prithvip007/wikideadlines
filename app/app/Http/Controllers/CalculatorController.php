@@ -159,13 +159,11 @@ class CalculatorController extends Controller
      
             // Calculation::create([
             //         'name' =>$events
-                    
-                     
-            //      ]);
+            // ]);
         // dd($events);
-        echo "<pre>";
-        print_r ($events);   
-        die;
+        // echo "<pre>";
+        // print_r ($events);   
+        // die;
 
         // Calculation::find($casename);
 
