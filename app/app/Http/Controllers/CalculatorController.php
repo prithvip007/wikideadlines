@@ -146,14 +146,14 @@ class CalculatorController extends Controller
         $event = new Calculation;
        
         $event->name = "An Event Added";
-        $event->description = 'Event description';
+        // $event->description = 'Event description';
        
         $event->save();
        
         $events = Calculation::orderBy('id', 'DESC')->get();
 
 
-     $events=   Calculation::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
+    //  $events=   Calculation::quickCreate('Appointment at Somewhere on April 25 10am-10:25am');
 
         // get the id of the first upcoming event in the calendar.
      
